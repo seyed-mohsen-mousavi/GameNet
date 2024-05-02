@@ -37,7 +37,7 @@ function MainHeader() {
     },
   ];
   return (
-    <div className="flex w-full h-full mt-28">
+    <div className="flex flex-col xl:flex-row w-full h-full mt-28">
       <GameTexts />
       <GameCardPreview cards={cards} />
     </div>
@@ -141,17 +141,17 @@ function GameTexts() {
       <div className="flex gap-2 items-center">
         <div className="flex -space-x-2 space-x-reverse">
           <img
-            className="w-12 h-12 border-2 border-[#733cb3] rounded-full  object-cover aspect-video"
+            className="w-12 h-12 border-2 bg-gray-800 border-[#733cb3] rounded-full  object-cover aspect-video"
             src="/images/csgo.jpeg"
             alt=""
           />
           <img
-            className="w-12 h-12 border-2 border-gray-600 rounded-full  object-cover aspect-video"
+            className="w-12 h-12 border-2 bg-gray-800 border-gray-600 rounded-full  object-cover aspect-video"
             src="/images/csgo.jpeg"
             alt=""
           />
           <img
-            className="w-12 h-12 border-2 border-[#50297e] rounded-full  object-cover aspect-video"
+            className="w-12 h-12 border-2 bg-gray-800 border-[#50297e] rounded-full  object-cover aspect-video"
             src="/images/csgo.jpeg"
             alt=""
           />
