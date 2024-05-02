@@ -20,7 +20,7 @@ export default Navbar;
 
 function NavLinks({ active, acivated }) {
   return (
-    <ul className="flex gap-3 text-xs">
+    <ul className="flex gap-3 text-xs pt-1.5">
       <li className={`text-gray-500${acivated === "home" ? active : ""}`}>
         <a href="#">خانه</a>
       </li>
