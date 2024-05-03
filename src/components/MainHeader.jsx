@@ -57,13 +57,17 @@ function GameCardSlider({ cards }) {
       {cards.map((card) => (
         <SwiperSlide key={card.id}>
           <div className="felx flex-col w-full bg-white/10 backdrop-blur-lg rounded-lg p-3 ">
-            <img
-              className="rounded-md h-36 md:h-52 aspect-video object-cover"
-              src={card.image}
-              alt=""
-            />
+            <a href="#">
+              <img
+                className="rounded-md h-36 md:h-52 aspect-video object-cover"
+                src={card.image}
+                alt=""
+              />
+            </a>
             <div className="flex flex-col gap-3 pt-2 ">
-              <p className="text-sm line-clamp-1">{card.title}</p>
+              <a href="#" className="text-sm line-clamp-1">
+                {card.title}
+              </a>
               <div className="flex justify-between text-[11px] text-gray-200 ">
                 <span className="flex items-center gap-1">
                   {card.view}

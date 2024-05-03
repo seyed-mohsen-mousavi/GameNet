@@ -5,17 +5,17 @@ import "swiper/css";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
-function MainPopular({ cards }) {
+function MainSlider({ cards, title }) {
   return (
     <div className="  relative">
-      <h3 className="pr-5">محبوب ترین IGN ها</h3>
+      <h3 className="pr-5">{title}</h3>
       <div className="pt-5">
-        <Slider cards={cards} />
+        <Slides cards={cards} />
       </div>
     </div>
   );
 }
-function Slider({ cards }) {
+function Slides({ cards }) {
   const pagination = {
     el: ".swiper-pagination",
     bulletClass:
@@ -58,13 +58,15 @@ function Slider({ cards }) {
       {cards.map((card) => (
         <SwiperSlide key={card.id}>
           <div className="felx flex-col bg-white/10 backdrop-blur-lg rounded-lg p-3 ">
-            <img
-              className="rounded-md h-52 aspect-video object-cover"
-              src={card.image}
-              alt=""
-            />
+            <a href="#">
+              <img
+                className="rounded-md h-52 aspect-video object-cover mx-auto"
+                src={card.image}
+                alt=""
+              />
+            </a>
             <div className="flex flex-col gap-3 pt-2 ">
-              <p className="text-sm line-clamp-1">{card.title}</p>
+              <a href="#" className="text-sm line-clamp-1">{card.title}</a>
               <div className="flex justify-between text-[11px] text-gray-200 ">
                 <span className="flex items-center gap-1">
                   {card.view}
@@ -104,4 +106,4 @@ function Slider({ cards }) {
     </Swiper>
   );
 }
-export default MainPopular;
+export default MainSlider;

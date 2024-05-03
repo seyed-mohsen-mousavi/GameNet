@@ -1,7 +1,7 @@
 import MainApplication from "./MainApplication";
 import MainTopProducers from "./MainTopProducers";
 import MainHeader from "./MainHeader";
-import MainPopular from "./MainPopular";
+import MainPopular from "./MainSlider";
 
 function Main() {
   const headerCards = [
@@ -104,8 +104,8 @@ function Main() {
     },
     {
       id: 2,
-      name: "سونی /Sony",
-      icon: "/images/icon/producers/PlayStation.png",
+      name: "ایکس باکس /Xbox",
+      icon: "/images/icon/producers/xbox.png",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
@@ -113,8 +113,8 @@ function Main() {
     },
     {
       id: 3,
-      name: "سونی /Sony",
-      icon: "/images/icon/producers/PlayStation.png",
+      name: "تنسنت / Tencent",
+      icon: "/images/icon/producers/Tencent.png",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
@@ -122,8 +122,8 @@ function Main() {
     },
     {
       id: 4,
-      name: "سونی /Sony",
-      icon: "/images/icon/producers/PlayStation.png",
+      name: "اکتیویژن /Activision",
+      icon: "/images/icon/producers/activision.svg",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
@@ -131,8 +131,8 @@ function Main() {
     },
     {
       id: 5,
-      name: "سونی /Sony",
-      icon: "/images/icon/producers/PlayStation.png",
+      name: " الکترو .. / Electronic  Arts",
+      icon: "/images/icon/producers/ea_sports.png",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
@@ -140,21 +140,21 @@ function Main() {
     },
     {
       id: 6,
-      name: "سونی /Sony",
-      icon: "/images/icon/producers/PlayStation.png",
+      name: "اپیک گیمز / Epic Games",
+      icon: "/images/icon/producers/Epic_Games.png",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
       creatorImage: "",
     },
-    
   ];
   return (
     <main className="pb-10 flex flex-col gap-10">
       <MainHeader cards={headerCards} />
       <MainApplication />
-      <MainPopular cards={allCards} />
+      <MainPopular cards={allCards} title="محبوب ترین IGN ها" />
       <MainTopProducers producers={topProducers} />
+      <MainPopular cards={allCards} title="جدید ترین IGN ها" />
     </main>
   );
 }
