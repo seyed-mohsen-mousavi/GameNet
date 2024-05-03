@@ -116,17 +116,17 @@ function GameTexts() {
         <div className="flex -space-x-2 space-x-reverse">
           <img
             className="w-12 h-12 border-2 bg-gray-800 border-[#733cb3] rounded-full  object-cover aspect-video"
-            src="/images/csgo.jpeg"
+            src="images/csgo.jpeg"
             alt=""
           />
           <img
             className="w-12 h-12 border-2 bg-gray-800 border-gray-600 rounded-full  object-cover aspect-video"
-            src="/images/csgo.jpeg"
+            src="images/csgo.jpeg"
             alt=""
           />
           <img
             className="w-12 h-12 border-2 bg-gray-800 border-[#50297e] rounded-full  object-cover aspect-video"
-            src="/images/csgo.jpeg"
+            src="images/csgo.jpeg"
             alt=""
           />
         </div>

@@ -7,7 +7,7 @@ function MainTopProducers({ producers }) {
       <img
         loading="lazy"
         className=" md:absolute py-4 md:py-0 right-[10%] top-12 w-20 2xl:w-24 rotate-90 invert"
-        src="/images/icon/boost-3-0-offical-skyrocket-arrow_140x.webp"
+        src="images/icon/boost-3-0-offical-skyrocket-arrow_140x.webp"
         alt="Best Game Makers In Iran Game Net"
       ></img>
       <div className="flex felx-col flex-wrap gap-12 px-5 lg:px-44 justify-center divide-y-2 divide-gray-600">
