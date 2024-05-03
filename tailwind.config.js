@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         Peyda: ["Peyda"],
+        PeydaLight: ["Peyda-light"],
       },
     },
   },

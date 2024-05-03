@@ -5,39 +5,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EyeIcon } from "@heroicons/react/24/outline";
 
-function MainHeader() {
-  const cards = [
-    {
-      id: 1,
-      title: "سایبرپانک همچنین یکی از زیرسبک‌های داستان‌های پادآرمان‌شهری",
-      image: "/images/Cyberpunk2077.jpg",
-      view: "665",
-      score: "4",
-      creatorName: "Ali Ahmadi",
-      creatorImage: "",
-    },
-    {
-      id: 2,
-      title: " یک بازی اول شخص از مجموعه بازی‌های ندای وظیفه است",
-      image: "/images/callofduty_کالاف دیوتی.jpg",
-      view: "46",
-      score: "4.5",
-      creatorName: "Ali Ahmadi",
-      creatorImage: "",
-    },
-    {
-      id: 3,
-      title:
-        "این بازی پنجمین قسمت اصلی در مجموعهٔ کانتر استرایک به‌شمار می‌رود.",
-      image: "/images/csgo.jpeg",
-      view: "775",
-      score: "5",
-      creatorName: "Ali Ahmadi",
-      creatorImage: "",
-    },
-  ];
+function MainHeader({ cards }) {
   return (
-    <div className="flex flex-col xl:flex-row w-full h-full mt-28">
+    <div className="flex flex-col md:flex-row w-full h-full mt-28 px-4">
       <GameTexts />
       <GameCardPreview cards={cards} />
     </div>
@@ -48,7 +18,7 @@ export default MainHeader;
 
 function GameCardPreview({ cards }) {
   return (
-    <div className="relative flex items-center w-full">
+    <div className="relative flex items-center w-full py-10 lg:py-0">
       <div className="gradient"></div>
       <GameCardSlider cards={cards} />
     </div>
@@ -88,12 +58,12 @@ function GameCardSlider({ cards }) {
         <SwiperSlide key={card.id}>
           <div className="felx flex-col w-full bg-white/10 backdrop-blur-lg rounded-lg p-3 ">
             <img
-              className="rounded-md h-52 aspect-video object-cover"
+              className="rounded-md h-36 md:h-52 aspect-video object-cover"
               src={card.image}
               alt=""
             />
             <div className="flex flex-col gap-3 pt-2 ">
-              <p className="text-sm line-clamp-2">{card.title}</p>
+              <p className="text-sm line-clamp-1">{card.title}</p>
               <div className="flex justify-between text-[11px] text-gray-200 ">
                 <span className="flex items-center gap-1">
                   {card.view}
@@ -119,7 +89,7 @@ function GameCardSlider({ cards }) {
 
 function GameTexts() {
   return (
-    <div className="w-full flex flex-col gap-7">
+    <div className="w-full flex flex-col gap-7 font-Peyda">
       <h1 className="text-4xl font-bold xl:w-3/4 line-clamp-2 first-letter:text-lg leading-snug">
         تماشای بازی و و دیدن بروز ترین اخبار بازی ها فقط تو{" "}
         <span className="bg-gradient-to-r from-[#655fd8] to-[#8856c0] bg-clip-text text-transparent font-extrabold ">
@@ -130,7 +100,7 @@ function GameTexts() {
       <p className="text-gray-400 text-xs">
         خیلی راحت با ایران گیم نت به تمام اخبار بازی های جهان اگاه باش .
       </p>
-      <div className="flex gap-3">
+      <div className="flex gap-3 font-PeydaLight">
         <button className=" text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
           بریم برای شروع
         </button>
@@ -156,7 +126,9 @@ function GameTexts() {
             alt=""
           />
         </div>
-        <p className="text-xs w-[6.5rem]">بیش از 1000 سازنده بازی در ایران گیم نت ...</p>
+        <p className="text-xs w-[6.5rem]">
+          بیش از 1000 سازنده بازی در ایران گیم نت ...
+        </p>
       </div>
     </div>
   );

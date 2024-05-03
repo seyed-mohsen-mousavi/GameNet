@@ -4,7 +4,7 @@ function Navbar() {
   // -webkit-background-clip: text;
   // -webkit-text-fill-color: transparent;
   return (
-    <nav className="flex justify-between items-center text-sm py-2">
+    <nav className="hidden sm:flex justify-between items-center text-sm py-2 font-Peyda ">
       <h2 className="bg-gradient-to-r from-[#3b35b2] to-[#733cb3] bg-clip-text text-transparent font-bold text-lg">
         ایران گیم نت
       </h2>

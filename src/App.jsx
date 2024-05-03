@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className=" container text-white p-5 xl:p-0">
+    <div className=" container text-white">
       <Navbar />
       <Main />
     </div>
