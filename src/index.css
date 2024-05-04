@@ -12,8 +12,8 @@
     src: url(/font/Peyda-Light.ttf);
   }
   @font-face {
-    font-family: "Peyda-Thin";
-    src: url(/font/Peyda-black.ttf);
+    font-family: "Peyda-black";
+    src: url(/font/Peyda-Black.ttf);
   }
   .gradient {
     position: absolute;
@@ -43,5 +43,25 @@
         var(--c);
     background-attachment: fixed;
   }
-  
+  #root::-webkit-scrollbar{
+    display: none;
+  }
+  ::-webkit-scrollbar {
+    /* Customize the scrollbar width */
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* Customize the scrollbar track */
+    background-color: #3b3b4b;
+    padding: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* Customize the scrollbar thumb */
+    background-color: gray;
+    padding: 5px;
+  }::-webkit-scrollbar-thumb:hover{
+    background-color: #80808094;
+  }
 }

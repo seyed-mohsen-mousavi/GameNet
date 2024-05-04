@@ -5,10 +5,19 @@ export default {
     container: {
       center: true,
     },
+    screens: {
+      mq500: "540px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       fontFamily: {
         Peyda: ["Peyda"],
         PeydaLight: ["Peyda-light"],
+        PeydaBlack: ["Peyda-black"],
       },
     },
   },

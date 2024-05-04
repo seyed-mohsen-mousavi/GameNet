@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
@@ -52,7 +52,11 @@ function Slides({ cards }) {
       breakpoints={breakPoints}
       navigation={navigation}
       pagination={pagination}
-      modules={[Pagination, Navigation]}
+      modules={[Pagination, Navigation, Autoplay]}
+      autoplay={{
+        delay: 10000,
+        disableOnInteraction: false,
+      }}
       className="mySwiper px-3"
     >
       {cards.map((card) => (
@@ -60,13 +64,16 @@ function Slides({ cards }) {
           <div className="felx flex-col bg-white/10 backdrop-blur-lg rounded-lg p-3 ">
             <a href="#">
               <img
+                loading="lazy"
                 className="rounded-md h-52 aspect-video object-cover mx-auto"
                 src={card.image}
                 alt=""
               />
             </a>
             <div className="flex flex-col gap-3 pt-2 ">
-              <a href="#" className="text-sm line-clamp-1">{card.title}</a>
+              <a href="#" className="text-sm line-clamp-1">
+                {card.title}
+              </a>
               <div className="flex justify-between text-[11px] text-gray-200 ">
                 <span className="flex items-center gap-1">
                   {card.view}
@@ -75,6 +82,7 @@ function Slides({ cards }) {
                 <div className="flex items-center gap-1">
                   {card.creatorName}
                   <img
+                    loading="lazy"
                     src={card.creatorImage}
                     className="w-5 h-5 rounded-full"
                     alt=""

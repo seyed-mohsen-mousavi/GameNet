@@ -7,7 +7,7 @@ import { EyeIcon } from "@heroicons/react/24/outline";
 
 function MainHeader({ cards }) {
   return (
-    <div className="flex flex-col md:flex-row w-full h-full mt-28 px-4">
+    <div className="flex flex-col md:flex-row w-full h-full mt-8 sm:mt-28 px-4">
       <GameTexts />
       <GameCardPreview cards={cards} />
     </div>
@@ -108,7 +108,7 @@ function GameTexts() {
         <button className=" text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
           بریم برای شروع
         </button>
-        <button className="text-xs  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 ">
+        <button className="text-xs hidden sm:inline-block  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 ">
           ثبت نام
         </button>
       </div>
@@ -116,17 +116,17 @@ function GameTexts() {
         <div className="flex -space-x-2 space-x-reverse">
           <img
             className="w-12 h-12 border-2 bg-gray-800 border-[#733cb3] rounded-full  object-cover aspect-video"
-            src="images/csgo.jpeg"
+            src="images/icon/header/Call_of_duty.jpg"
             alt=""
           />
           <img
             className="w-12 h-12 border-2 bg-gray-800 border-gray-600 rounded-full  object-cover aspect-video"
-            src="images/csgo.jpeg"
+            src="images/icon/header/Forza.jpg"
             alt=""
           />
           <img
             className="w-12 h-12 border-2 bg-gray-800 border-[#50297e] rounded-full  object-cover aspect-video"
-            src="images/csgo.jpeg"
+            src="images/icon/header/Grand-Theft-Auto-San-Andreas.jpg"
             alt=""
           />
         </div>

@@ -2,6 +2,8 @@ import MainApplication from "./MainApplication";
 import MainTopProducers from "./MainTopProducers";
 import MainHeader from "./MainHeader";
 import MainPopular from "./MainSlider";
+import MainFaqs from "./MainFaqs";
+import MainAbout from "./MainAbout";
 
 function Main() {
   const headerCards = [
@@ -27,7 +29,7 @@ function Main() {
       id: 3,
       title:
         "این بازی پنجمین قسمت اصلی در مجموعهٔ کانتر استرایک به‌شمار می‌رود.",
-      image: "images/csgo.jpeg",
+      image: "images/csgo.jpg",
       view: "775",
       score: "5",
       creatorName: "Ali Ahmadi",
@@ -96,7 +98,7 @@ function Main() {
     {
       id: 1,
       name: "سونی /Sony",
-      icon: "images/icon/producers/PlayStation.png",
+      icon: "images/icon/producers/PlayStation.jpg",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
@@ -105,7 +107,7 @@ function Main() {
     {
       id: 2,
       name: "ایکس باکس /Xbox",
-      icon: "images/icon/producers/xbox.png",
+      icon: "images/icon/producers/xbox.jpg",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
@@ -114,7 +116,7 @@ function Main() {
     {
       id: 3,
       name: "تنسنت / Tencent",
-      icon: "images/icon/producers/Tencent.png",
+      icon: "images/icon/producers/Tencent.jpg",
       employees: "113,000 (2023)",
       Revenue: "🔼 ¥11.540 trillion ",
       Founded: "7 May 1946",
@@ -155,6 +157,8 @@ function Main() {
       <MainPopular cards={allCards} title="محبوب ترین IGN ها" />
       <MainTopProducers producers={topProducers} />
       <MainPopular cards={allCards} title="جدید ترین IGN ها" />
+      <MainFaqs />
+      <MainAbout />
     </main>
   );
 }
