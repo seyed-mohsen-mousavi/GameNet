@@ -4,6 +4,7 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EyeIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 function MainHeader({ cards }) {
   return (
@@ -108,9 +109,9 @@ function GameTexts() {
         <button className=" text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
           بریم برای شروع
         </button>
-        <button className="text-xs hidden sm:inline-block  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 ">
+        <Link to="/register" className="text-xs hidden sm:inline-block  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 ">
           ثبت نام
-        </button>
+        </Link>
       </div>
       <div className="flex gap-2 items-center">
         <div className="flex -space-x-2 space-x-reverse">

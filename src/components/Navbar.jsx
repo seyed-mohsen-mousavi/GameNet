@@ -9,11 +9,10 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const active = "text-white";
-  const acivated = "home";
 
   isOpen
     ? document.body.classList.add("overflow-hidden")
@@ -29,10 +28,13 @@ function Navbar() {
       <button className="flex sm:hidden " onClick={() => setIsOpen(true)}>
         <Bars3Icon className="w-7 h-7 " />
       </button>
-      <NavLinks active={active} acivated={acivated} />
-      <button className="text-xs hidden sm:flex bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-5 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
+      <NavLinks />
+      <NavLink
+        to="/login"
+        className="text-xs hidden sm:flex bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-5 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 "
+      >
         ورود
-      </button>
+      </NavLink>
       <Aside isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
         onClick={() => setIsOpen(false)}
@@ -46,26 +48,59 @@ function Navbar() {
 
 export default Navbar;
 
-function NavLinks({ active, acivated }) {
+function NavLinks() {
   return (
     <ul className="gap-3 text-xs pt-1.5 hidden sm:flex">
-      <li className={`text-gray-500${acivated === "home" ? active : ""}`}>
-        <a href="#">خانه</a>
+      <li>
+        <NavLink
+          className={`text-gray-500 aria-[current=page]:text-white`}
+          to="/"
+        >
+          خانه
+        </NavLink>
       </li>
-      <li className={`text-gray-500${acivated === "store" ? active : ""}`}>
-        <a href="#">بازار</a>
+      <li>
+        <NavLink
+          className={`text-gray-500 aria-[current=page]:text-white`}
+          to="/store"
+        >
+          بازار
+        </NavLink>
       </li>
-      <li className={`text-gray-500${acivated === "drop" ? active : ""}`}>
-        <a href="#">مقالات </a>
+      <li>
+        <NavLink
+          className={`text-gray-500 aria-[current=page]:text-white`}
+          to="/blog"
+        >
+          مقالات{" "}
+        </NavLink>
       </li>
-      <li className={`text-gray-500${acivated === "game" ? active : ""}`}>
-        <a href="#"> بازی ها</a>
+      <li>
+        <NavLink
+          className={`text-gray-500 aria-[current=page]:text-white`}
+          to="/games"
+        >
+          {" "}
+          بازی ها
+        </NavLink>
       </li>
-      <li className={`text-gray-500${acivated === "strimer" ? active : ""}`}>
-        <a href="#"> استریمر ها</a>
+      <li>
+        <NavLink
+          className={`text-gray-500 aria-[current=page]:text-white`}
+          to="/stream"
+        >
+          {" "}
+          استریمر ها
+        </NavLink>
       </li>
-      <li className={`text-gray-500${acivated === "about" ? active : ""}`}>
-        <a href="#"> درباره ما</a>
+      <li>
+        <NavLink
+          className={`text-gray-500 aria-[current=page]:text-white`}
+          to="/about"
+        >
+          {" "}
+          درباره ما
+        </NavLink>
       </li>
     </ul>
   );
@@ -80,91 +115,88 @@ function Aside({ isOpen, setIsOpen }) {
     >
       <div>
         <section className="flex items-center justify-between py-5">
-          <a className="flex" href="/">
+          <Link className="flex cursor-pointer" to="/">
             <h2 className="bg-gradient-to-l from-[#FFF] to-[#757579] bg-clip-text text-transparent font-bold text-2xl">
               ایران گیم نت | IGN
             </h2>
-          </a>
+          </Link>
           <XMarkIcon
             onClick={() => setIsOpen(!isOpen)}
             className="h-7 w-7 transition-colors text-gray-300"
           />
         </section>
         <nav className="pt-7">
-          <ul className="flex w-full flex-col justify-center gap-4 text-base  xl:text-lg">
+          <ul className="flex w-full flex-col justify-center gap-8 text-base  xl:text-lg">
             <li className="flex">
-              <a className="flex items-center justify-center gap-4" href="/">
-                <HomeIcon className="inline-block h-5 w-5" />
-                <span className="relative p-2 text-center after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:-translate-x-1/2 after:rounded-sm after:bg-cnBlack-20 after:transition-all dark:after:bg-gray-300 font-bold after:w-1/2 after:opacity-100">
-                  خانه
-                </span>
-              </a>
+              <NavLink
+                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2  "
+                to="/"
+              >
+                <HomeIcon className="inline-block h-5 w-5 " />
+                <span className="pt-1">خانه</span>
+              </NavLink>
             </li>
             <li className="flex">
-              <a
-                className="flex items-center justify-center gap-4"
-                href="/podcasts"
+              <NavLink
+                className=" flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                to="/store"
               >
-                <BuildingStorefrontIcon className="inline-block h-5 w-5" />
-                <span className="relative p-2 text-center after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-sm after:bg-cnBlack-20 after:opacity-0 after:transition-all dark:after:bg-gray-300 hover:after:w-1/2 hover:after:opacity-50">
-                  بازار
-                </span>
-              </a>
+                <BuildingStorefrontIcon className="inline-block h-5 w-5 " />
+                بازار
+              </NavLink>
             </li>
             <li className="flex">
-              <a
-                className="flex items-center justify-center gap-4"
-                href="/blogs"
+              <NavLink
+                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                to="/blog"
               >
-                <BookOpenIcon className="inline-block h-5 w-5" />
-                <span className="relative p-2 text-center after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-sm after:bg-cnBlack-20 after:opacity-0 after:transition-all dark:after:bg-gray-300 hover:after:w-1/2 hover:after:opacity-50">
-                  مقالات
-                </span>
-              </a>
+                <BookOpenIcon className="inline-block h-5 w-5 " />
+                مقالات
+              </NavLink>
             </li>
             <li className="flex">
-              <a
-                className="flex items-center justify-center gap-4"
-                href="/coming-soon"
+              <NavLink
+                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                to="/games"
               >
-                <PuzzlePieceIcon className="inline-block h-5 w-5" />
-                <span className="relative p-2 text-center after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-sm after:bg-cnBlack-20 after:opacity-0 after:transition-all dark:after:bg-gray-300 hover:after:w-1/2 hover:after:opacity-50">
-                  بازی ها
-                </span>
-              </a>
+                <PuzzlePieceIcon className="inline-block h-5 w-5 " />
+                بازی ها
+              </NavLink>
             </li>
             <li className="flex">
-              <a
-                className="flex items-center justify-center gap-4"
-                href="/resume"
+              <NavLink
+                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                to="/stream"
               >
-                <VideoCameraIcon className="inline-block h-5 w-5" />
-                <span className="relative p-2 text-center after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-sm after:bg-cnBlack-20 after:opacity-0 after:transition-all dark:after:bg-gray-300 hover:after:w-1/2 hover:after:opacity-50">
-                  استریمر ها
-                </span>
-              </a>
+                <VideoCameraIcon className="inline-block h-5 w-5 " />
+                استریمر ها
+              </NavLink>
             </li>
             <li className="flex">
-              <a
-                className="flex items-center justify-center gap-4"
-                href="/coming-soon"
+              <NavLink
+                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                to="/about"
               >
-                <InformationCircleIcon className="inline-block h-5 w-5" />
-                <span className="relative p-2 text-center after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-sm after:bg-cnBlack-20 after:opacity-0 after:transition-all dark:after:bg-gray-300 hover:after:w-1/2 hover:after:opacity-50">
-                  درباره ما
-                </span>
-              </a>
+                <InformationCircleIcon className="inline-block h-5 w-5 " />
+                درباره ما
+              </NavLink>
             </li>
           </ul>
         </nav>
       </div>
       <div className="flex justify-around">
-      <button className="text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-8  py-2 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
+        <NavLink
+          to="/login"
+          className="text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-8  py-2 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 "
+        >
           ورود
-        </button>
-        <button className="text-xs px-7 py-2 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 ">
+        </NavLink>
+        <NavLink
+          to="/register"
+          className="text-xs px-7 py-2 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 "
+        >
           ثبت نام
-        </button>
+        </NavLink>
       </div>
     </aside>
   );

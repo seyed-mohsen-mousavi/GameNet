@@ -1,9 +1,10 @@
-import MainApplication from "./MainApplication";
-import MainTopProducers from "./MainTopProducers";
-import MainHeader from "./MainHeader";
-import MainPopular from "./MainSlider";
-import MainFaqs from "./MainFaqs";
-import MainAbout from "./MainAbout";
+import MainApplication from "../components/MainApplication";
+import MainTopProducers from "../components/MainTopProducers";
+import MainHeader from "../components/MainHeader";
+import MainPopular from "../components/MainSlider";
+import MainFaqs from "../components/MainFaqs";
+import MainAbout from "../components/MainAbout";
+
 
 function Main() {
   const headerCards = [
