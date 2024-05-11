@@ -71,25 +71,25 @@ function FillterCard() {
     {
       id: 2,
       title: "پلی استیشن 5",
-      val: "playstation5",
+      val: "PS5",
       chek: false,
     },
     {
       id: 3,
       title: "پلی استیشن 4",
-      val: "playstation4",
+      val: "PS4",
       chek: false,
     },
     {
       id: 4,
-      title: "ایکس باکس سری x",
-      val: "xbox-series-x",
+      title: "ایکس باکس سری x و s",
+      val: "xboxSeries",
       chek: false,
     },
     {
       id: 5,
       title: "نیدنتندو سوییج",
-      val: "nintendo-switch",
+      val: "nintendoSwitch",
       chek: false,
     },
   ];
@@ -116,7 +116,7 @@ function FillterCard() {
 
   return (
     <div>
-      <div className="p-2 rounded-lg bg-white/5 backdrop-blur !sticky top-7 hidden lg:inline-block">
+      <div className="p-2 rounded-lg bg-white/5 backdrop-blur !sticky top-7 hidden lg:inline-block transition-all ease-linear animate-fade">
         <h2 className="text-lg py-3 font-semibold">دسته بندی ( ژانر )</h2>
         <Categorie
           categories={categories}
@@ -182,10 +182,7 @@ function Platform({ platform, hanleFilter }) {
       {platform.map((p) => (
         <li className="text-gray-300" key={p.id}>
           <label>
-            <div
-              to={`?platform=${p.val}`}
-              className="flex gap-3 cursor-pointer"
-            >
+            <div className="flex gap-3 cursor-pointer">
               {p.chek ? (
                 <input
                   defaultChecked

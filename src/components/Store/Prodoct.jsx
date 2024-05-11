@@ -5,35 +5,10 @@ import {
   HeartIcon,
 } from "@heroicons/react/24/outline";
 import { useParams } from "react-router-dom";
+import useGames from "../../hook/useGames";
 
 function Prodoct() {
-  const games = [
-    {
-      id: 1,
-      subTitle: "سی اس گو 2",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد",
-      image_background: "/images/csgo/2.webp",
-      link: "csgo",
-      price: "Free",
-    },
-    {
-      id: 2,
-      subTitle: "کالاف دیوتی مدرن وافای",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد",
-      image_background: "/images/callofduty/2.jpg",
-      link: "call-of-duty",
-      price: "69.99 $",
-    },
-    {
-      id: 3,
-      subTitle: "سایرپرانک",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد",
-      image_background: "/images/cyberpunk/1.jpg",
-      link: "cyberpunk2077",
-      price: "59 $",
-    },
-  ];
-
+  const games = useGames();
   const { id } = useParams();
   const game = games.find((g) => g.link === id);
   return (
@@ -76,23 +51,7 @@ function Prodoct() {
             </a>
           </div>
         </div>
-        <div className="flex gap-5 items-center">
-          <img
-            src="/images/Platform/windows-icon.svg"
-            className="w-5 h-5 invert"
-            alt=""
-          />
-          <img
-            src="/images/Platform/playstation.png"
-            className="w-5 h-7 invert"
-            alt=""
-          />
-          <img
-            src="/images/Platform/xbox.png"
-            className="w-5 h-5 invert"
-            alt=""
-          />
-        </div>
+        <ImagePlatform game={game} />
         <div className="flex justify-between w-full">
           <div className="flex items-center gap-10">
             <button className="btn font-medium px-10 bg-[#5850f57c] hover:bg-[#5850f598] text-white">
@@ -115,3 +74,70 @@ function Prodoct() {
 }
 
 export default Prodoct;
+
+function ImagePlatform({ game }) {
+  const img_platform = [
+    "/images/Platform/windows-icon.svg",
+    "/images/Platform/playstation.png",
+    "/images/Platform/xbox.png",
+    "/images/Platform/nintendo_switch.png",
+  ];
+  return (
+    <div className="flex gap-5 items-center">
+      {game.platform.map((p, index) => {
+        switch (p.toLowerCase()) {
+          case "pc": {
+            return (
+              <img
+                key={index}
+                src={img_platform[0]}
+                className="w-5 h-5 invert"
+                alt={p + "-platform  پلتفرم بازی"}
+              />
+            );
+          }
+          case "ps4": {
+            return (
+              <img
+                key={index}
+                src={img_platform[1]}
+                className="w-5 h-5 invert"
+                alt={p + "-platform  پلتفرم بازی"}
+              />
+            );
+          }
+          case "xboxSeries": {
+            return (
+              <img
+                key={index}
+                src={img_platform[2]}
+                className="w-5 h-5 invert"
+                alt={p + "-platform  پلتفرم بازی"}
+              />
+            );
+          }
+          case "nintendoSwitch": {
+            return (
+              <img
+                key={index}
+                src={img_platform[3]}
+                className="w-5 h-5 invert"
+                alt={p + "-platform  پلتفرم بازی"}
+              />
+            );
+          }
+        }
+        if (p.toLowerCase() === "pc") {
+          return (
+            <img
+              key={index}
+              src={img_platform[0]}
+              className="w-5 h-5 invert"
+              alt={p + "-platform  پلتفرم بازی"}
+            />
+          );
+        }
+      })}
+    </div>
+  );
+}

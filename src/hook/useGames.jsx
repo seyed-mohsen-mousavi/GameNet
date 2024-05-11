@@ -1,0 +1,77 @@
+function useGames() {
+  const games = [
+    {
+      id: 1,
+      subTitle: "سی اس گو 2",
+      desc: "بازی اول شخص و اکشن در گروه های پنچ نفره بازی اغاز شده و",
+      image_preview: "/images/csgo.jpg",
+      image_background: "/images/csgo/2.webp",
+      link: "csgo",
+      platform: ["pc"],
+      price: "Free",
+    },
+    {
+      id: 2,
+      subTitle: "کالاف دیوتی مدرن وافای",
+      desc: "بازی اول شخص و اکشن در گروه های پنچ نفره بازی اغاز شده و",
+      image_preview: "/images/callofduty_کالاف دیوتی.jpg",
+      image_background: "/images/callofduty/2.jpg",
+      link: "call-of-duty",
+      platform: ["pc", "ps4", "ps5", "xboxSeries"],
+      price: "69.99 $",
+    },
+    {
+      id: 3,
+      subTitle: "سایرپرانک",
+      desc: "بازی اول شخص و اکشن در گروه های پنچ نفره بازی اغاز شده و",
+      image_preview: "/images/Cyberpunk2077.jpg",
+      image_background: "/images/cyberpunk/1.jpg",
+      link: "cyberpunk2077",
+      platform: ["pc", "ps4", "ps5", "xboxSeries"],
+      price: "59 $",
+    },
+    {
+      id: 4,
+      subTitle: "FC - 24",
+      desc: " یک بازی ویدئویی شبیه‌سازی فوتبال است که توسط الکترونیک آرتس ونکوور و الکترونیک آرتز رومانی توسعه یافته و به‌وسیلهٔ ای‌ای اسپورتس منتشر شده است. این بازی اولین قسمت از سری ای‌ای اسپورتس اف سی است که در ۲۹ سپتامبر ۲۰۲۳ برابر با ۷ مهر ۱۴۰۲ به صورت رسمی ارایه شد .",
+      image_preview: "/images/fc24.jpg",
+      image_background: "/images/fc24_back.jpg",
+      link: "fc24",
+      platform: ["pc", "ps4", "ps5", "xboxSeries", "nintendoSwitch"],
+      price: "59 $",
+    },
+    {
+      id: 5,
+      subTitle: "جنون سرعت (حرارت)",
+      desc: "این بازی شامل رویداد مسابقه خیابانی با نام هورایزن است که در کلرادو رخ می‌دهد. گیم‌پلی این بازی در بخش‌های مختلفی مثل تعدد خودروها، فیزیک واقع‌گرایانه و گرافیک باکیفیت مشابه فورزا موتور اسپورت می باشد. سری بازی‌های فورزا با داشتن سبک‌ها نو و گرافیک و گیم پلی چالش برانگیز و جذاب علاقه‌مندان فراوانی به خود جذب کرده‌است. این سری بازی‌ها معمولاً هر ۲ سال یک بار روانه بازار می‌شوند و این نسخه یک Spin-off برای سری بازی‌ها فورزا است. در این نسخه بازی از روال‌های نسخه‌های قبلی خود فاصله گرفته و در مرزها جدیدی خوش درخشیده‌است.",
+      image_preview: "/images/need-for-speed-heat.jpg",
+      image_background: "/images/need-for-speed-heat_back.avif",
+      link: "need-for-speed_heat",
+      platform: ["pc", "ps4"],
+      price: "59 $",
+    },
+    {
+      id: 6,
+      subTitle: "فورتزا هورایزن",
+      desc: "این بازی شامل رویداد مسابقه خیابانی با نام هورایزن است که در کلرادو رخ می‌دهد. گیم‌پلی این بازی در بخش‌های مختلفی مثل تعدد خودروها، فیزیک واقع‌گرایانه و گرافیک باکیفیت مشابه فورزا موتور اسپورت می باشد. سری بازی‌های فورزا با داشتن سبک‌ها نو و گرافیک و گیم پلی چالش برانگیز و جذاب علاقه‌مندان فراوانی به خود جذب کرده‌است. این سری بازی‌ها معمولاً هر ۲ سال یک بار روانه بازار می‌شوند و این نسخه یک Spin-off برای سری بازی‌ها فورزا است. در این نسخه بازی از روال‌های نسخه‌های قبلی خود فاصله گرفته و در مرزها جدیدی خوش درخشیده‌است.",
+      image_preview: "/images/forza-horizon-6.jpg",
+      image_background: "/images/Forza6_back.webp",
+      link: "forza",
+      platform: ["pc", "xboxSeries"],
+      price: "59 $",
+    },
+    {
+      id: 7,
+      subTitle: "دو تا دو",
+      desc: "یک بازی ویدئویی در ژانر بازی آنلاین چندنفره (Multiplayer Online Battle Arena) به اصطلاح موبا است که برای پلت‌فرم‌های مایکروسافت ویندوز، مک‌اواس و لینوکس منتشر شده‌است. این بازی کامل شدهٔ نسخه پیشین آن یعنی دفاع از خانه باستانی است. واژه DotA خلاصه شده از Defense of the Ancients به معنی دفاع از ساختمان باستانی است؛ هر تیم که بتواند ساختمان دشمن یا ancient را از بین ببرد، برنده است. این بازی به صورت 5v5 بازی می‌شود و درجه سختی بالایی دارد",
+      image_preview: "/images/dota2.jpg",
+      image_background: "/images/dota2_back.jpg",
+      link: "dota2",
+      platform: ["pc"],
+      price: "رایگان",
+    },
+  ];
+  return games;
+}
+
+export default useGames;
