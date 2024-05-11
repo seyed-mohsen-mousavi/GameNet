@@ -1,6 +1,13 @@
-import { NavLink } from "react-router-dom";
+import useSearchSort from "../../hook/useSearchSort";
 
 function FillterCard() {
+  // hook
+  const [hanleFilterPlatform, searchParams] = useSearchSort(
+    "platform",
+    "categ"
+  );
+  const [hanleFilterCategories] = useSearchSort("categ", "platform");
+  // for price
   function separate(Number) {
     Number += "";
     Number = Number.replace(",", "");
@@ -11,54 +18,47 @@ function FillterCard() {
     while (rgx.test(y)) y = y.replace(rgx, "$1" + "," + "$2");
     return y + z;
   }
+  // sort
   const categories = [
     {
       id: 1,
       text: "اکشن",
-      val: "",
-      check: false,
+      val: "action",
     },
     {
       id: 2,
       text: "اکشن و ماجراجویی",
-      val: "",
-      check: false,
+      val: "actionAdventure",
     },
     {
       id: 3,
       text: "ماجراجویی",
-      val: "",
-      check: false,
+      val: "adventure",
     },
     {
       id: 4,
       text: "نقش آفرینی",
-      val: "",
-      check: false,
+      val: "rolePlay",
     },
     {
       id: 5,
       text: "استراتژی",
-      val: "",
-      check: false,
+      val: "strategy",
     },
     {
       id: 6,
       text: "ورزشی ",
-      val: "",
-      check: false,
+      val: "Sports",
     },
     {
       id: 7,
       text: "ترس و بقاء",
-      val: "",
-      check: false,
+      val: "Survival",
     },
     {
       id: 8,
       text: "ماشینی",
-      val: "",
-      check: false,
+      val: "card",
     },
   ];
   const platform = [
@@ -66,84 +66,64 @@ function FillterCard() {
       id: 1,
       title: "کامپیوتر",
       val: "pc",
-      check: false,
+      chek: false,
     },
     {
       id: 2,
       title: "پلی استیشن 5",
       val: "playstation5",
-      check: false,
+      chek: false,
     },
     {
       id: 3,
       title: "پلی استیشن 4",
       val: "playstation4",
-      check: false,
+      chek: false,
     },
     {
       id: 4,
       title: "ایکس باکس سری x",
       val: "xbox-series-x",
-      check: false,
+      chek: false,
     },
     {
       id: 5,
       title: "نیدنتندو سوییج",
       val: "nintendo-switch",
-      check: false,
+      chek: false,
     },
   ];
-  // const hanleFilter = (value, e) => {
-  //   let nowLocation = location.search;
-  //   const locationSearchParams = new URLSearchParams(nowLocation);
-
-  //   console.log(locationSearchParams.get("platform"));
-  // };
+  platform.map((p) => {
+    searchParams
+      .get("platform")
+      ?.split(",")
+      .forEach((s) => {
+        if (p.val === s) {
+          p.chek = !p.chek;
+        }
+      });
+  });
+  categories.map((p) => {
+    searchParams
+      .get("categ")
+      ?.split(",")
+      .forEach((s) => {
+        if (p.val === s) {
+          p.chek = !p.chek;
+        }
+      });
+  });
 
   return (
     <div>
       <div className="p-2 rounded-lg bg-white/5 backdrop-blur !sticky top-7 hidden lg:inline-block">
-        <h2 className="text-lg py-3 font-bold">دسته بندی</h2>
-        <ul className="flex flex-col gap-4 text-xs">
-          {categories.map((c) => (
-            <li className="text-gray-300" key={c.id}>
-              <label className="flex gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="checkbox checkbox-primary w-4 h-4 rounded-md"
-                />
-                {c.text}
-              </label>
-            </li>
-          ))}
-        </ul>
+        <h2 className="text-lg py-3 font-semibold">دسته بندی ( ژانر )</h2>
+        <Categorie
+          categories={categories}
+          hanleFilter={hanleFilterCategories}
+        />
         <h2 className="text-lg py-3 font-bold">پلتفرم</h2>
-        <ul className="flex flex-col gap-3 text-xs">
-          {platform.map((p) => (
-            <li className="text-gray-300" key={p.id}>
-              <label>
-                <NavLink
-                  to={`?platform=${p.val}`}
-                  className="flex gap-3 cursor-pointer"
-                >
-                  {p.val == "s" ? (
-                    <input
-                      defaultChecked
-                      type="checkbox"
-                      className="checkbox checkbox-primary w-4 h-4 rounded-md"
-                    />
-                  ) : (
-                    <input
-                      type="checkbox"
-                      className="checkbox checkbox-primary w-4 h-4 rounded-md"
-                    />
-                  )}
-                  {p.title}
-                </NavLink>
-              </label>
-            </li>
-          ))}
-        </ul>
+        <Platform hanleFilter={hanleFilterPlatform} platform={platform} />
         <h2 className="text-lg py-3 font-bold">قیمت</h2>
 
         <div className="w-full flex justify-center gap-2 items-center ">
@@ -189,12 +169,69 @@ function FillterCard() {
             </svg>
           </label>
         </div>
-        <button className="w-full mb-3 mt-6 text-center text-xs flex bg-gradient-to-r from-[#3b35b2] to-[#733cb3] pl-3 py-3 transition ease-in rounded-full shadow-[#733cb39c_0px_0px_5px] hover:brightness-90">
-          <span className="mx-auto "> اعمال فیلتر</span>
-        </button>
       </div>
     </div>
   );
 }
 
 export default FillterCard;
+
+function Platform({ platform, hanleFilter }) {
+  return (
+    <ul className="flex flex-col gap-3 text-xs">
+      {platform.map((p) => (
+        <li className="text-gray-300" key={p.id}>
+          <label>
+            <div
+              to={`?platform=${p.val}`}
+              className="flex gap-3 cursor-pointer"
+            >
+              {p.chek ? (
+                <input
+                  defaultChecked
+                  type="checkbox"
+                  onChange={(e) => hanleFilter(p.val, e)}
+                  className="checkbox checkbox-primary w-4 h-4 rounded-md"
+                />
+              ) : (
+                <input
+                  type="checkbox"
+                  onChange={(e) => hanleFilter(p.val, e)}
+                  className="checkbox checkbox-primary w-4 h-4 rounded-md"
+                />
+              )}
+              {p.title}
+            </div>
+          </label>
+        </li>
+      ))}
+    </ul>
+  );
+}
+function Categorie({ categories, hanleFilter }) {
+  return (
+    <ul className="flex flex-col gap-4 text-xs">
+      {categories.map((c) => (
+        <li className="text-gray-300" key={c.id}>
+          <label className="flex gap-3 cursor-pointer">
+            {c.chek ? (
+              <input
+                defaultChecked
+                type="checkbox"
+                onChange={(e) => hanleFilter(c.val, e)}
+                className="checkbox checkbox-primary w-4 h-4 rounded-md"
+              />
+            ) : (
+              <input
+                type="checkbox"
+                onChange={(e) => hanleFilter(c.val, e)}
+                className="checkbox checkbox-primary w-4 h-4 rounded-md"
+              />
+            )}
+            {c.text}
+          </label>
+        </li>
+      ))}
+    </ul>
+  );
+}

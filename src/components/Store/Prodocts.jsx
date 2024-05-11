@@ -53,7 +53,9 @@ function Prodocts() {
               >
                 Buy Now
               </Link>
-              <p className="text-center -pl-2 pt-1 text-lg font-bold">{g.price}</p>
+              <p className="text-center -pl-2 pt-1 text-lg font-bold">
+                {g.price}
+              </p>
             </div>
           </div>
         </div>
