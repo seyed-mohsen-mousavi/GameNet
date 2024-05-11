@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function MainHeader({ cards }) {
   return (
@@ -57,7 +58,7 @@ function GameCardSlider({ cards }) {
     >
       {cards.map((card) => (
         <SwiperSlide key={card.id}>
-          <div className="felx flex-col w-full bg-white/10 backdrop-blur-lg rounded-lg p-3 ">
+          <div className="felx flex-col w-full bg-white/10 backdrop-blur-lg rounded-lg p-3 animate-fade-right">
             <a href="#">
               <img
                 className="rounded-md h-36 md:h-52 aspect-video object-cover"
@@ -94,7 +95,12 @@ function GameCardSlider({ cards }) {
 
 function GameTexts() {
   return (
-    <div className="w-full flex flex-col gap-7 font-Peyda">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="w-full flex flex-col gap-7 font-Peyda"
+    >
       <h1 className="text-4xl font-bold xl:w-3/4 line-clamp-2 first-letter:text-lg leading-snug">
         تماشای بازی و و دیدن بروز ترین اخبار بازی ها فقط تو{" "}
         <span className="bg-gradient-to-r from-[#655fd8] to-[#8856c0] bg-clip-text text-transparent font-extrabold ">
@@ -109,7 +115,10 @@ function GameTexts() {
         <button className=" text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
           بریم برای شروع
         </button>
-        <Link to="/register" className="text-xs hidden sm:inline-block  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 ">
+        <Link
+          to="/register"
+          className="text-xs hidden sm:inline-block  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 "
+        >
           ثبت نام
         </Link>
       </div>
@@ -135,6 +144,6 @@ function GameTexts() {
           بیش از 1000 سازنده بازی در ایران گیم نت ...
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }

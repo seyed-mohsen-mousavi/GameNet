@@ -18,8 +18,9 @@ export default {
         Peyda: ["Peyda"],
         PeydaLight: ["Peyda-light"],
         PeydaBlack: ["Peyda-black"],
+        PeydaMed: ["Peyda-med"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated"), require("daisyui")],
 };

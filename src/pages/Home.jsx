@@ -1,9 +1,9 @@
-import MainApplication from "../components/MainApplication";
-import MainTopProducers from "../components/MainTopProducers";
-import MainHeader from "../components/MainHeader";
-import MainPopular from "../components/MainSlider";
-import MainFaqs from "../components/MainFaqs";
-import MainAbout from "../components/MainAbout";
+import MainApplication from "../components/Home/MainApplication";
+import MainTopProducers from "../components/Home/MainTopProducers";
+import MainHeader from "../components/Home/MainHeader";
+import MainPopular from "../components/Home/MainSlider";
+import MainFaqs from "../components/Home/MainFaqs";
+import MainAbout from "../components/Home/MainAbout";
 
 
 function Main() {

@@ -1,10 +1,6 @@
-
 function Games() {
-  return (
-    <div>
-      بازی ها
-    </div>
-  )
+
+  return <div></div>;
 }
 
-export default Games
+export default Games;
