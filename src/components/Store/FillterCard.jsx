@@ -58,7 +58,7 @@ function FillterCard() {
     {
       id: 8,
       text: "ماشینی",
-      val: "card",
+      val: "car",
     },
   ];
   const platform = [

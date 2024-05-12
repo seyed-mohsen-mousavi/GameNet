@@ -106,7 +106,7 @@ function ImagePlatform({ game }) {
               />
             );
           }
-          case "xboxSeries": {
+          case "xboxseries": {
             return (
               <img
                 key={index}
@@ -116,7 +116,7 @@ function ImagePlatform({ game }) {
               />
             );
           }
-          case "nintendoSwitch": {
+          case "nintendoswitch": {
             return (
               <img
                 key={index}
@@ -126,16 +126,8 @@ function ImagePlatform({ game }) {
               />
             );
           }
-        }
-        if (p.toLowerCase() === "pc") {
-          return (
-            <img
-              key={index}
-              src={img_platform[0]}
-              className="w-5 h-5 invert"
-              alt={p + "-platform  پلتفرم بازی"}
-            />
-          );
+          default:
+            return;
         }
       })}
     </div>

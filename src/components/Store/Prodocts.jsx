@@ -1,10 +1,32 @@
 import { Link, useSearchParams } from "react-router-dom";
 import useGames from "../../hook/useGames";
+import { useState } from "react";
 
 function Prodocts() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const games = useGames();
-  console.log(searchParams);
+  const [searchParams] = useSearchParams();
+  let games = useGames();
+  let deduped = [];
+  if (searchParams.get("platform")) {
+    const searchp = searchParams.get("platform").split(",");
+    //
+    let searchFilter = [];
+    searchp.map((f) => {
+      games.map((g) => {
+        g.platform.map((gp) => {
+          console.log(f, gp);
+          if (gp.toLowerCase() === f.toLowerCase()) {
+            searchFilter = [...searchFilter, g];
+          }
+        });
+      });
+    });
+    console.log(searchFilter);
+    //
+    deduped = searchFilter.filter(function (el, i, arr) {
+      return arr.indexOf(el) === i;
+    });
+    games = deduped;
+  }
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
       {games.map((g) => (
