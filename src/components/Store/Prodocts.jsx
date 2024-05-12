@@ -1,32 +1,51 @@
 import { Link, useSearchParams } from "react-router-dom";
 import useGames from "../../hook/useGames";
-import { useState } from "react";
 
 function Prodocts() {
   const [searchParams] = useSearchParams();
   let games = useGames();
   let deduped = [];
-  if (searchParams.get("platform")) {
-    const searchp = searchParams.get("platform").split(",");
-    //
-    let searchFilter = [];
-    searchp.map((f) => {
-      games.map((g) => {
-        g.platform.map((gp) => {
-          console.log(f, gp);
-          if (gp.toLowerCase() === f.toLowerCase()) {
+  const filterPlatform = () => {
+    // platform filter
+    if (searchParams.get("platform")) {
+      const searchp = searchParams.get("platform").split(",");
+      //
+      let searchFilter = [];
+      searchp.map((f) => {
+        games.map((g) => {
+          g.platform.map((gp) => {
+            if (gp.toLowerCase() === f.toLowerCase()) {
+              searchFilter = [...searchFilter, g];
+            }
+          });
+        });
+      });
+      //
+      deduped = searchFilter.filter(function (el, i, arr) {
+        return arr.indexOf(el) === i;
+      });
+      games = deduped;
+    }
+    // category filter
+    if (searchParams.get("categ")) {
+      const searchc = searchParams.get("categ").split(",");
+      //
+      let searchFilter = [];
+      searchc.map((f) => {
+        games.map((g) => {
+          if (g.category === f) {
             searchFilter = [...searchFilter, g];
           }
         });
       });
-    });
-    console.log(searchFilter);
-    //
-    deduped = searchFilter.filter(function (el, i, arr) {
-      return arr.indexOf(el) === i;
-    });
-    games = deduped;
-  }
+      //
+      deduped = searchFilter.filter(function (el, i, arr) {
+        return arr.indexOf(el) === i;
+      });
+      games = deduped;
+    }
+  };
+  filterPlatform();
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
       {games.map((g) => (
