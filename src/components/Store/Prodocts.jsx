@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import useGames from "../../hook/useGames";
+import { BookmarkIcon, HeartIcon } from "@heroicons/react/24/outline";
 
 function Prodocts() {
   const [searchParams] = useSearchParams();
@@ -46,14 +47,14 @@ function Prodocts() {
     }
   };
   filterPlatform();
-  return (
+  return games.length > 0 ? (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
       {games.map((g) => (
         <div
           className="card w-72 bg-white/5 backdrop-blur shadow-xl"
           key={g.id}
         >
-          <figure className="p-3">
+          <figure className="relative p-3">
             <Link to={g.link} className="w-full h-44">
               <img
                 src={g.image_preview}
@@ -61,9 +62,25 @@ function Prodocts() {
                 className=" object-cover w-full h-full rounded-2xl"
               />
             </Link>
+            <div className="flex absolute left-5 bottom-0  gap-5">
+              <button
+                title={g.like}
+                className="group bg-gray-800 p-1.5 shadow rounded-full text-red-500 transition-all ease-linear"
+              >
+                <HeartIcon className="w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear" />
+              </button>
+              <button
+                title={g.save}
+                className="group bg-gray-800 p-1.5 shadow rounded-full text-gray-500 transition-all ease-linear"
+              >
+                <BookmarkIcon className="w-5 h-5 group-hover:fill-gray-400/30 transition-all ease-linear" />
+              </button>
+            </div>
           </figure>
           <div className="card-body px-4 py-2 gap-5">
-            <h2 className="card-title">{g.subTitle}</h2>
+            <div className="flex justify-between pl-4">
+              <h2 className="card-title">{g.subTitle}</h2>
+            </div>
             <p className="text-gray-400 line-clamp-1 text-sm">{g.desc}</p>
             <div className="card-actions  flex items-center flex-nowrap justify-between text-[#9f9af5]">
               <Link
@@ -80,6 +97,8 @@ function Prodocts() {
         </div>
       ))}
     </div>
+  ) : (
+    <p> چیزی پیدا نشد </p>
   );
 }
 

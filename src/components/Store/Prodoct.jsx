@@ -24,11 +24,13 @@ function Prodoct() {
         <div className="flex justify-between items-center">
           <span className="text-gray-500">2024,11,03</span>
           <div className="flex  gap-5">
-            <button className="group text-red-500 transition-all ease-linear">
-              <HeartIcon className="w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear" />
+            <button className=" text-red-500 text-sm flex gap-1 items-center bg-red-500/30 hover:bg-red-500/50 transition-colors ease-linear p-1 rounded">
+              <p className="mt-1">{game.like}</p>
+              <HeartIcon className="w-5 h-5" />
             </button>
-            <button className="group text-gray-500 transition-all ease-linear">
-              <BookmarkIcon className="w-5 h-5 group-hover:fill-gray-400/30 transition-all ease-linear" />
+            <button className=" text-gray-500 text-sm flex gap-1 items-center bg-gray-500/30 hover:bg-gray-500/50 transition-colors ease-linear p-1 rounded">
+              <p className="mt-1">{game.save}</p>
+              <BookmarkIcon className="w-5 h-5" />
             </button>
           </div>
         </div>

@@ -72,7 +72,7 @@ function NavLinks() {
           className={`text-gray-500 aria-[current=page]:text-white`}
           to="/blog"
         >
-          مقالات{" "}
+          اخبار{" "}
         </NavLink>
       </li>
       <li>
@@ -151,7 +151,7 @@ function Aside({ isOpen, setIsOpen }) {
                 to="/blog"
               >
                 <BookOpenIcon className="inline-block h-5 w-5 " />
-                مقالات
+                اخبار
               </NavLink>
             </li>
             <li className="flex">
