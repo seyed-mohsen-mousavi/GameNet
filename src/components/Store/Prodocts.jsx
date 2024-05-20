@@ -48,10 +48,10 @@ function Prodocts() {
   };
   filterPlatform();
   return games.length > 0 ? (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 justify-items-center">
       {games.map((g) => (
         <div
-          className="card w-72 bg-white/5 backdrop-blur shadow-xl"
+          className="card w-full sm:w-72  bg-white/5 backdrop-blur shadow-xl"
           key={g.id}
         >
           <figure className="relative p-3">

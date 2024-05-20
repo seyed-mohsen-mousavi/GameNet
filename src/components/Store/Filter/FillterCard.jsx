@@ -1,13 +1,11 @@
-import useSearchSort from "../../hook/useSearchSort";
-
+import useSearchSort from "../../../hook/useSearchSort";
+import { platform, categories } from "../../../../data/sortData";
+import Platform from "./Platform";
+import Categorie from "./Categorie";
 function FillterCard() {
   // hook
-  const [hanleFilterPlatform, searchParams] = useSearchSort(
-    "platform",
-    "categ"
-  );
+  const [hanleFilterPlatform] = useSearchSort("platform", "categ");
   const [hanleFilterCategories] = useSearchSort("categ", "platform");
-  // for price
   function separate(Number) {
     Number += "";
     Number = Number.replace(",", "");
@@ -18,104 +16,8 @@ function FillterCard() {
     while (rgx.test(y)) y = y.replace(rgx, "$1" + "," + "$2");
     return y + z;
   }
-  // sort
-  const categories = [
-    {
-      id: 1,
-      text: "اکشن",
-      val: "action",
-    },
-    {
-      id: 2,
-      text: "اکشن و ماجراجویی",
-      val: "actionAdventure",
-    },
-    {
-      id: 3,
-      text: "ماجراجویی",
-      val: "adventure",
-    },
-    {
-      id: 4,
-      text: "نقش آفرینی",
-      val: "rolePlay",
-    },
-    {
-      id: 5,
-      text: "استراتژی",
-      val: "strategy",
-    },
-    {
-      id: 6,
-      text: "ورزشی ",
-      val: "Sports",
-    },
-    {
-      id: 7,
-      text: "ترس و بقاء",
-      val: "Survival",
-    },
-    {
-      id: 8,
-      text: "ماشینی",
-      val: "car",
-    },
-  ];
-  const platform = [
-    {
-      id: 1,
-      title: "کامپیوتر",
-      val: "pc",
-      chek: false,
-    },
-    {
-      id: 2,
-      title: "پلی استیشن 5",
-      val: "PS5",
-      chek: false,
-    },
-    {
-      id: 3,
-      title: "پلی استیشن 4",
-      val: "PS4",
-      chek: false,
-    },
-    {
-      id: 4,
-      title: "ایکس باکس سری x و s",
-      val: "xboxSeries",
-      chek: false,
-    },
-    {
-      id: 5,
-      title: "نیدنتندو سوییج",
-      val: "nintendoSwitch",
-      chek: false,
-    },
-  ];
-  platform.map((p) => {
-    searchParams
-      .get("platform")
-      ?.split(",")
-      .forEach((s) => {
-        if (p.val === s) {
-          p.chek = !p.chek;
-        }
-      });
-  });
-  categories.map((p) => {
-    searchParams
-      .get("categ")
-      ?.split(",")
-      .forEach((s) => {
-        if (p.val === s) {
-          p.chek = !p.chek;
-        }
-      });
-  });
-
   return (
-    <div>
+    <div className="">
       <div className="p-2 rounded-lg bg-white/5 backdrop-blur !sticky top-7 hidden lg:inline-block transition-all ease-linear animate-fade">
         <h2 className="text-lg py-3 font-semibold">دسته بندی ( ژانر )</h2>
         <Categorie
@@ -175,60 +77,3 @@ function FillterCard() {
 }
 
 export default FillterCard;
-
-function Platform({ platform, hanleFilter }) {
-  return (
-    <ul className="flex flex-col gap-3 text-xs">
-      {platform.map((p) => (
-        <li className="text-gray-300" key={p.id}>
-          <label>
-            <div className="flex gap-3 cursor-pointer">
-              {p.chek ? (
-                <input
-                  defaultChecked
-                  type="checkbox"
-                  onChange={(e) => hanleFilter(p.val, e)}
-                  className="checkbox checkbox-primary w-4 h-4 rounded-md"
-                />
-              ) : (
-                <input
-                  type="checkbox"
-                  onChange={(e) => hanleFilter(p.val, e)}
-                  className="checkbox checkbox-primary w-4 h-4 rounded-md"
-                />
-              )}
-              {p.title}
-            </div>
-          </label>
-        </li>
-      ))}
-    </ul>
-  );
-}
-function Categorie({ categories, hanleFilter }) {
-  return (
-    <ul className="flex flex-col gap-4 text-xs">
-      {categories.map((c) => (
-        <li className="text-gray-300" key={c.id}>
-          <label className="flex gap-3 cursor-pointer">
-            {c.chek ? (
-              <input
-                defaultChecked
-                type="checkbox"
-                onChange={(e) => hanleFilter(c.val, e)}
-                className="checkbox checkbox-primary w-4 h-4 rounded-md"
-              />
-            ) : (
-              <input
-                type="checkbox"
-                onChange={(e) => hanleFilter(c.val, e)}
-                className="checkbox checkbox-primary w-4 h-4 rounded-md"
-              />
-            )}
-            {c.text}
-          </label>
-        </li>
-      ))}
-    </ul>
-  );
-}

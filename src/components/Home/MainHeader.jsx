@@ -61,19 +61,19 @@ function GameCardSlider({ cards }) {
           <div className="felx flex-col w-full bg-white/10 backdrop-blur-lg rounded-lg p-3 animate-fade-right">
             <a href="#">
               <img
-                className="rounded-md h-36 md:h-52 aspect-video object-cover"
+                className="rounded-md h-32 sm:h-44 md:h-52 aspect-video object-cover"
                 src={card.image}
                 alt=""
               />
             </a>
             <div className="flex flex-col gap-3 pt-2 ">
-              <a href="#" className="text-sm line-clamp-1">
+              <a href="#" className="text-xs sm:text-sm line-clamp-1">
                 {card.title}
               </a>
-              <div className="flex justify-between text-[11px] text-gray-200 ">
+              <div className="flex justify-between text-[10px] sm:text-[11px] text-gray-200 ">
                 <span className="flex items-center gap-1">
                   {card.view}
-                  <EyeIcon className="w-4 h-4" />
+                  <EyeIcon className="w-3 sm:w-4" />
                 </span>
                 <div className="flex items-center gap-1">
                   {card.creatorName}

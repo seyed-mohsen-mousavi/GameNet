@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 
 function useSearchSort(key, key2) {
   const [searchParam, setSearchParam] = useSearchParams();
-  const value = (value, e) => {
+  function value(value, e) {
     if (e.target.checked) {
       if (searchParam.get(key)) {
         if (searchParam.get(key2)) {
@@ -41,9 +41,9 @@ function useSearchSort(key, key2) {
         }
       }
     }
-  };
+  }
 
-  return [value, searchParam];
+  return [value];
 }
 
 export default useSearchSort;
