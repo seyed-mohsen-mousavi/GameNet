@@ -12,30 +12,30 @@ function Prodoct() {
   const { id } = useParams();
   const game = games.find((g) => g.link === id);
   return (
-    <div className="flex h-full my-24 gap-8 justify-center relative">
-      <div className="w-[29rem] h-full bg-white/5 backdrop-blur p-5 rounded-sm">
+    <div className="flex h-full my-24 gap-8 justify-center flex-col lg:flex-row items-center lg:items-stretch relative px-5">
+      <div className="lg:w-[29rem] h-full bg-white/5 backdrop-blur p-5 rounded-sm">
         <img
           src={game.image_background}
           alt={game.subTitle + "-images"}
-          className="w-full object-cover h-[28rem] rounded-sm"
+          className="w-full object-cover h-[18rem] sm:h-[28rem] rounded-sm"
         />
       </div>
-      <div className="flex flex-col gap-2 w-1/2 justify-around">
+      <div className="flex flex-col gap-4 lg:gap-2 lg:w-1/2 justify-around">
         <div className="flex justify-between items-center">
           <span className="text-gray-500">2024,11,03</span>
           <div className="flex  gap-5">
-            <button className=" text-red-500 text-sm flex gap-1 items-center bg-red-500/30 hover:bg-red-500/50 transition-colors ease-linear p-1 rounded">
+            <button className=" text-red-500 text-sm flex gap-1 items-center bg-red-500/30 hover:bg-red-500/50 transition-colors ease-linear px-2 py-1 rounded">
               <p className="mt-1">{game.like}</p>
               <HeartIcon className="w-5 h-5" />
             </button>
-            <button className=" text-gray-500 text-sm flex gap-1 items-center bg-gray-500/30 hover:bg-gray-500/50 transition-colors ease-linear p-1 rounded">
+            <button className=" text-gray-500 text-sm flex gap-1 items-center bg-gray-500/30 hover:bg-gray-500/50 transition-colors ease-linear px-2 py-1 rounded">
               <p className="mt-1">{game.save}</p>
               <BookmarkIcon className="w-5 h-5" />
             </button>
           </div>
         </div>
         <h1 className="text-3xl font-Peyda font-semibold">{game.subTitle}</h1>
-        <p className="w-9/12 text-gray-200">{game.desc}</p>
+        <p className="lg:w-9/12 text-gray-200">{game.desc}</p>
         <div className="flex gap-1 items-center ">
           <img
             src="/images/csgo.jpg"
@@ -54,12 +54,12 @@ function Prodoct() {
           </div>
         </div>
         <ImagePlatform game={game} />
-        <div className="flex justify-between w-full">
-          <div className="flex items-center gap-10">
-            <button className="btn font-medium px-10 bg-[#5850f57c] hover:bg-[#5850f598] text-white">
+        <div className="flex justify-between w-full items-end">
+          <div className="flex items-center gap-5 lg:gap-10">
+            <button className="btn font-medium lg:px-10 bg-[#5850f57c] hover:bg-[#5850f598] text-white">
               دیدن بازی در استیم
             </button>
-            <p className="font-bold text-lg"> {game.price} </p>
+            <p className="text-sm font-PeydaBlack sm:text-lg pt-2"> {game.price} </p>
           </div>
           <div className="flex gap-3 items-end">
             <button className="px-4 py-2 bg-[#5850f57c] hover:bg-[#5850f598] rounded transition ease-linear">

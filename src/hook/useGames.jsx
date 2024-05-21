@@ -11,7 +11,7 @@ function useGames() {
       save: 545,
       platform: ["pc"],
       category: "action",
-      price: "Free",
+      price: "0",
     },
     {
       id: 2,
@@ -89,7 +89,7 @@ function useGames() {
       save: 25,
       platform: ["pc"],
       category: "strategy",
-      price: "رایگان",
+      price: "0",
     },
     {
       id: 8,

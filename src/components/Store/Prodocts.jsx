@@ -65,13 +65,13 @@ function Prodocts() {
             <div className="flex absolute left-5 bottom-0  gap-5">
               <button
                 title={g.like}
-                className="group bg-gray-800 p-1.5 shadow rounded-full text-red-500 transition-all ease-linear"
+                className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-red-500 transition-all ease-linear"
               >
                 <HeartIcon className="w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear" />
               </button>
               <button
                 title={g.save}
-                className="group bg-gray-800 p-1.5 shadow rounded-full text-gray-500 transition-all ease-linear"
+                className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-gray-400 transition-all ease-linear"
               >
                 <BookmarkIcon className="w-5 h-5 group-hover:fill-gray-400/30 transition-all ease-linear" />
               </button>
@@ -90,7 +90,7 @@ function Prodocts() {
                 ادامه مطلب
               </Link>
               <p className="text-center -pl-2 pt-1 text-lg font-bold">
-                {g.price}
+                {+g.price === 0  ? 'رایگان' : g.price}
               </p>
             </div>
           </div>

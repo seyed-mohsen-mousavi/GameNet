@@ -38,7 +38,7 @@ function Navbar() {
       <Aside isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
         onClick={() => setIsOpen(false)}
-        className={`fixed inset-0 z-10 transition-all duration-300 bg-black/30 dark:bg-black/70  ${
+        className={`fixed inset-0 z-[35] transition-all duration-300 bg-black/30 dark:bg-black/70  ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       ></div>
@@ -109,7 +109,7 @@ function NavLinks() {
 function Aside({ isOpen, setIsOpen }) {
   return (
     <aside
-      className={`fixed bottom-0 right-0 top-0 z-20 flex flex-col justify-between sm:hidden w-3/4 overflow-auto bg-[#2a2a38]  p-4 transition-all duration-300 dark:bg-cnDarkBlue-20 mq500:w-1/2 visible ${
+      className={`fixed bottom-0 right-0 top-0 z-40 flex flex-col justify-between sm:hidden w-3/4 overflow-auto bg-[#2a2a38]  p-4 transition-all duration-300 dark:bg-cnDarkBlue-20 mq500:w-1/2 visible ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >

@@ -1,80 +1,104 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { platform, categories } from "../../../../data/sortData";
-import useSearchSort from "../../../hook/useSearchSort";
 import Categorie from "./Categorie";
 import Platform from "./Platform";
+import "animate.css";
 import { AdjustmentsVerticalIcon } from "@heroicons/react/16/solid";
+import { useStoreContext } from "../../context/StoreProvider";
 function FillterCardMobile() {
+  const { hanleFilterCategories, hanleFilterPlatform } = useStoreContext();
   const [isOpenPlatform, setIsOpenPlatform] = useState(false);
   const [isOpenCategory, setIsOpenCategory] = useState(false);
-  const [hanleFilterPlatform] = useSearchSort("platform", "categ");
-  const [hanleFilterCategories] = useSearchSort("categ", "platform");
-  const [width, setWidth] = useState(0);
-  console.log(width);
-  //   // for price
-  //   function separate(Number) {
-  //     Number += "";
-  //     Number = Number.replace(",", "");
-  //     let x = Number.split(".");
-  //     let y = x[0];
-  //     let z = x.length > 1 ? "." + x[1] : "";
-  //     let rgx = /(\d+)(\d{3})/;
-  //     while (rgx.test(y)) y = y.replace(rgx, "$1" + "," + "$2");
-  //     return y + z;
-  //   }
+  const [widthC, setWidthC] = useState(0);
+  const [widthP, setWidthP] = useState(0);
   // check
+  const hanleOpen = (setWidth, setOpen) => {
+    setOpen(true);
+    let width = 0;
+    const id = setInterval(() => {
+      if (width === 100) {
+        clearInterval(id);
+      } else {
+        width++;
+        setWidth(width);
+      }
+    }, 4);
+  };
+  const hanleClose = (setWidth, setOpen) => {
+    setOpen(false);
+    let width = 100;
+    const id = setInterval(() => {
+      if (width === 0) {
+        clearInterval(id);
+      } else {
+        width--;
+        setWidth(width);
+      }
+    }, 5);
+  };
   return (
     <div>
       <div className="flex gap-x-4  lg:hidden mb-8">
         <div
-          className="fixed left-0 w-full h-full top-0 bg-gray-800 z-20 bg-opacity-40"
-          style={{ display: isOpenCategory ? "block" : "none" }}
-          onClick={() => setIsOpenCategory(false)}
+          className={`fixed left-0 w-full h-full top-0 bg-black z-20 bg-opacity-40 transition-all ease-linear duration-1000 ${
+            isOpenCategory ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          onClick={() => hanleClose(setWidthC, setIsOpenCategory)}
         ></div>
         <button
-          onClick={() => {
-            setIsOpenCategory(true);
-            let width = 0;
-            const id = setInterval(() => {
-              if (width === 100) {
-                clearInterval(id);
-              } else {
-                width++;
-                setWidth(width);
-              }
-            }, 5);
-          }}
+          onClick={() => hanleOpen(setWidthC, setIsOpenCategory)}
           className="btn btn-outline btn-primary flex py-2 justify-center items-center flex-1"
         >
-          <AdjustmentsVerticalIcon className="w-5 h-5  ml-2 text-white" />
-          <span className="text-white font-normal">فیلتر بر اساس ژانر</span>
+          <AdjustmentsVerticalIcon className="sm:w-5 w-4  text-white" />
+          <span className="text-white font-normal text-xs sm:text-base">
+            فیلتر بر اساس ژانر
+          </span>
         </button>
+        <div
+          className={`fixed left-0 w-full h-full top-0 bg-black z-20 bg-opacity-40 transition-all ease-linear duration-1000 ${
+            isOpenPlatform ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          onClick={() => hanleClose(setWidthP, setIsOpenPlatform)}
+        ></div>
         <button
-          onClick={() => setIsOpenPlatform(true)}
+          onClick={() => hanleOpen(setWidthP, setIsOpenPlatform)}
           className="btn btn-outline btn-primary flex py-2 justify-center items-center border flex-1 text-white"
         >
-          <AdjustmentsVerticalIcon className="w-5 h-5  ml-2 text-white" />
-          <span className="text-white font-normal">فیلتر بر اساس پلتفرم</span>
+          <AdjustmentsVerticalIcon className="sm:w-5 w-4  text-white" />
+          <span className="text-white font-normal text-xs sm:text-base">
+            فیلتر بر اساس پلتفرم
+          </span>
         </button>
       </div>
       <div className="lg:hidden ">
         <div
-          className={`fixed z-50 ${
-            isOpenPlatform ? "block" : "hidden"
-          } bottom-0 left-0 right-0  shadow p-5 bg-gray-700 max-w-full rounded-t-3xl overflow-y-auto`}
+          style={{ maxHeight: widthP + "vh", opacity: widthP === 0 ? 0 : 1 }}
+          className={`fixed z-30  bottom-0 left-0 right-0  shadow p-5 bg-gray-700 max-w-full rounded-t-3xl overflow-hidden`}
         >
-          <h2 className="pb-2 text-lg">فیلتر بر اساس پلتفرم </h2>
+          <h2
+            className={`pb-2 text-lg animate__animated  ${
+              isOpenPlatform ? "animate__flipInX" : "animate__flipOutX"
+            }`}
+          >
+            فیلتر بر اساس پلتفرم{" "}
+          </h2>
           <hr className="py-2" />
           <Platform platform={platform} hanleFilter={hanleFilterPlatform} />
         </div>
       </div>
       <div className="lg:hidden">
         <div
-          style={{ maxHeight: width + "vh" }}
-          className="fixed z-50 bottom-0 left-0 right-0  shadow p-5 bg-gray-700 max-w-full rounded-t-3xl"
+          style={{ maxHeight: widthC + "vh", opacity: widthC === 0 ? 0 : 1 }}
+          className="fixed z-30 bottom-0 left-0 right-0  shadow p-5 bg-gray-700 max-w-full rounded-t-3xl overflow-hidden"
         >
-          <div>
-            <h2 className="pb-2 text-lg">فیلتر بر اساس ژانر </h2>
+          <div className={` ${isOpenCategory ? "" : ""}`}>
+            <h2
+              className={`pb-2 text-lg animate__animated  ${
+                isOpenCategory ? "animate__flipInX" : "animate__flipOutX"
+              }`}
+            >
+              فیلتر بر اساس ژانر{" "}
+            </h2>
             <hr className="py-2 " />
             <Categorie
               categories={categories}

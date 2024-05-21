@@ -1,4 +1,3 @@
-
 export const categories = [
   {
     id: 1,
@@ -46,31 +45,25 @@ export const platform = [
     id: 1,
     title: "کامپیوتر",
     val: "pc",
-    chek: false,
   },
   {
     id: 2,
     title: "پلی استیشن 5",
     val: "PS5",
-    chek: false,
   },
   {
     id: 3,
     title: "پلی استیشن 4",
     val: "PS4",
-    chek: false,
   },
   {
     id: 4,
     title: "ایکس باکس سری x و s",
     val: "xboxSeries",
-    chek: false,
   },
   {
     id: 5,
     title: "نیدنتندو سوییج",
     val: "nintendoSwitch",
-    chek: false,
   },
 ];
-
