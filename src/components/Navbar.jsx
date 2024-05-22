@@ -1,5 +1,4 @@
 import {
-  Bars3Icon,
   BookOpenIcon,
   BuildingStorefrontIcon,
   HomeIcon,
@@ -7,6 +6,7 @@ import {
   PuzzlePieceIcon,
   VideoCameraIcon,
   XMarkIcon,
+  PencilIcon
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
@@ -25,7 +25,10 @@ function Navbar() {
       <h2 className="bg-gradient-to-r from-[#3b35b2] to-[#733cb3] bg-clip-text text-transparent font-bold text-lg">
         ایران گیم نت
       </h2>
-      <button className="flex sm:hidden hover:bg-white/10 active:bg-white/10 rounded-full p-2 transition-colors ease-linear" onClick={() => setIsOpen(true)}>
+      <button
+        className="flex sm:hidden hover:bg-white/10 active:bg-white/10 rounded-full p-2 transition-colors ease-linear"
+        onClick={() => setIsOpen(true)}
+      >
         <svg
           stroke="currentColor"
           fill="none"
@@ -86,7 +89,7 @@ function NavLinks() {
       <li>
         <NavLink
           className={`text-gray-500 aria-[current=page]:text-white`}
-          to="/blog"
+          to="/news"
         >
           اخبار{" "}
         </NavLink>
@@ -125,14 +128,14 @@ function NavLinks() {
 function Aside({ isOpen, setIsOpen }) {
   return (
     <aside
-      className={`fixed bottom-0 right-0 top-0 z-40 flex flex-col justify-between sm:hidden w-3/4 overflow-auto bg-[#2a2a38]  p-4 transition-all duration-300 dark:bg-cnDarkBlue-20 mq500:w-1/2 visible ${
+      className={`fixed bottom-0 right-0 top-0 z-40 flex flex-col justify-between sm:hidden w-60 overflow-auto bg-[#27273db4] backdrop-blur-xl  p-4 transition-all duration-300 dark:bg-cnDarkBlue-20 mq500:w-1/2 visible ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
       <div>
         <section className="flex items-center justify-between py-5">
           <Link className="flex cursor-pointer" to="/">
-            <h2 className="bg-gradient-to-l from-[#FFF] to-[#757579] bg-clip-text text-transparent font-bold text-2xl">
+            <h2 className="bg-gradient-to-l from-[#FFF] to-[#757579] bg-clip-text text-transparent font-bold text-xl">
               ایران گیم نت | IGN
             </h2>
           </Link>
@@ -141,20 +144,23 @@ function Aside({ isOpen, setIsOpen }) {
             className="h-7 w-7 transition-colors text-gray-300"
           />
         </section>
+        <hr />
         <nav className="pt-7">
-          <ul className="flex w-full flex-col justify-center gap-8 text-base  xl:text-lg">
+          <ul className="flex w-full flex-col justify-center gap-4 text-base  xl:text-lg pl-10">
             <li className="flex">
               <NavLink
-                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2  "
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-4 transition-all ease-linear shadow-[#67d0e3] aria-[current=page]:border aria-[current=page]:border-[#67d0e3] aria-[current=page]:text-[#67d0e3] py-2 rounded-xl w-full  pr-2 text-sm"
                 to="/"
               >
                 <HomeIcon className="inline-block h-5 w-5 " />
-                <span className="pt-1">خانه</span>
+                خانه
               </NavLink>
             </li>
             <li className="flex">
               <NavLink
-                className=" flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                onClick={() => setIsOpen(false)}
+                className=" flex items-center gap-4 transition-all ease-linear aria-[current=page]:border aria-[current=page]:border-[#67e390] aria-[current=page]:text-[#67e390] py-2 rounded-xl w-full  pr-2 text-sm"
                 to="/store"
               >
                 <BuildingStorefrontIcon className="inline-block h-5 w-5 " />
@@ -163,8 +169,9 @@ function Aside({ isOpen, setIsOpen }) {
             </li>
             <li className="flex">
               <NavLink
-                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
-                to="/blog"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-4 transition-all ease-linear aria-[current=page]:border aria-[current=page]:border-[#e36767] aria-[current=page]:text-[#e36767] py-2 rounded-xl w-full  pr-2 text-sm"
+                to="/news"
               >
                 <BookOpenIcon className="inline-block h-5 w-5 " />
                 اخبار
@@ -172,7 +179,8 @@ function Aside({ isOpen, setIsOpen }) {
             </li>
             <li className="flex">
               <NavLink
-                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-4 transition-all ease-linear aria-[current=page]:border aria-[current=page]:border-[#b067e3] aria-[current=page]:text-[#c999eb] py-2 rounded-xl w-full  pr-2 text-sm"
                 to="/games"
               >
                 <PuzzlePieceIcon className="inline-block h-5 w-5 " />
@@ -181,7 +189,8 @@ function Aside({ isOpen, setIsOpen }) {
             </li>
             <li className="flex">
               <NavLink
-                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-4 transition-all ease-linear aria-[current=page]:border aria-[current=page]:border-yellow-500 aria-[current=page]:text-yellow-500 py-2 rounded-xl w-full  pr-2 text-sm"
                 to="/stream"
               >
                 <VideoCameraIcon className="inline-block h-5 w-5 " />
@@ -190,7 +199,8 @@ function Aside({ isOpen, setIsOpen }) {
             </li>
             <li className="flex">
               <NavLink
-                className="flex items-center justify-center gap-4 aria-[current=page]:font-bold aria-[current=page]:border-r-2 pr-2 "
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-4 transition-all ease-linear aria-[current=page]:border aria-[current=page]:border-[#fff] aria-[current=page]:text-[#fff] py-2 rounded-xl w-full  pr-2 text-sm"
                 to="/about"
               >
                 <InformationCircleIcon className="inline-block h-5 w-5 " />
@@ -201,18 +211,13 @@ function Aside({ isOpen, setIsOpen }) {
         </nav>
       </div>
       <div className="flex justify-around">
-        <NavLink
+        <Link
+          onClick={() => setIsOpen(false)}
           to="/login"
-          className="text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-8  py-2 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 "
+          className="text-xs w-full text-center font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-8  py-2 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] active:scale-95 "
         >
           ورود
-        </NavLink>
-        <NavLink
-          to="/register"
-          className="text-xs px-7 py-2 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 "
-        >
-          ثبت نام
-        </NavLink>
+        </Link>
       </div>
     </aside>
   );

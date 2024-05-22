@@ -18,6 +18,7 @@ export default function Login() {
           setError(false);
           setError2(false);
         } else {
+          setError(false);
           setError2(true);
         }
       } else if (inputValue.startsWith("9")) {
@@ -25,6 +26,7 @@ export default function Login() {
           setError(false);
           setError2(false);
         } else {
+          setError(false);
           setError2(true);
         }
       } else {

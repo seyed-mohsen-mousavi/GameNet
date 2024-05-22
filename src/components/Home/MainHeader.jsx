@@ -3,7 +3,7 @@ import "swiper/css";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { EyeIcon } from "@heroicons/react/24/outline";
+import { EyeIcon ,NewspaperIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -116,10 +116,11 @@ function GameTexts() {
           بریم برای شروع
         </button>
         <Link
-          to="/register"
-          className="text-xs hidden sm:inline-block  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 "
+          to=""
+          className="text-xs hidden sm:inline-flex gap-1 items-center  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 "
         >
-          ثبت نام
+          <NewspaperIcon className="w-5" />
+          جدیدترین اخبار
         </Link>
       </div>
       <div className="flex gap-2 items-center">
