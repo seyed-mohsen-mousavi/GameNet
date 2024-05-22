@@ -1,11 +1,9 @@
 import Slider from "@mui/material/Slider";
-import { useState } from "react";
-import "./price.css"
+import "./price.css";
+import { useStoreContext } from "../../context/StoreProvider";
 const minDistance = 1000000;
-const maxPrice = 100000000;
 export default function PriceFilter() {
-  const [price, setPrice] = useState([0, maxPrice]);
-
+  const { price, setPrice , maxPrice } = useStoreContext();
   const handleChange = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
       return;
@@ -22,20 +20,24 @@ export default function PriceFilter() {
   };
 
   return (
-    <div className="w-52 px-5">
+    <div className="w-full lg:w-60 px-5">
       <Slider
         size="small"
         getAriaLabel={() => "Minimum distance"}
         value={price}
         onChange={handleChange}
-        valueLabelDisplay="auto"
+        valueLabelDisplay="off"
         valueLabelFormat={valueLabelFormat}
         disableSwap
         max={maxPrice}
         color="secondary"
         className="font-Peyda w-full"
       />
+      <div className="text-xs flex justify-between">
+        <p>{price[1].toLocaleString()} تومان</p>
 
+        <p>{price[0].toLocaleString()} تومان</p>
+      </div>
     </div>
   );
 }

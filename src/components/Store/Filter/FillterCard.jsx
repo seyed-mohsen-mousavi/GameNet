@@ -2,7 +2,6 @@ import { platform, categories } from "../../../../data/sortData";
 import Platform from "./Platform";
 import Categorie from "./Categorie";
 import { useStoreContext } from "../../context/StoreProvider";
-import { Slider } from "@mui/material";
 import PriceFilter from "./PriceFilter";
 function FillterCard() {
   // hook

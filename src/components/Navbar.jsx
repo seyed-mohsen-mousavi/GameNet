@@ -25,8 +25,24 @@ function Navbar() {
       <h2 className="bg-gradient-to-r from-[#3b35b2] to-[#733cb3] bg-clip-text text-transparent font-bold text-lg">
         ایران گیم نت
       </h2>
-      <button className="flex sm:hidden " onClick={() => setIsOpen(true)}>
-        <Bars3Icon className="w-7 h-7 " />
+      <button className="flex sm:hidden hover:bg-white/10 active:bg-white/10 rounded-full p-2 transition-colors ease-linear" onClick={() => setIsOpen(true)}>
+        <svg
+          stroke="currentColor"
+          fill="none"
+          strokeWidth="0"
+          viewBox="0 0 24 24"
+          className="h-7 w-7 [transform:rotateY(180deg)]"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
       </button>
       <NavLinks />
       <NavLink

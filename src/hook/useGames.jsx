@@ -24,7 +24,7 @@ function useGames() {
       save: 45,
       platform: ["pc", "ps4", "ps5", "xboxSeries"],
       category: "action",
-      price: "69.99 $",
+      price: 69.99,
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ function useGames() {
       save: 5,
       platform: ["pc", "ps4", "ps5", "xboxSeries"],
       category: "rolePlay",
-      price: "59 $",
+      price: 59 ,
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ function useGames() {
       save: 545,
       platform: ["pc", "ps4", "ps5", "xboxSeries", "nintendoSwitch"],
       category: "Sports",
-      price: "59 $",
+      price: 59 ,
     },
     {
       id: 5,
@@ -63,7 +63,7 @@ function useGames() {
       save: 15,
       platform: ["pc", "ps4"],
       category: "car",
-      price: "10.49 $",
+      price: 10.49 ,
     },
     {
       id: 6,
@@ -76,7 +76,7 @@ function useGames() {
       save: 1,
       platform: ["pc", "xboxSeries"],
       category: "car",
-      price: "32.78 $",
+      price: 32.78,
     },
     {
       id: 7,
@@ -102,7 +102,7 @@ function useGames() {
       save: 7,
       platform: ["pc", "ps4", "ps5"],
       category: "actionAdventure",
-      price: "49.99 $ ",
+      price: 49.99,
     },
     {
       id: 9,
@@ -115,7 +115,7 @@ function useGames() {
       save: 21,
       platform: ["pc", "ps4", "ps5", "xboxSeries", "nintendoSwitch"],
       category: "Survival",
-      price: "29.99 $",
+      price: 29.99 ,
     },
     {
       id: 10,
@@ -128,7 +128,7 @@ function useGames() {
       save: 14,
       platform: ["pc", "ps4", "ps5", "xboxSeries", "nintendoSwitch"],
       category: "actionAdventure",
-      price: "29.98 $",
+      price: 29.98,
     },
   ];
   return games;

@@ -1,9 +1,12 @@
 import { Link, useSearchParams } from "react-router-dom";
 import useGames from "../../hook/useGames";
 import { BookmarkIcon, HeartIcon } from "@heroicons/react/24/outline";
+import { useStoreContext } from "../context/StoreProvider";
 
 function Prodocts() {
   const [searchParams] = useSearchParams();
+  const { price } = useStoreContext();
+  const dolarPrice = 50_000;
   let games = useGames();
   let deduped = [];
   const filterPlatform = () => {
@@ -47,6 +50,18 @@ function Prodocts() {
     }
   };
   filterPlatform();
+  games = games
+    .map((g) => {
+      if (
+        +g.price * dolarPrice >= price[0] &&
+        +g.price * dolarPrice <= price[1]
+      ) {
+        return g;
+      }
+    })
+    .filter((element) => {
+      return element !== undefined;
+    });
   return games.length > 0 ? (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 justify-items-center">
       {games.map((g) => (
@@ -90,7 +105,7 @@ function Prodocts() {
                 ادامه مطلب
               </Link>
               <p className="text-center -pl-2 pt-1 text-lg font-bold">
-                {+g.price === 0  ? 'رایگان' : g.price}
+                {+g.price === 0 ? "رایگان" : g.price}
               </p>
             </div>
           </div>
