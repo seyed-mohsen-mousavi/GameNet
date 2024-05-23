@@ -1,111 +1,111 @@
 {
-  "News": [
+  "news": [
     {
-      "id": "1",
+      "id": "64979306",
       "title": "انتشار نسخه جدید بازی کال آف دیوتی",
       "author": "خبرگزاری دیجیتال گیمز",
       "author_image": "https://example.com/images/author-digital-games-news.jpg",
       "views": 15000,
-      "date": "2024-05-20",
+      "date": "2024-05-20 11:10:20",
       "description": "نسخه جدید بازی کال آف دیوتی با گرافیک بهبود یافته و امکانات جدید منتشر شد. این نسخه جدید با داستانی جذاب و حالت‌های بازی متنوع عرضه شده است.",
       "link": "https://digitalgamesnews.com/cod-new-release",
-      "image": "https://example.com/images/cod-new-release.jpg"
+      "image": "/images/news/What-to-Expect-From-Call-of-Duty-2024-This-Year.gif"
     },
     {
-      "id": "2",
+      "id": "66916247",
       "title": "بررسی بازی آخرین بازمانده",
       "author": "وبسایت بازی‌نما",
       "author_image": "https://example.com/images/author-bazinama.jpg",
       "views": 8500,
-      "date": "2024-05-18",
+      "date": "2024-05-18 11:10:20",
       "description": "در این مقاله به بررسی جامع بازی آخرین بازمانده پرداخته‌ایم. این بازی با گرافیک خیره‌کننده و داستانی عمیق توانسته است نظر بسیاری از گیمرها را به خود جلب کند.",
       "link": "https://bazinama.com/last-survivor-review",
       "image": "https://example.com/images/last-survivor-review.jpg"
     },
     {
-      "id": "3",
+      "id": "6209664",
       "title": "افتتاحیه لیگ جهانی ورزش‌های الکترونیکی",
       "author": "خبرگزاری ورزش‌های دیجیتال",
       "author_image": "https://example.com/images/author-digital-sports-news.jpg",
       "views": 12000,
-      "date": "2024-05-22",
-      "description": "لیگ جهانی ورزش‌های الکترونیکی با حضور تیم‌های برتر از سراسر جهان افتتاح شد. این لیگ با جوایز میلیونی و رقابت‌های هیجان‌انگیز توجه بسیاری از علاقه‌مندان به گیم را به خود جلب کرده است.",
+      "date": "2024-05-22 11:10:20",
+      "description": " لیگ جهانی ورزش‌های الکترونیکی با حضور تیم‌های برتر از سراسر جهان افتتاح شد. این لیگ با جوایز میلیونی و رقابت‌های هیجان‌انگیز توجه بسیاری از علاقه‌مندان به گیم را به خود جلب کرده است. و این رویداد اواخر سال ۲۰۲۴ در عربستان سعودی برگزار می‌شود؛ کشوری که به دنبال سرمایه گذاری عظیم در صنعت ورزش‌های الکترونیک است. این مسابقات در فضایی نزدیک به ۶۰۰ هزار مترمربع برگزار می‌شود و چهار میدان ورزشی جداگانه دارد. برگزارکنندگان انتظار دارند ۲.۹ میلیون طرفدار ",
       "link": "https://digitalesportsnews.com/global-esports-league",
-      "image": "https://example.com/images/global-esports-league.jpg"
+      "image": "/images/news/game-lig.webp"
     },
     {
-      "id": "4",
+      "id": "64084369",
       "title": "بازی جدید شرکت نینتندو به بازار عرضه شد",
       "author": "خبرگزاری گیم‌نیوز",
       "author_image": "https://example.com/images/author-gamenews.jpg",
       "views": 20000,
-      "date": "2024-05-19",
-      "description": "شرکت نینتندو بازی جدید خود را با عنوان \"ماجراجویی در جهان‌های ناشناخته\" به بازار عرضه کرد. این بازی با ویژگی‌های نوآورانه و داستانی جذاب، تجربه‌ای متفاوت برای گیمرها به ارمغان می‌آورد.",
+      "date": "2024-05-19 11:10:20",
+      "description": "شرکت نینتندو بازی جدید خود را با عنوان \"مترویدوینیا \" به بازار عرضه کرد. این بازی با ویژگی‌های نوآورانه و داستانی جذاب، تجربه‌ای متفاوت برای گیمرها به ارمغان می‌آورد.",
       "link": "https://gamenews.com/nintendo-new-game-release",
-      "image": "https://example.com/images/nintendo-new-game.jpg"
+      "image": "/images/news/TalesofKenzeraZau.jpg"
     },
     {
-      "id": "5",
+      "id": "63012666",
       "title": "بازی‌های ویدیویی و تأثیر آنها بر ذهن کودکان",
       "author": "مجله علمی گیم‌فکتس",
       "author_image": "https://example.com/images/author-gamefacts.jpg",
       "views": 9500,
-      "date": "2024-05-21",
+      "date": "2024-05-21 11:10:20",
       "description": "در این مقاله به بررسی تأثیر بازی‌های ویدیویی بر ذهن کودکان پرداخته‌ایم. تحقیقات نشان می‌دهد که بازی‌های ویدیویی می‌توانند بر توانایی‌های شناختی و اجتماعی کودکان تأثیرات مثبت و منفی داشته باشند.",
       "link": "https://gamefacts.com/impact-of-video-games-on-children",
-      "image": "https://example.com/images/video-games-impact.jpg"
+      "image": "/images/news/gameForKid.jpeg"
     },
     {
-      "id": "6",
+      "id": "61936144",
       "title": "مسابقات جهانی بازی‌های ویدیویی برگزار شد",
       "author": "خبرگزاری مسابقات گیم",
       "author_image": "https://example.com/images/author-gametournaments.jpg",
       "views": 17500,
-      "date": "2024-05-17",
+      "date": "2024-05-17 11:10:20",
       "description": "مسابقات جهانی بازی‌های ویدیویی با حضور تیم‌های برتر از سراسر جهان برگزار شد. این مسابقات با جوایز ارزشمند و رقابت‌های هیجان‌انگیز توانست توجه بسیاری از علاقه‌مندان به بازی‌های ویدیویی را جلب کند.",
       "link": "https://gametournaments.com/world-championship",
       "image": "https://example.com/images/world-championship.jpg"
     },
     {
-      "id": "7",
+      "id": "68046568",
       "title": "بازی جدید پلی‌استیشن 5 منتشر شد",
       "author": "مجله پلی‌استیشن",
       "author_image": "https://example.com/images/author-playstationmag.jpg",
       "views": 22000,
-      "date": "2024-05-16",
+      "date": "2024-05-16 11:10:20",
       "description": "پلی‌استیشن 5 بازی جدیدی با عنوان \"افسانه‌های گمشده\" را منتشر کرد. این بازی با گرافیک بی‌نظیر و گیم‌پلی منحصر به فرد تجربه‌ای جدید برای گیمرها ارائه می‌دهد.",
       "link": "https://playstationmag.com/new-game-release",
       "image": "https://example.com/images/lost-legends.jpg"
     },
     {
-      "id": "8",
+      "id": "6786756",
       "title": "رشد صنعت بازی‌های موبایل در سال 2024",
       "author": "وبسایت گیم‌اینداستری",
       "author_image": "https://example.com/images/author-gameindustry.jpg",
       "views": 14000,
-      "date": "2024-05-15",
+      "date": "2024-05-15 11:10:20",
       "description": "صنعت بازی‌های موبایل در سال 2024 رشد چشمگیری داشته است. با افزایش تعداد کاربران و بهبود فناوری‌های موبایل، بازار بازی‌های موبایل به یکی از پر درآمدترین بخش‌های صنعت بازی تبدیل شده است.",
       "link": "https://gameindustry.com/mobile-games-growth-2024",
       "image": "https://example.com/images/mobile-games-growth.jpg"
     },
     {
-      "id": "9",
+      "id": "61883218",
       "title": "بازی‌های واقعیت مجازی: آینده صنعت گیم",
       "author": "مجله واقعیت مجازی",
       "author_image": "https://example.com/images/author-vrmagazine.jpg",
       "views": 11500,
-      "date": "2024-05-14",
+      "date": "2024-05-14 11:10:20",
       "description": "بازی‌های واقعیت مجازی به عنوان آینده صنعت گیم شناخته می‌شوند. با پیشرفت‌های فناوری در حوزه واقعیت مجازی، این بازی‌ها تجربه‌ای بی‌نظیر و همه‌جانبه برای کاربران فراهم می‌کنند.",
       "link": "https://vrmagazine.com/future-of-vr-games",
       "image": "https://example.com/images/vr-games.jpg"
     },
     {
-      "id": "10",
+      "id": "61458118",
       "title": "بهترین بازی‌های سال 2024 معرفی شدند",
       "author": "وبسایت گیم‌آواردز",
       "author_image": "https://example.com/images/author-gameawards.jpg",
       "views": 19500,
-      "date": "2024-05-13",
+      "date": "2024-05-13 11:10:20",
       "description": "در مراسم گیم‌آواردز بهترین بازی‌های سال 2024 معرفی شدند. این بازی‌ها با نوآوری‌های خود توانستند جوایز متعددی را کسب کنند و توجه گیمرها و منتقدان را به خود جلب کنند.",
       "link": "https://gameawards.com/best-games-2024",
       "image": "https://example.com/images/best-games-2024.jpg"
@@ -116,10 +116,56 @@
       "author": "خبرگزاری تکنولوژی گیم",
       "author_image": "https://example.com/images/author-gametechnews.jpg",
       "views": 16000,
-      "date": "2024-05-12",
+      "date": "2024-05-12 11:10:20",
       "description": "در این مقاله به بررسی تکنولوژی‌های جدید در صنعت بازی‌سازی پرداخته‌ایم. این تکنولوژی‌ها شامل هوش مصنوعی پیشرفته، گرافیک واقع‌گرایانه و ابزارهای توسعه بازی‌های چندنفره آنلاین می‌باشند.",
       "link": "https://gametechnews.com/new-tech-in-gaming",
       "image": "https://example.com/images/gaming-tech.jpg"
+    }
+  ],
+  "popularNews": [
+    {
+      "id": "6786756",
+      "title": "رشد صنعت بازی‌های موبایل در سال 2024",
+      "author": "وبسایت گیم‌اینداستری",
+      "author_image": "https://example.com/images/author-gameindustry.jpg",
+      "views": 14000,
+      "date": "2024-05-15 11:10:20",
+      "description": "صنعت بازی‌های موبایل در سال 2024 رشد چشمگیری داشته است. با افزایش تعداد کاربران و بهبود فناوری‌های موبایل، بازار بازی‌های موبایل به یکی از پر درآمدترین بخش‌های صنعت بازی تبدیل شده است.",
+      "link": "https://gameindustry.com/mobile-games-growth-2024",
+      "image": "/images/news/mobile-games.webp"
+    },
+    {
+      "id": "61883218",
+      "title": "بازی‌های واقعیت مجازی: آینده صنعت گیم",
+      "author": "مجله واقعیت مجازی",
+      "author_image": "https://example.com/images/author-vrmagazine.jpg",
+      "views": 11500,
+      "date": "2024-05-22 12:10:20 am",
+      "description": "بازی‌های واقعیت مجازی به عنوان آینده صنعت گیم شناخته می‌شوند. با پیشرفت‌های فناوری در حوزه واقعیت مجازی، این بازی‌ها تجربه‌ای بی‌نظیر و همه‌جانبه برای کاربران فراهم می‌کنند.",
+      "link": "https://vrmagazine.com/future-of-vr-games",
+      "image": "/images/news/آینده-صنعت-بازی.jpg"
+    },
+    {
+      "id": "61458118",
+      "title": "بهترین بازی‌های سال 2024 معرفی شدند",
+      "author": "وبسایت گیم‌آواردز",
+      "author_image": "https://example.com/images/author-gameawards.jpg",
+      "views": 19500,
+      "date": "2024-05-23 11:24:00",
+      "description": "در مراسم گیم‌آواردز بهترین بازی‌های سال 2024 معرفی شدند. این بازی‌ها با نوآوری‌های خود توانستند جوایز متعددی را کسب کنند و توجه گیمرها و منتقدان را به خود جلب کنند.",
+      "link": "https://gameawards.com/best-games-2024",
+      "image": "/images/news/best-games-of-the-2024.jpg"
+    },
+    {
+      "id": "11",
+      "title": "تکنولوژی‌های جدید در صنعت بازی‌سازی",
+      "author": "خبرگزاری تکنولوژی گیم",
+      "author_image": "https://example.com/images/author-gametechnews.jpg",
+      "views": 16000,
+      "date": "2024-05-23 11:00:20",
+      "description": "در این مقاله به بررسی تکنولوژی‌های جدید در صنعت بازی‌سازی پرداخته‌ایم. این تکنولوژی‌ها شامل هوش مصنوعی پیشرفته، گرافیک واقع‌گرایانه و ابزارهای توسعه بازی‌های چندنفره آنلاین می‌باشند.",
+      "link": "https://gametechnews.com/new-tech-in-gaming",
+      "image": "images/news/new-tech-in-gaming.jpeg"
     }
   ]
 }
