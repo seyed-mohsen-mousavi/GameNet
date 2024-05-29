@@ -19,6 +19,7 @@ function App() {
           <Route path="store/:id" element={<Prodoct />} />
           <Route path="store" element={<Store />} />
           <Route path="news" element={<News />} />
+          <Route path="news/:id" element={<div>single new</div>} />
           <Route path="register" element={<Register />} />
           <Route path="about" element={<About />} />
           <Route path="games" element={<Games />} />

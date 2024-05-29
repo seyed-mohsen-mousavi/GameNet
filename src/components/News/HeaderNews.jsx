@@ -20,14 +20,14 @@ function HeaderNews() {
   if (isLoading) return <Loader />;
   return (
     <>
-      <div className="flex gap-1 ">
-        <div className="relative w-2/3 pr-5 xl:pr-20">
+      <div className="flex flex-col lg:flex-row gap-1 ">
+        <div className="relative lg:h-auto lg:w-2/3 w-11/12 mx-auto h-1/2 lg:pr-5 xl:pr-20">
           <img
             src="/images/news/homePage.jpg"
-            className="w-full h-full object-cover rounded-xl animate-fade scale-x-[-1]"
+            className="w-full h-full object-cover rounded-xl animate-fade scale-x-[-1] hidden sm:block"
             alt=""
           />
-          <div className="bg-white/40 backdrop-blur-2xl w-96 max-h-[30rem] absolute top-20 right-0 rounded flex  text-black animate__animated  animate__bounceInDown animate-delay-100 ">
+          <div className="bg-white/40  backdrop-blur w-full  sm:w-72 sm:max-h-60 md:max-h-80 lg:w-96 lg:max-h-[30rem] sm:absolute sm:top-20 sm:right-8 rounded flex  text-black animate__animated  animate__bounceInDown animate-delay-100 ">
             <Swiper
               navigation={{
                 prevEl: ".prev",
@@ -74,7 +74,7 @@ function HeaderNews() {
 }
 function CardSlider({ title, desc, createdAt, author, id }) {
   return (
-    <div className="flex flex-col justify-between h-full">
+    <div className="flex flex-col justify-between h-full text-xs lg:text-base">
       <div>
         <div className="flex items-center gap-2">
           <img
@@ -89,12 +89,12 @@ function CardSlider({ title, desc, createdAt, author, id }) {
         </div>
         <Link
           to={id}
-          className=" hover:underline transition-all ease-linear line-clamp-4 font-Peyda text-2xl"
+          className=" hover:underline transition-all ease-linear line-clamp-4 font-Peyda text-xl lg:text-2xl"
         >
           {title}
         </Link>
         <p className="flex animate-fade">
-          <p className="text-gray-700 text-sm line-clamp-5 pt-3">{desc}</p>
+          <p className="text-gray-700 text-sm line-clamp-5 sm:line-clamp-3 lg:line-clamp-5 pt-3">{desc}</p>
         </p>
       </div>
       <div>
@@ -113,7 +113,7 @@ function CardSlider({ title, desc, createdAt, author, id }) {
 function PopularCard({ title, createdAt, author, id, views, image }) {
   return (
     <div className="flex gap-2 hover:bg-white/5 backdrop-blur p-2 rounded-lg transition-colors ease-in-out animate-fade animate-duration-1000">
-      <Link to={id} className="w-2/6 h-28">
+      <Link to={id} className="w-2/6 h-24 xl:h-28">
         <img
           src={image}
           className="w-full h-full object-cover rounded-lg "
@@ -121,9 +121,9 @@ function PopularCard({ title, createdAt, author, id, views, image }) {
         />
       </Link>
       <div className="flex flex-col justify-around gap-2 w-3/4">
-        <div className="flex gap-3 items-center text-sm ">
+        <div className="flex gap-3 items-center text-xs xl:text-sm">
           <p className="text-white line-clamp-1"> {author} </p>
-          <p className="text-gray-400 text-sm inline-flex gap-1">
+          <p className="text-gray-400  inline-flex gap-1">
             <ClockIcon className="w-3.5" />
             <ReactTimeAgo
               date={new Date(createdAt)}
@@ -141,7 +141,7 @@ function PopularCard({ title, createdAt, author, id, views, image }) {
           </Link>
         </div>
         <div>
-          <p className="text-gray-300 text-sm ">
+          <p className="text-gray-300 text-xs xl:text-sm">
             <Link to="" className="text-red-500 pl-2 hover:underline ">
               اکشن
             </Link>{" "}
@@ -154,8 +154,8 @@ function PopularCard({ title, createdAt, author, id, views, image }) {
 }
 function PopularCardLoader() {
   return (
-    <div className="flex gap-2 backdrop-blur p-2 rounded-lg">
-      <div className="w-56 h-28">
+    <div className="flex  gap-2 backdrop-blur p-2 rounded-lg">
+      <div className="xl:w-56 w-44 h-28">
         <div className="w-full h-full object-cover rounded-lg bg-gray-500 animate-pulse"></div>
       </div>
       <div className="flex flex-col gap-2">
@@ -189,8 +189,8 @@ function PopularCardLoader() {
 
 function Loader() {
   return (
-    <div className="flex gap-1 cursor-progress">
-      <div className="relative w-2/3 pr-5 xl:pr-20">
+    <div className="flex gap-1 cursor-progress flex-col lg:flex-row">
+      <div className="relative w-full h-56 lg:h-auto lg:w-2/3 pr-5 xl:pr-20">
         <div className="w-full h-full object-cover rounded-xl  bg-gray-400 animate-pulse"></div>
       </div>
       <div className="flex-1 flex flex-col gap-5 p-5">

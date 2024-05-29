@@ -5,6 +5,7 @@ import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
 import fa from "javascript-time-ago/locale/fa";
 import { Link } from "react-router-dom";
+import MostViewed from "../components/News/MostViewed";
 
 TimeAgo.addDefaultLocale(en);
 TimeAgo.addLocale(fa);
@@ -28,9 +29,6 @@ function News() {
 
 export default News;
 
-function MostViewed({ children }) {
-  return <div>{children}</div>;
-}
 function WeeklyHighlightNews({ children }) {
   return <div>{children}</div>;
 }
