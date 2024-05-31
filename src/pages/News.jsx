@@ -6,12 +6,13 @@ import en from "javascript-time-ago/locale/en";
 import fa from "javascript-time-ago/locale/fa";
 import { Link } from "react-router-dom";
 import MostViewed from "../components/News/MostViewed";
+import WeeklyHighlightNews from "../components/News/WeeklyHighlightNews";
 
 TimeAgo.addDefaultLocale(en);
 TimeAgo.addLocale(fa);
 function News() {
   return (
-    <div className="flex flex-col gap-14 w-full mt-5">
+    <main className="flex flex-col gap-14 w-full mt-5">
       <HeaderNews />
       <LatestNews>
         <SeeAll title="جدیدترین اخبار " link="latest" />
@@ -23,15 +24,13 @@ function News() {
         <SeeAll title="برترین های هفته" link="weeklyHighlight" />
       </WeeklyHighlightNews>
       <TopCreatorNews />
-    </div>
+    </main>
   );
 }
 
 export default News;
 
-function WeeklyHighlightNews({ children }) {
-  return <div>{children}</div>;
-}
+
 function TopCreatorNews() {
   return <div></div>;
 }

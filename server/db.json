@@ -167,5 +167,51 @@
       "link": "https://gametechnews.com/new-tech-in-gaming",
       "image": "images/news/new-tech-in-gaming.jpeg"
     }
+  ],
+  "WeeklyHighlightNews": [
+    {
+      "id": 61234567,
+      "title": "عرضه بازی جدید Assassin's Creed Mirage",
+      "author": "خبرگزاری بازی‌سازان",
+      "author_image": "https://example.com/images/authors/gamesazan.jpg",
+      "views": 25000,
+      "date": "2024-05-30",
+      "description": "بازی جدید Assassin's Creed Mirage از شرکت یوبی‌سافت با ویژگی‌ها و داستان‌های جذاب منتشر شد. این بازی با محیط‌های باز و امکانات جدید، تجربه‌ای بی‌نظیر را برای گیمرها به ارمغان می‌آورد.",
+      "link": "https://gamesazan.com/assassins-creed-mirage-release",
+      "image": "/images/news/Assassins-Creed-Mirage.jpg"
+    },
+    {
+      "id": 62345678,
+      "title": "معرفی بازی جدید The Witcher 4",
+      "author": "مجله بازی‌های دیجیتال",
+      "author_image": "https://example.com/images/authors/digital-gaming-mag.jpg",
+      "views": 18000,
+      "date": "2024-05-29",
+      "description": "شرکت CD Projekt Red از بازی جدید The Witcher 4 رونمایی کرد. این بازی قرار است با گرافیک بسیار بالا و داستانی عمیق، مخاطبان را به دنیایی جدید ببرد.",
+      "link": "https://digitalgamingmag.com/the-witcher-4-announcement",
+      "image": "/images/news/the-witcher-4-logo.webp"
+    },
+    {
+      "id": 63456789,
+      "title": "آپدیت جدید بازی Fortnite",
+      "author": "خبرگزاری گیم‌نیوز",
+      "author_image": "https://example.com/images/authors/gamenews.jpg",
+      "views": 22000,
+      "date": "2024-05-28",
+      "description": "بازی Fortnite با آپدیت جدیدی که شامل امکانات و اسکین‌های جدید است، به‌روزرسانی شد. این آپدیت تجربه بازی را برای کاربران بهبود می‌بخشد.",
+      "link": "https://gamenews.com/fortnite-new-update",
+      "image": "/images/news/Fortnite-Cover.jpg"
+    },
+    {
+      "id": 64567890,
+      "title": "بررسی بازی Cyberpunk 2077 پس از آپدیت 2.0",
+      "author": "وبسایت بازی‌نما",
+      "author_image": "https://example.com/images/authors/bazinama.jpg",
+      "views": 15000,
+      "date": "2024-05-27",
+      "description": "آپدیت جدید بازی Cyberpunk 2077 با نسخه 2.0 عرضه شد و بسیاری از مشکلات فنی بازی برطرف شده است. بررسی کامل این آپدیت در این مقاله ارائه شده است.",
+      "link": "https://bazinama.com/cyberpunk-2077-update-2-review",
+      "image": "/images/news/Cyber-Punk.jpg"
+    }
   ]
 }
