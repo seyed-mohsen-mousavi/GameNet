@@ -64,18 +64,18 @@
       "date": "2024-05-17 11:10:20",
       "description": "مسابقات جهانی بازی‌های ویدیویی با حضور تیم‌های برتر از سراسر جهان برگزار شد. این مسابقات با جوایز ارزشمند و رقابت‌های هیجان‌انگیز توانست توجه بسیاری از علاقه‌مندان به بازی‌های ویدیویی را جلب کند.",
       "link": "https://gametournaments.com/world-championship",
-      "image": "https://example.com/images/world-championship.jpg"
+      "image": "/images/news/world-championship.jpg"
     },
     {
       "id": "68046568",
       "title": "بازی جدید پلی‌استیشن 5 منتشر شد",
       "author": "مجله پلی‌استیشن",
-      "author_image": "https://example.com/images/author-playstationmag.jpg",
+      "author_image": "https://example.com/images/the-best-playstation-5-games.jpeg",
       "views": 22000,
       "date": "2024-05-16 11:10:20",
       "description": "پلی‌استیشن 5 بازی جدیدی با عنوان \"افسانه‌های گمشده\" را منتشر کرد. این بازی با گرافیک بی‌نظیر و گیم‌پلی منحصر به فرد تجربه‌ای جدید برای گیمرها ارائه می‌دهد.",
       "link": "https://playstationmag.com/new-game-release",
-      "image": "https://example.com/images/lost-legends.jpg"
+      "image": "/images/news/the-best-playstation-5-games.jpeg"
     },
     {
       "id": "6786756",
@@ -108,7 +108,7 @@
       "date": "2024-05-13 11:10:20",
       "description": "در مراسم گیم‌آواردز بهترین بازی‌های سال 2024 معرفی شدند. این بازی‌ها با نوآوری‌های خود توانستند جوایز متعددی را کسب کنند و توجه گیمرها و منتقدان را به خود جلب کنند.",
       "link": "https://gameawards.com/best-games-2024",
-      "image": "https://example.com/images/best-games-2024.jpg"
+      "image": "/images/news/best_Games2024.jpg"
     },
     {
       "id": "11",

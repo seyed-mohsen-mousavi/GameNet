@@ -94,7 +94,9 @@ function CardSlider({ title, desc, createdAt, author, id }) {
           {title}
         </Link>
         <p className="flex animate-fade">
-          <p className="text-gray-700 text-sm line-clamp-5 sm:line-clamp-3 lg:line-clamp-5 pt-3">{desc}</p>
+          <p className="text-gray-700 text-sm line-clamp-5 sm:line-clamp-3 lg:line-clamp-5 pt-3">
+            {desc}
+          </p>
         </p>
       </div>
       <div>
@@ -110,7 +112,7 @@ function CardSlider({ title, desc, createdAt, author, id }) {
     </div>
   );
 }
-function PopularCard({ title, createdAt, author, id, views, image }) {
+export function PopularCard({ title, createdAt, author, id, views, image }) {
   return (
     <div className="flex gap-2 hover:bg-white/5 backdrop-blur p-2 rounded-lg transition-colors ease-in-out animate-fade animate-duration-1000">
       <Link to={id} className="w-2/6 h-24 xl:h-28">

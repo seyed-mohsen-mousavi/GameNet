@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 import useNews from "../../hook/useNews";
 import ReactTimeAgo from "react-time-ago";
-import {
-  BookOpenIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/24/outline";
+import { BookOpenIcon } from "@heroicons/react/24/outline";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
@@ -108,7 +104,7 @@ export default function LatestNews({ children }) {
             ""
           )
         )}
-        <div className="flex gap-3 w-full justify-center items-center">
+        <div className="flex gap-3 w-full justify-center items-center py-1">
           <button className="prev opacity-60 hover:opacity-80 transition-opacity ease-in-out">
             <svg
               viewBox="0 0 26 30"

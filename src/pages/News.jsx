@@ -37,7 +37,7 @@ function TopCreatorNews() {
 }
 function SeeAll({ title, link }) {
   return (
-    <div key="1" className="flex justify-between pb-5">
+    <div key="1" className="flex justify-between pb-3">
       <h2 className="text-2xl font-PeydaBlack ">{title}</h2>
       <Link
         to={link}
