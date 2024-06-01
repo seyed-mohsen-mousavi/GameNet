@@ -1,5 +1,5 @@
 
-function Stream() {
+function Streamers() {
   return (
     <div>
       استریمر ها
@@ -7,4 +7,4 @@ function Stream() {
   )
 }
 
-export default Stream
+export default Streamers

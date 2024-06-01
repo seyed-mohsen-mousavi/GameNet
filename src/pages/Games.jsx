@@ -1,6 +1,11 @@
-function Games() {
+import React from 'react'
 
-  return <div></div>;
+function Games() {
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
-export default Games;
+export default Games

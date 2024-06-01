@@ -12,7 +12,38 @@ import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navBar = [
+    {
+      id: 1,
+      title: "خانه",
+      link: "/",
+    },
+    {
+      id: 1,
+      title: "بازار",
+      link: "/store",
+    },
+    {
+      id: 1,
+      title: "اخبار",
+      link: "/news",
+    },
+    {
+      id: 1,
+      title: "بازی ها",
+      link: "/games",
+    },
+    {
+      id: 1,
+      title: "استریمر ها",
+      link: "/streamers",
+    },
+    {
+      id: 1,
+      title: "گیم نت ها",
+      link: "/gameNet",
+    },
+  ];
   isOpen
     ? document.body.classList.add("overflow-hidden")
     : document.body.classList.remove("overflow-hidden");
@@ -46,7 +77,7 @@ function Navbar() {
           ></path>
         </svg>
       </button>
-      <NavLinks />
+      <NavLinks navBar={navBar} />
       <NavLink
         to="/login"
         className="text-xs hidden sm:flex bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-5 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 "
@@ -66,60 +97,19 @@ function Navbar() {
 
 export default Navbar;
 
-function NavLinks() {
+function NavLinks({ navBar }) {
   return (
     <ul className="gap-3 text-xs pt-1.5 hidden sm:flex">
-      <li>
-        <NavLink
-          className={`text-gray-500 aria-[current=page]:text-white`}
-          to="/"
-        >
-          خانه
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={`text-gray-500 aria-[current=page]:text-white`}
-          to="/store"
-        >
-          بازار
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={`text-gray-500 aria-[current=page]:text-white`}
-          to="/news"
-        >
-          اخبار{" "}
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={`text-gray-500 aria-[current=page]:text-white`}
-          to="/games"
-        >
-          {" "}
-          بازی ها
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={`text-gray-500 aria-[current=page]:text-white`}
-          to="/stream"
-        >
-          {" "}
-          استریمر ها
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={`text-gray-500 aria-[current=page]:text-white`}
-          to="/about"
-        >
-          {" "}
-          درباره ما
-        </NavLink>
-      </li>
+      {navBar.map((nav) => (
+        <li key={nav.id}>
+          <NavLink
+            className={`text-gray-500 aria-[current=page]:text-white`}
+            to={nav.link}
+          >
+            {nav.title}
+          </NavLink>
+        </li>
+      ))}
     </ul>
   );
 }
@@ -203,7 +193,7 @@ function Aside({ isOpen, setIsOpen }) {
                 to="/about"
               >
                 <InformationCircleIcon className="inline-block h-5 w-5 " />
-                درباره ما
+                گیم نت ها
               </NavLink>
             </li>
           </ul>

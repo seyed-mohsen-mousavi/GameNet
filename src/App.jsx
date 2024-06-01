@@ -5,7 +5,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import Games from "./pages/Games";
-import Stream from "./pages/Stream";
+import Streamers from "./pages/Streamers";
 import Layout from "./components/Layout";
 import Prodoct from "./components/Store/Prodoct";
 import News from "./pages/News";
@@ -23,8 +23,9 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="about" element={<About />} />
           <Route path="games" element={<Games />} />
-          <Route path="stream" element={<Stream />} />
+          <Route path="streamers" element={<Streamers />} />
           <Route path="login" element={<Login />} />
+          <Route path="gameNet" element={<div> گیم نت</div>} />
         </Route>
       </Routes>
     </div>
