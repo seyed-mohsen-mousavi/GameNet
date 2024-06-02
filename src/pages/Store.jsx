@@ -3,7 +3,6 @@ import FillterCardMobile from "../components/Store/Filter/FillterCardMobile";
 import HeaderImage from "../components/Store/HeaderImage";
 import Prodocts from "../components/Store/Prodocts";
 import StoreProvider from "../components/context/StoreProvider";
-import useCheckToBe from "../hook/useCheckToBe";
 
 function Store() {
   return (

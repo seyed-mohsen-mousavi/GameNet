@@ -1,3 +1,5 @@
+import { Checkbox } from "@nextui-org/checkbox";
+
 export default function Platform({ platform, hanleFilter }) {
   return (
     <ul className="flex flex-col gap-3 text-xs">
@@ -7,18 +9,18 @@ export default function Platform({ platform, hanleFilter }) {
             <label>
               <div className="flex gap-3 cursor-pointer items-center">
                 {p.chek ? (
-                  <input
-                    defaultChecked
-                    type="checkbox"
+                  <Checkbox
+                    size="xs"
+                    defaultSelected={true}
+                    className="p-0 pr-2"
                     onChange={(e) => hanleFilter(p.val, e)}
-                    className="checkbox checkbox-primary w-4 h-4 text-white rounded-md"
-                  />
+                  ></Checkbox>
                 ) : (
-                  <input
-                    type="checkbox"
+                  <Checkbox
+                    size="xs"
+                    className="p-0 pr-2"
                     onChange={(e) => hanleFilter(p.val, e)}
-                    className="checkbox checkbox-primary w-4 h-4 rounded-md"
-                  />
+                  ></Checkbox>
                 )}
                 {p.title}
               </div>
@@ -29,5 +31,3 @@ export default function Platform({ platform, hanleFilter }) {
     </ul>
   );
 }
-
-

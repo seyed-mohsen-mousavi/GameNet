@@ -112,12 +112,12 @@ function GameTexts() {
         خیلی راحت با ایران گیم نت به تمام اخبار بازی های جهان اگاه باش .
       </p>
       <div className="flex gap-3 font-PeydaLight">
-        <button className=" text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
+        <button onClick={()=> window.scrollTo(0,750)} className=" text-xs font-thin bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-md shadow-[#733cb39c_0px_0px_5px] hover:scale-95 ">
           بریم برای شروع
         </button>
         <Link
-          to=""
-          className="text-xs hidden sm:inline-flex gap-1 items-center  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 "
+          to="/news/latest"
+          className="text-xs inline-flex gap-1 items-center  px-5 py-1 transition-transform ease-linear rounded-md border-2 border-[#733cb3] hover:scale-95 "
         >
           <NewspaperIcon className="w-5" />
           جدیدترین اخبار

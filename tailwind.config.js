@@ -1,6 +1,11 @@
+const { nextui } = require("@nextui-org/theme");
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./index.html",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -22,5 +27,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animated"), require("daisyui")],
+  plugins: [require("daisyui"), nextui()],
 };

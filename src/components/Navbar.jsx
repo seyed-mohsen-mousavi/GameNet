@@ -100,8 +100,8 @@ export default Navbar;
 function NavLinks({ navBar }) {
   return (
     <ul className="gap-3 text-xs pt-1.5 hidden sm:flex">
-      {navBar.map((nav) => (
-        <li key={nav.id}>
+      {navBar.map((nav , index) => (
+        <li key={index}>
           <NavLink
             className={`text-gray-500 aria-[current=page]:text-white`}
             to={nav.link}

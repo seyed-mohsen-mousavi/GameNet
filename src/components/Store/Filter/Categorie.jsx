@@ -1,3 +1,5 @@
+import { Checkbox } from "@nextui-org/checkbox";
+
 export default function Categorie({ categories, hanleFilter }) {
   return (
     <ul className="flex flex-col gap-4 text-xs">
@@ -5,18 +7,18 @@ export default function Categorie({ categories, hanleFilter }) {
         <li className="text-gray-300" key={c.id}>
           <label className="flex gap-3 cursor-pointer">
             {c.chek ? (
-              <input
-                defaultChecked
-                type="checkbox"
+              <Checkbox
+                size="xs"
+                defaultSelected={true}
+                className="p-0 pr-2"
                 onChange={(e) => hanleFilter(c.val, e)}
-                className="checkbox checkbox-primary w-4 h-4 rounded-md"
-              />
+              ></Checkbox>
             ) : (
-              <input
-                type="checkbox"
+              <Checkbox
+                size="xs"
+                className="p-0 pr-2"
                 onChange={(e) => hanleFilter(c.val, e)}
-                className="checkbox checkbox-primary w-4 h-4 rounded-md"
-              />
+              ></Checkbox>
             )}
             {c.text}
           </label>
