@@ -4,6 +4,7 @@ import ReactTimeAgo from "react-time-ago";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import LazyLoad from "react-lazyload";
 
 export default function WeeklyHighlightNews({ children }) {
   const { weeklyHighlightNews, isLoading } = useNews();
@@ -48,15 +49,17 @@ export default function WeeklyHighlightNews({ children }) {
         }}
         modules={[Navigation, Pagination]}
       >
-        {weeklyHighlightNews.map((n, index) => (
+        {weeklyHighlightNews.map((n) => (
           <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
             <Link to={n.id}>
-              <img
-                loading="lazy"
-                src={n.image}
-                className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
-                alt={`خبر ${n.title} `}
-              />
+              <LazyLoad>
+                <img
+                  loading="lazy"
+                  src={n.image}
+                  className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
+                  alt={`خبر ${n.title} `}
+                />
+              </LazyLoad>
             </Link>
             <div className="flex flex-col gap-1 pt-3">
               <div className="inline-flex gap-2 items-center text-sm pr-1">

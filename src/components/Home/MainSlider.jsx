@@ -65,7 +65,10 @@ function Slides({ cards }) {
         <SwiperSlide key={card.id}>
           <div className="felx flex-col bg-white/10 backdrop-blur-lg rounded-lg p-3 ">
             <a href="#">
-              <Image isBlurred className="rounded-md h-52 aspect-video object-cover mx-auto" loading="lazy"
+              <Image
+                isBlurred
+                className="rounded-md h-52 aspect-video object-cover mx-auto"
+                loading="lazy"
                 alt={card.title}
                 src={card.image}
               />

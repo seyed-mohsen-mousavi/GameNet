@@ -1,10 +1,9 @@
+import axios from "axios";
 
 function Streamers() {
-  return (
-    <div>
-      استریمر ها
-    </div>
-  )
+  const s = axios.get("https://api.twitch.tv/helix/users?login=twitchdev");
+  console.log(s);
+  return <div>استریمر ها</div>;
 }
 
-export default Streamers
+export default Streamers;

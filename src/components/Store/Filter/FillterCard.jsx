@@ -3,7 +3,6 @@ import Platform from "./Platform";
 import Categorie from "./Categorie";
 import { useStoreContext } from "../../context/StoreProvider";
 import PriceFilter from "./PriceFilter";
-import useGames from "../../../hook/useGames";
 import { Input } from "@nextui-org/input";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 function FillterCard() {
@@ -13,13 +12,12 @@ function FillterCard() {
 
   // hook
   const { hanleFilterCategories, hanleFilterPlatform } = useStoreContext();
-  const games = useGames();
   return (
     <div className="">
       <div className="p-2 rounded-lg bg-white/5 backdrop-blur hidden lg:inline-block !sticky top-7 transition-all ease-linear animate-fade">
         <h2 className="text-lg pb-1 font-semibold ">جستجو </h2>
 
-        <Input
+        <Input className="pl-5"
           size="sm"
           isClearable
           classNames={{
@@ -41,7 +39,7 @@ function FillterCard() {
               "!cursor-text",
             ],
           }}
-          placeholder="بریم ببینیم دنبال چی هستی ..."
+          placeholder="نام بازی یا محصول ..."
           startContent={<MagnifyingGlassIcon className="w-5 text-gray-300" />}
         />
         <h2 className="text-lg py-3 font-semibold ">دسته بندی ( ژانر )</h2>

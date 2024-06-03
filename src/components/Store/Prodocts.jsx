@@ -2,6 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import useGames from "../../hook/useGames";
 import { BookmarkIcon, HeartIcon } from "@heroicons/react/24/outline";
 import { useStoreContext } from "../context/StoreProvider";
+import LazyLoad from "react-lazyload";
 
 function Prodocts() {
   const [searchParams] = useSearchParams();
@@ -71,11 +72,13 @@ function Prodocts() {
         >
           <figure className="relative p-3">
             <Link to={g.link} className="w-full h-44">
-              <img
-                src={g.image_preview}
-                alt="Shoes"
-                className=" object-cover w-full h-full rounded-2xl"
-              />
+              <LazyLoad  className="h-full">
+                <img
+                  src={g.image_preview}
+                  alt="Shoes"
+                  className=" object-cover w-full h-full rounded-2xl"
+                />
+              </LazyLoad>
             </Link>
             <div className="flex absolute left-5 bottom-0  gap-5">
               <button

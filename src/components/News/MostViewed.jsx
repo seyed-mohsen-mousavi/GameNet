@@ -3,6 +3,7 @@ import useNews from "../../hook/useNews";
 import { PopularCard } from "./HeaderNews";
 import ReactTimeAgo from "react-time-ago";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
+import LazyLoad from "react-lazyload";
 
 export default function MostViewed({ children }) {
   const { news, isLoading } = useNews();
@@ -44,12 +45,14 @@ function TopViewed({ news }) {
       {topview ? (
         <div key={topview.id} className="w-full ">
           <Link to={topview.id}>
-            <img
-              loading="lazy"
-              src={topview.image}
-              className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
-              alt={`خبر ${topview.title} `}
-            />
+            <LazyLoad>
+              <img
+                loading="lazy"
+                src={topview.image}
+                className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
+                alt={`خبر ${topview.title} `}
+              />
+            </LazyLoad>
           </Link>
           <div className="flex flex-col gap-1 pt-3">
             <div className="inline-flex gap-2 items-center text-sm pr-1">

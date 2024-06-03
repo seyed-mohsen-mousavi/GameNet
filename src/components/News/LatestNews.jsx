@@ -4,6 +4,7 @@ import ReactTimeAgo from "react-time-ago";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import LazyLoad from "react-lazyload";
 
 export default function LatestNews({ children }) {
   const { news, isLoading } = useNews();
@@ -67,12 +68,14 @@ export default function LatestNews({ children }) {
               <div className="flex flex-col gap-1 pt-3">
                 <div className="inline-flex gap-2 items-center text-sm pr-1">
                   <Link className="inline-flex gap-1 items-center">
-                    <img
-                      loading="lazy"
-                      src="/images/icon/header/Grand-Theft-Auto-San-Andreas.jpg"
-                      className="w-7 h-7 rounded-full object-cover"
-                      alt={`${n.author} سازنده خبر `}
-                    />
+                    <LazyLoad>
+                      <img
+                        loading="lazy"
+                        src="/images/icon/header/Grand-Theft-Auto-San-Andreas.jpg"
+                        className="w-7 h-7 rounded-full object-cover"
+                        alt={`${n.author} سازنده خبر `}
+                      />
+                    </LazyLoad>
                     <p className="hover:underline">{n.author}</p>
                   </Link>
                   <p className="text-gray-400">

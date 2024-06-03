@@ -14,6 +14,7 @@ import useNews from "../../hook/useNews";
 // time ago
 
 import ReactTimeAgo from "react-time-ago";
+import LazyLoad from "react-lazyload";
 
 function HeaderNews() {
   const { news, isLoading, popularNews } = useNews();
@@ -116,11 +117,13 @@ export function PopularCard({ title, createdAt, author, id, views, image }) {
   return (
     <div className="flex gap-2 hover:bg-white/5 backdrop-blur p-2 rounded-lg transition-colors ease-in-out animate-fade animate-duration-1000">
       <Link to={id} className="w-2/6 h-24 xl:h-28">
-        <img
-          src={image}
-          className="w-full h-full object-cover rounded-lg "
-          alt={` عکس/ خبر ${title}`}
-        />
+        <LazyLoad className="w-full h-full">
+          <img
+            src={image}
+            className="w-full h-full object-cover rounded-lg "
+            alt={` عکس/ خبر ${title}`}
+          />
+        </LazyLoad>
       </Link>
       <div className="flex flex-col justify-around gap-2 w-3/4">
         <div className="flex gap-3 items-center text-xs xl:text-sm">
