@@ -22,6 +22,7 @@
     "@nextui-org/avatar": "^2.0.29",
     "@nextui-org/button": "^2.0.33",
     "@nextui-org/checkbox": "^2.1.1",
+    "@nextui-org/image": "^2.0.28",
     "@nextui-org/input": "^2.2.1",
     "@nextui-org/modal": "^2.0.35",
     "@nextui-org/system": "^2.2.1",

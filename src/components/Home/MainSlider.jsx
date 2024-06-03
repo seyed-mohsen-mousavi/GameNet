@@ -5,6 +5,8 @@ import "swiper/css";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { Image } from "@nextui-org/image";
+
 function MainSlider({ cards, title }) {
   return (
     <div className="  relative">
@@ -63,11 +65,9 @@ function Slides({ cards }) {
         <SwiperSlide key={card.id}>
           <div className="felx flex-col bg-white/10 backdrop-blur-lg rounded-lg p-3 ">
             <a href="#">
-              <img
-                loading="lazy"
-                className="rounded-md h-52 aspect-video object-cover mx-auto"
+              <Image isBlurred className="rounded-md h-52 aspect-video object-cover mx-auto" loading="lazy"
+                alt={card.title}
                 src={card.image}
-                alt=""
               />
             </a>
             <div className="flex flex-col gap-3 pt-2 ">
