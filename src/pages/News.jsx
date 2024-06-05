@@ -12,16 +12,16 @@ TimeAgo.addDefaultLocale(en);
 TimeAgo.addLocale(fa);
 function News() {
   return (
-    <main className="flex flex-col gap-14 w-full mt-5">
+    <main className="flex flex-col justify-center gap-14 w-full mt-5">
       <HeaderNews />
       <LatestNews>
-        <SeeAll title="جدیدترین اخبار " link="latest" />
+        <SeeAll title="جدیدترین اخبار " link="latest" color="#5254d4" />
       </LatestNews>
       <MostViewed>
-        <SeeAll title="بیشترین تعداد خوندن" link="mostRead" />
+        <SeeAll title="بیشترین تعداد خوندن" link="mostRead" color="#34f4c5" />
       </MostViewed>
       <WeeklyHighlightNews>
-        <SeeAll title="برترین های هفته" link="weeklyHighlight" />
+        <SeeAll title="برترین های هفته" link="weeklyHighlight" color="#fff" />
       </WeeklyHighlightNews>
       <TopCreatorNews />
     </main>
@@ -30,14 +30,23 @@ function News() {
 
 export default News;
 
-
 function TopCreatorNews() {
   return <div></div>;
 }
-function SeeAll({ title, link }) {
+// #34f4c5 , #5254d4 , #fff
+function SeeAll({ title, link, color }) {
   return (
-    <div key="1" className="flex justify-between pb-3">
-      <h2 className="text-2xl font-PeydaBlack ">{title}</h2>
+    <div className="flex justify-between pb-3">
+      <div className="relative flex gap-5 mr-5 md:mr-0">
+        <h2 className="text-2xl font-PeydaBlack pr-5">{title}</h2>
+        <div
+          style={{
+            boxShadow: `0px 0px 15px 0px ${color}`,
+            backgroundColor: color,
+          }}
+          className="absolute right-0 w-[3.5px] h-9 rounded-l-full"
+        ></div>
+      </div>
       <Link
         to={link}
         className="group text-[#bb80ff] font-PeydaMed flex items-center  gap-2 pl-3"

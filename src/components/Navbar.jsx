@@ -2,11 +2,11 @@ import {
   BookOpenIcon,
   BuildingStorefrontIcon,
   HomeIcon,
-  InformationCircleIcon,
   PuzzlePieceIcon,
   VideoCameraIcon,
 } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
+import { SiYoutubegaming } from "react-icons/si";
 
 import NavigationMobile from "./NavigationMobile";
 export const navBar = [
@@ -14,38 +14,50 @@ export const navBar = [
     id: 1,
     title: "خانه",
     link: "/",
-    icon: <HomeIcon className="inline-block h-5 w-5 " />,
+    icon: (
+      <HomeIcon className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
+    ),
   },
   {
     id: 2,
     title: "بازار",
     link: "/store",
-    icon: <BuildingStorefrontIcon className="inline-block h-5 w-5 " />,
+    icon: (
+      <BuildingStorefrontIcon className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
+    ),
   },
   {
     id: 3,
     title: "اخبار",
     link: "/news",
-    icon: <BookOpenIcon className="inline-block h-5 w-5 " />,
+    icon: (
+      <BookOpenIcon className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
+    ),
   },
   {
     id: 4,
     title: "بازی ها",
     link: "/games",
-    icon: <PuzzlePieceIcon className="inline-block h-5 w-5 " />,
+    icon: (
+      <PuzzlePieceIcon className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
+    ),
   },
   {
     id: 5,
     title: "استریمر ها",
     link: "/streamers",
-    icon: <VideoCameraIcon className="inline-block h-5 w-5 " />,
+    icon: (
+      <VideoCameraIcon className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
+    ),
   },
   {
     id: 6,
     title: "گیم نت ها",
     link: "/gameNet",
-    icon: <InformationCircleIcon className="inline-block h-5 w-5 " />,
-  },
+    icon: (
+      <SiYoutubegaming className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
+    ),
+  }
 ];
 function Navbar() {
   return (
@@ -83,3 +95,5 @@ function NavLinks({ navBar }) {
     </ul>
   );
 }
+
+

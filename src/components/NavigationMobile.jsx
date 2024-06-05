@@ -4,8 +4,7 @@ import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { navBar } from "./Navbar";
 import "./navigation.css";
-import { Backdrop } from "@mui/material";
-import { PlayIcon } from "@heroicons/react/24/outline";
+import { Backdrop, Button } from "@mui/material";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -99,14 +98,19 @@ function MenuToggle({ toggle }) {
     <motion.div className=" relative">
       <motion.section
         variants={variantsItem2}
-        className="flex items-center justify-between py-5 z-50 absolute right-[85px] top-2"
+        className="flex items-center justify-between py-5 z-50 absolute right-[115px] -top-3"
       >
-        <Link className="flex cursor-pointer" to="/">
-          <h2 className="text-white text-xl font-Jaro">
-            (: &nbsp; Iran Game Net
-          </h2>
+        <Link className="flex cursor-pointer " to="/login" onClick={toggle}>
+          <Button
+            size="small"
+            variant="contained"
+            className="w-24 h-full text-xs  bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-full shadow-[#733cb39c_0px_0px_5px] "
+          >
+            <span className="font-Peyda">ورود</span>
+          </Button>
         </Link>
       </motion.section>
+
       <button onClick={toggle} className="z-50 pr-2.5">
         <svg
           width="23"
@@ -185,7 +189,7 @@ function Navigation({ toggle, isOpen }) {
     <motion.ul
       variants={variants}
       dir="rtl"
-      className={`absolute top-20 right-3 z-40 h-full flex flex-col ${
+      className={`absolute top-20 right-3 z-40 h-full flex flex-col  font-PeydaLight ${
         isOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >
@@ -193,7 +197,7 @@ function Navigation({ toggle, isOpen }) {
         <motion.li key={i.id} variants={variantsItem} className="flex py-2">
           <NavLink
             onClick={toggle}
-            className="group flex items-center gap-3 transition-all ease-linear py-2  w-full  aria-[current=page]:bg-white/10 backdrop-blur rounded-xl px-20 pr-2 text-sm"
+            className="group flex items-center gap-3 transition-all ease-linear py-2  w-full aria-[current=page]:font-PeydaMed  aria-[current=page]:bg-white/10 aria-[current=page]:text-purple-400 backdrop-blur rounded-xl px-20 pr-2 text-sm"
             to={i.link}
           >
             {i.icon}
@@ -201,10 +205,6 @@ function Navigation({ toggle, isOpen }) {
           </NavLink>
         </motion.li>
       ))}
-      {/* <motion.div variants={variantsItem} className="flex flex-col h-full">
-        <div className="w-full h-0.5 bg-gray-400 rounded-full" />
-        <a href="mailto:info@gmail.com" className="font-PeydaLight p-1 pt-2">info@gmail.com </a>
-      </motion.div> */}
     </motion.ul>
   );
 }

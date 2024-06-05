@@ -14,7 +14,7 @@ export default function MostViewed({ children }) {
   return (
     <div>
       {children}
-      <div className="w-full flex flex-col lg:flex-row ">
+      <div className="w-full flex flex-col lg:flex-row px-5">
         <TopViewed news={news} />
         <span className="w-full h-0.5 rounded-full bg-gray-400 my-5 lg:hidden"></span>
         <div className="w-full">

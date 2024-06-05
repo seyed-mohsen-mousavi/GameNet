@@ -20,9 +20,9 @@ export default function LatestNews({ children }) {
     lockClass: "hidden",
     renderBullet: function (index, className) {
       return `<div class="w-2 h-2 sm:w-3 sm:h-3  rounded-full cursor-pointer ${className} transition-all ease-linear"></div>`;
-    },
+    }
   };
-  const breakpoints = {
+  const breakPoints = {
     576: {
       slidesPerView: 1,
     },
@@ -41,7 +41,7 @@ export default function LatestNews({ children }) {
     <div>
       {children}
       <Swiper
-        breakpoints={breakpoints}
+        breakpoints={breakPoints}
         pagination={pagination}
         spaceBetween={20}
         navigation={{
