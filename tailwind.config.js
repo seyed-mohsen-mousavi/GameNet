@@ -24,6 +24,7 @@ export default {
         PeydaLight: ["Peyda-light"],
         PeydaBlack: ["Peyda-black"],
         PeydaMed: ["Peyda-med"],
+        Jaro: ["Jaro"],
       },
     },
   },

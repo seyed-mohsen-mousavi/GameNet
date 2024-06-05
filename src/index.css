@@ -19,6 +19,10 @@
     font-family: "Peyda-med";
     src: url(/font/Peyda-Medium.ttf);
   }
+  @font-face {
+    font-family: "Jaro";
+    src: url(/font/Jaro-Regular-VariableFont_opsz.ttf);
+  }
   .gradient {
     position: absolute;
     bottom: -10px;

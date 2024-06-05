@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 function MainHeader({ cards }) {
   return (
-    <div className="flex flex-col md:flex-row w-full h-full mt-8 sm:mt-28 px-4">
+    <div className="flex flex-col md:flex-row w-full h-full mt-8 sm:mt-28 px-4 z-10">
       <GameTexts />
       <GameCardPreview cards={cards} />
     </div>

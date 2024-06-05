@@ -10,7 +10,6 @@ export default function MostViewed({ children }) {
   news.sort(function (a, b) {
     return b.views - a.views;
   });
-  console.log(news);
   if (isLoading) return <div>LOading ...</div>;
   return (
     <div>
