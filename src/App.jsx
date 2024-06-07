@@ -12,7 +12,7 @@ import News from "./pages/News";
 
 function App() {
   return (
-    <div className="container text-white overflow-x-hidden">
+    <div className="relative container text-white overflow-x-hidden min-h-screen ">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

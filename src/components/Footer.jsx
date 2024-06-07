@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="relative mt-28 overflow-hidden">
+    <footer className="relative mt-28 overflow-hidden ">
       <div className="mx-auto mb-3 text-center ">
         <div className="ft-hr md:w-[50rem] mx-auto h-[1px]  rounded-full"></div>
         <h3 className="wow animate__animated animate__fadeInUp my-5">

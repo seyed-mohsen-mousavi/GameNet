@@ -12,7 +12,7 @@ TimeAgo.addDefaultLocale(en);
 TimeAgo.addLocale(fa);
 function News() {
   return (
-    <main className="flex flex-col justify-center gap-14 w-full mt-5">
+    <main className="flex flex-col justify-center gap-14 w-full mt-0 md:mt-5 ">
       <HeaderNews />
       <LatestNews>
         <SeeAll title="جدیدترین اخبار " link="latest" color="#5254d4" />

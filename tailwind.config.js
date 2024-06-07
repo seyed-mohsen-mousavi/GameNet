@@ -28,5 +28,5 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui"), nextui()],
+  plugins: [require("daisyui"), nextui() , require('tailwindcss-animated')],
 };
