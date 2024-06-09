@@ -4,8 +4,8 @@ function Header({ scroll }) {
   const creaedGames = useInc(980);
   const hTraller = useInc(568);
   return (
-    <div className="mx-auto min-h-[100vh] flex flex-col justify-around">
-      <div className="flex  gap-20 items-center h-full">
+    <div className="mx-auto min-h-[100vh] flex flex-col justify-evenly z-10">
+      <div className="flex flex-col md:flex-row  md:gap-20 items-center h-full">
         <div className="relative">
           <img 
             src="/images/games/Character.png"
