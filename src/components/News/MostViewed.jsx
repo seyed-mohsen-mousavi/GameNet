@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import useNews from "../../hook/useNews";
+import useServer from "../../hook/useServer";
 import { PopularCard } from "./HeaderNews";
 import ReactTimeAgo from "react-time-ago";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
 import LazyLoad from "react-lazyload";
 
 export default function MostViewed({ children }) {
-  const { news, isLoading } = useNews();
+  const [news, isLoading] = useServer("news");
   news.sort(function (a, b) {
     return b.views - a.views;
   });

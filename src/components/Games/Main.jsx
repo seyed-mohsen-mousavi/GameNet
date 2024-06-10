@@ -10,7 +10,7 @@ function Main({ el }) {
       <h2 className="text-center text-gray-300 text-xl font-PeydaBlack">
         با بازی های جدید قدم بعدی رو به سوی قوی تر شدن در صنعت گیم بردار
       </h2>
-      <div className="flex flex-wrap items-center gap-7 justify-center my-11">
+      <div className="flex flex-wrap items-center gap-10 justify-center mt-11 mb-5">
         <div className="relative flex bg-gray-700 p-6 py-9 gap-2 items-center rounded-xl">
           <div className=" bg-orange-400/15 text-orange-400 p-4 rounded-full">
             <UsersIcon className="w-6" />

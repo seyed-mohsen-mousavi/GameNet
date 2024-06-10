@@ -34,7 +34,7 @@ function TopCreatorNews() {
   return <div></div>;
 }
 // #34f4c5 , #5254d4 , #fff
-function SeeAll({ title, link, color }) {
+export function SeeAll({ title, link, color }) {
   return (
     <div className="flex justify-between pb-3">
       <div className="relative flex gap-5 mr-5 md:mr-0">

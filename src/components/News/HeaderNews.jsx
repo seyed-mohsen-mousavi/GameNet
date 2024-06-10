@@ -10,14 +10,15 @@ import {
   ClockIcon,
   PencilIcon,
 } from "@heroicons/react/24/outline";
-import useNews from "../../hook/useNews";
+import useServer from "../../hook/useServer";
 // time ago
 
 import ReactTimeAgo from "react-time-ago";
 import LazyLoad from "react-lazyload";
 
 function HeaderNews() {
-  const { news, isLoading, popularNews } = useNews();
+  const [news, isLoading] = useServer("news");
+  const [popularNews] = useServer("popularNews");
   if (isLoading) return <Loader />;
   return (
     <>

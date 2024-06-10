@@ -213,5 +213,62 @@
       "link": "https://bazinama.com/cyberpunk-2077-update-2-review",
       "image": "/images/news/Cyber-Punk.jpg"
     }
+  ],
+  "Games": [
+    {
+      "id": 61234567,
+      "title": "بازی Call of Duty: Warzone",
+      "author": "شرکت Activision",
+      "author_image": "https://example.com/images/authors/activision.jpg",
+      "views": 5000000,
+      "date": "2020-03-10",
+      "description": "بازی Call of Duty: Warzone یکی از محبوب‌ترین بازی‌های بتل رویال است که توسط شرکت Activision ساخته شده است. این بازی با گرافیک بالا و گیم‌پلی هیجان‌انگیز خود توانسته است طرفداران زیادی را جذب کند.",
+      "link": "https://www.callofduty.com/warzone",
+      "image": "/images/callofduty/4.jpg"
+    },
+    {
+      "id": 62345678,
+      "title": "بازی Fortnite",
+      "author": "شرکت Epic Games",
+      "author_image": "https://example.com/images/authors/epicgames.jpg",
+      "views": 3500000,
+      "date": "2017-07-25",
+      "description": "بازی Fortnite یکی از محبوب‌ترین بازی‌های بتل رویال است که توسط شرکت Epic Games ساخته شده است. این بازی با گرافیک کارتونی و امکانات متنوع خود، تجربه‌ای منحصر به فرد را به بازیکنان ارائه می‌دهد.",
+      "link": "https://www.epicgames.com/fortnite",
+      "image": "/images/news/Fortnite-Cover.jpg"
+    },
+    {
+      "id": 63456789,
+      "title": "بازی The Witcher 3: Wild Hunt",
+      "author": "شرکت CD Projekt Red",
+      "author_image": "https://example.com/images/authors/cdprojektred.jpg",
+      "views": 2000000,
+      "date": "2015-05-19",
+      "description": "بازی The Witcher 3: Wild Hunt یک بازی نقش‌آفرینی است که توسط شرکت CD Projekt Red ساخته شده است. این بازی با داستان عمیق و گرافیک خیره‌کننده، یکی از بهترین بازی‌های تاریخ محسوب می‌شود.",
+      "link": "https://thewitcher.com/en/witcher3",
+      "image": "/images/news/the-witcher-4-logo.webp"
+    },
+    {
+      "id": 64567890,
+      "title": "بازی Cyberpunk 2077",
+      "author": "شرکت CD Projekt Red",
+      "author_image": "https://example.com/images/authors/cdprojektred.jpg",
+      "views": 3000000,
+      "date": "2020-12-10",
+      "description": "بازی Cyberpunk 2077 یک بازی نقش‌آفرینی و جهان باز است که توسط شرکت CD Projekt Red ساخته شده است. این بازی با داستان علمی تخیلی و گرافیک بالا، تجربه‌ای جدید و هیجان‌انگیز را برای بازیکنان به ارمغان می‌آورد.",
+      "link": "https://www.cyberpunk.net",
+      "image": "/images/news/Cyber-Punk.jpg"
+    },
+    {
+      "id": 65678901,
+      "title": "بازی Grand Theft Auto V",
+      "author": "شرکت Rockstar Games",
+      "author_image": "https://example.com/images/authors/rockstargames.jpg",
+      "views": 6000000,
+      "date": "2013-09-17",
+      "description": "بازی Grand Theft Auto V یکی از محبوب‌ترین و پرفروش‌ترین بازی‌های جهان است که توسط شرکت Rockstar Games ساخته شده است. این بازی با داستان جذاب و گرافیک بالا، تجربه‌ای بی‌نظیر را به بازیکنان ارائه می‌دهد.",
+      "link": "https://www.rockstargames.com/V",
+      "image": "/images/gtav_back.jpg"
+    }
   ]
 }
