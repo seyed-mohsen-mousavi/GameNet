@@ -3,6 +3,7 @@ import Header from "../components/Games/Header";
 import Main from "../components/Games/Main";
 import LatestGames from "../components/Games/LatestGames";
 import { SeeAll } from "../pages/News";
+import Category from "../components/Games/Category";
 function Games() {
   const around = useRef(null);
   const categ = useRef(null);
@@ -19,7 +20,8 @@ function Games() {
       <LatestGames scroll={scrollCateg}>
         <SeeAll title="جدیدترین بازی ها " link="latest" color="#d42222" />
       </LatestGames>
-      <div ref={categ}></div>
+
+      <Category el={categ} />
     </main>
   );
 }

@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import ReactTimeAgo from "react-time-ago";
-import { BookOpenIcon, ClockIcon } from "@heroicons/react/24/outline";
+import {
+  BookOpenIcon,
+  BookmarkIcon,
+  ClockIcon,
+  HeartIcon,
+} from "@heroicons/react/24/outline";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import LazyLoad from "react-lazyload";
@@ -47,16 +52,32 @@ export default function SliderCards({ arr, categ }) {
     >
       {arr.map((n) => (
         <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
-          <Link to={n.id}>
-            <LazyLoad>
-              <img
-                loading="lazy"
-                src={n.image}
-                className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
-                alt={`${categ} ${n.title} `}
-              />
-            </LazyLoad>
-          </Link>
+          <div className="relative">
+            <Link to={n.id}>
+              <LazyLoad>
+                <img
+                  loading="lazy"
+                  src={n.image}
+                  className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
+                  alt={`${categ} ${n.title} `}
+                />
+              </LazyLoad>
+            </Link>
+            <div className="flex absolute left-2 -bottom-2  gap-5">
+              <button
+                title={n.like}
+                className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-red-500 transition-all ease-linear"
+              >
+                <HeartIcon className="w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear" />
+              </button>
+              <button
+                title={n.save}
+                className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-gray-400 transition-all ease-linear"
+              >
+                <BookmarkIcon className="w-5 h-5 group-hover:fill-gray-400/30 transition-all ease-linear" />
+              </button>
+            </div>
+          </div>
           <div className="flex flex-col gap-1 pt-3">
             <div className="flex justify-between gap-2 items-center text-sm pr-1">
               <Link className="inline-flex gap-1 items-center">
@@ -95,7 +116,7 @@ export default function SliderCards({ arr, categ }) {
           </div>
         </SwiperSlide>
       ))}
-      <div className="flex gap-3 w-full justify-center items-center py-1">
+      <div className="flex gap-3 w-full justify-center items-center py-2 pt-5">
         <button className="prev opacity-60 hover:opacity-80 transition-opacity ease-in-out">
           <svg
             viewBox="0 0 26 30"
