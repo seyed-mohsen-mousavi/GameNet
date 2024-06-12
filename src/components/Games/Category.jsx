@@ -17,14 +17,16 @@ function Category({ el }) {
             <div className="flex">
               <div className="w-20">
                 <img
-                  src="https://pngimg.com/d/fifa_game_PNG23.png"
+                  src={e.image}
                   className="absolute -top-5 right-2 w-20"
-                  alt={`بازی های  ${e.text }`}
+                  alt={`بازی های  ${e.text}`}
                 />
               </div>
               <div>
                 <h3 className=" font-PeydaMed">{e.text}</h3>
-                <p className="text-xs text-gray-500">کلیک کن تا بریم سمت دنیای {e.text}</p>
+                <p className="text-xs text-gray-500">
+                  کلیک کن تا بریم سمت دنیای {e.text}
+                </p>
               </div>
             </div>
           </Link>
