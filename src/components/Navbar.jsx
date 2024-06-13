@@ -19,14 +19,6 @@ export const navBar = [
     ),
   },
   {
-    id: 2,
-    title: "بازار",
-    link: "/store",
-    icon: (
-      <BuildingStorefrontIcon className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
-    ),
-  },
-  {
     id: 3,
     title: "اخبار",
     link: "/news",
