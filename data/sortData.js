@@ -7,15 +7,9 @@ export const categories = [
   },
   {
     id: 2,
-    text: "اکشن و ماجراجویی",
+    text: " ماجراجویی",
     val: "actionAdventure",
-    image: "/images/games/actionAdventure.png",
-  },
-  {
-    id: 3,
-    text: "ماجراجویی",
-    val: "adventure",
-    image: "/images/games/red-dead-online-blood-money-artwork-png-8647-1600.png",
+    image: "/images/games/adventure.png",
   },
   {
     id: 4,
@@ -27,25 +21,25 @@ export const categories = [
     id: 5,
     text: "استراتژی",
     val: "strategy",
-    image: "",
+    image: "/images/games/strategy.png",
   },
   {
     id: 6,
     text: "ورزشی ",
     val: "Sports",
-    image: "/images/games/sport.png",
+    image: "/images/games/sport.webp",
   },
   {
     id: 7,
-    text: "ترس و بقاء",
-    val: "Survival",
-    image: "",
+    text: "ترسناک",
+    val: "scary",
+    image: "/images/games/scary.png",
   },
   {
     id: 8,
     text: "ماشینی",
     val: "car",
-    image: "/images/games/car.png",
+    image: "/images/games/car.avif",
   },
 ];
 export const platform = [

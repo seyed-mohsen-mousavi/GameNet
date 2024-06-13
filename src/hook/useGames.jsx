@@ -114,7 +114,7 @@ function useGames() {
       like: 12,
       save: 21,
       platform: ["pc", "ps4", "ps5", "xboxSeries", "nintendoSwitch"],
-      category: "Survival",
+      category: "scary",
       price: 29.99 ,
     },
     {

@@ -12,25 +12,30 @@ function Category({ el }) {
           <Link
             to={e.val}
             key={e.id}
-            className="p-5 bg-white text-gray-900 rounded-lg relative"
+            className="p-5 bg-gray-500  rounded-2xl relative w-72 group active:scale-95 transition-transform"
           >
             <div className="flex">
               <div className="w-20">
                 <img
                   src={e.image}
-                  className="absolute -top-5 right-2 w-20"
+                  className="absolute -top-5 right-2 w-20 group-hover:-top-6 transition-all"
                   alt={`بازی های  ${e.text}`}
                 />
               </div>
               <div>
                 <h3 className=" font-PeydaMed">{e.text}</h3>
-                <p className="text-xs text-gray-500">
-                  کلیک کن تا بریم سمت دنیای {e.text}
+                <p className="text-xs text-gray-300 line-clamp-1">
+                  پیش به سوی  بازی های {e.text}
                 </p>
               </div>
             </div>
+
           </Link>
         ))}
+      </div>
+      <div>
+        <img src="" alt="" />
+        <img src="" alt="" />
       </div>
     </div>
   );

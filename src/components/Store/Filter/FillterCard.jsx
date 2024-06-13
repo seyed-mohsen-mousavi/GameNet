@@ -17,7 +17,8 @@ function FillterCard() {
       <div className="p-2 rounded-lg bg-white/5 backdrop-blur hidden lg:inline-block !sticky top-7 transition-all ease-linear animate-fade">
         <h2 className="text-lg pb-1 font-semibold ">جستجو </h2>
 
-        <Input className="pl-5"
+        <Input
+          className="pl-5"
           size="sm"
           isClearable
           classNames={{

@@ -1,6 +1,7 @@
 import { Checkbox } from "@nextui-org/checkbox";
 
 export default function Categorie({ categories, hanleFilter }) {
+  console.log(categories);
   return (
     <ul className="flex flex-col gap-4 text-xs">
       {categories.map((c) => (
