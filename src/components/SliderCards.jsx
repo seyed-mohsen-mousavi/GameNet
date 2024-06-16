@@ -36,7 +36,6 @@ export default function SliderCards({ arr, categ }) {
       slidesPerView: 4,
     },
   };
-  console.log(arr);
   return (
     <Swiper
       breakpoints={breakpoints}
@@ -53,7 +52,7 @@ export default function SliderCards({ arr, categ }) {
       {arr.map((n) => (
         <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
           <div className="relative">
-            <Link to={`${n.id}`}>
+            <Link to={`page/${n.id}`}>
               <LazyLoad>
                 <img
                   loading="lazy"

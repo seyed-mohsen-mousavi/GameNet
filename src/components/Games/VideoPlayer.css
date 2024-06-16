@@ -1,0 +1,47 @@
+/* VideoPlayer.css */
+.video-js .vjs-play-control,
+.video-js .vjs-pause-control {
+  background-color: rgba(255, 255, 255, 0.082);
+  border-radius: 50%;
+  margin: 10px 2px;
+}
+
+.video-js .vjs-play-control:hover,
+.video-js .vjs-pause-control:hover {
+}
+.video-js .vjs-play-control:focus,
+.video-js .vjs-pause-control:focus {
+  text-shadow: none;
+}
+/* VideoPlayer.css */
+.video-js .vjs-big-play-button {
+  /* استایل‌های سفارشی برای BigPlayButton */
+  background-color: #4caf50; /* رنگ پس زمینه پیش‌فرض */
+  color: #fff; /* رنگ متن */
+  border-radius: 50%; /* شکل گرد */
+  width: 60px; /* عرض */
+  height: 60px; /* ارتفاع */
+  font-size: 30px; /* اندازه متن */
+  top: 50%; /* توپ */
+  left: 50%; /* چپ */
+  transform: translate(-50%, -50%); /* تراز متن در وسط */
+}
+
+.vjs-control-bar {
+  width: auto !important;
+  border-radius: 20px;
+  height: 4em !important;
+  align-items: center;
+  bottom: 20px !important;
+  margin: 0 15px;
+  backdrop-filter: blur(10px);
+}
+.video-js .vjs-time-control {
+  line-height: 3.2em !important;
+  font-size: 1.2em;
+}
+.vjs-menu-item-text,
+vjs-playback-rate,
+.video-js .vjs-time-control {
+  font-family: "Peyda";
+}
