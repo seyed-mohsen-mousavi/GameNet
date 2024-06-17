@@ -1,60 +1,19 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import "video.js/dist/lang/fa.json"; // بارگذاری فایل زبان فارسی
-import "./VideoPlayer.css"; // ایمپورت فایل CSS سفارشی
-// const VideoPlayer = ({ options }) => {
-//   const videoRef = useRef(null);
-//   const playerRef = useRef(null);
-
-//   useEffect(() => {
-//     // initialize video.js player
-//     if (playerRef.current) {
-//       playerRef.current.dispose();
-//     }
-
-//     const videoElement = videoRef.current;
-//     if (!videoElement) return;
-
-//     playerRef.current = videojs(videoElement, options, () => {
-//       console.log("player is ready");
-//       console.log("Player language:", playerRef.current.language());
-//     });
-
-//     // سفارشی‌سازی کنترل‌ها بعد از بارگذاری پلیر
-//     const controlBar = document.querySelector(".vjs-control-bar");
-//     if (controlBar) {
-//       controlBar.style.backgroundImage = "linear-gradient(to right, #3b35b2, #733cb3)";
-//       controlBar.style.backgroundClip = "text";
-//       controlBar.style.color = "transparent";
-//     }
-
-//     return () => {
-//       if (playerRef.current) {
-//         playerRef.current.dispose();
-//         playerRef.current = null;
-//       }
-//     };
-//   }, [options]);
-
-//   return (
-//     <div data-vjs-player>
-//       <video
-//         ref={videoRef}
-//         className="video-js vjs-default-skin rounded-lg border-2 border-gray-300"
-//       />
-//     </div>
-//   );
-// };
-
-// export default VideoPlayer;
+import "video.js/dist/lang/fa.json";
+import "./VideoPlayer.css";
+import "videojs-hotkeys";
 
 const VideoPlayer = ({ options }) => {
   const videoRef = useRef(null);
   const playerRef = useRef(null);
-
+  document.addEventListener("contextmenu", function (event) {
+    if (event.target.tagName === "VIDEO") {
+      event.preventDefault();
+    }
+  });
   useEffect(() => {
-    // initialize video.js player
     if (playerRef.current) {
       playerRef.current.dispose();
     }
@@ -62,9 +21,23 @@ const VideoPlayer = ({ options }) => {
     const videoElement = videoRef.current;
     if (!videoElement) return;
 
+    // Initialize video.js player
     playerRef.current = videojs(videoElement, options, () => {
-      console.log("player is ready");
-      console.log("Player language:", playerRef.current.language());
+      const bigp = document.querySelector(".vjs-big-play-button");
+      if (bigp) {
+        bigp.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 mx-auto ml-3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+        </svg>`;
+      }
+    });
+
+    // Initialize hotkeys plugin
+    playerRef.current.hotkeys({
+      enableModifiersForNumbers: true,
+      seekStep: 10,
+      volumeStep: 0.1,
+      enableVolumeScroll: false,
+      alwaysCaptureHotkeys: true,
     });
 
     return () => {
@@ -76,10 +49,10 @@ const VideoPlayer = ({ options }) => {
   }, [options]);
 
   return (
-    <div data-vjs-player className="my-4 mx-auto max-w-screen-md relative">
-      <video
+    <div data-vjs-player className="my-4 mx-auto max-w-screen-md relative flex-1">
+      <video width={500} height={200}
         ref={videoRef}
-        className="video-js vjs-default-skin rounded-lg border-2 border-gray-300"
+        className="video-js vjs-default-skin rounded-3xl overflow-hidden !w-full !h-full object-none"
       />
     </div>
   );
