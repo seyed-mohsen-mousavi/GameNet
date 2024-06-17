@@ -33,7 +33,7 @@
   border-radius: 10px;
   height: 4em !important;
   align-items: center;
-  bottom: 20px !important;
+  bottom: 12px !important;
   margin: 0 15px;
   backdrop-filter: blur(10px);
   padding: 5px;
@@ -92,7 +92,11 @@ vjs-playback-rate,
 .vjs-tech {
   outline: none;
   object-fit: cover;
+
 }
 .vjs_video_3-dimensions.vjs-fluid:not(.vjs-audio-only-mode) {
   padding-top: 0 !important;
+}
+.vjs-poster img{
+  object-fit: cover;
 }

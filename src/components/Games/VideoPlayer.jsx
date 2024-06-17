@@ -20,9 +20,9 @@ const VideoPlayer = ({ options }) => {
 
     const videoElement = videoRef.current;
     if (!videoElement) return;
-
     // Initialize video.js player
     playerRef.current = videojs(videoElement, options, () => {
+      console.log(videoElement);
       const bigp = document.querySelector(".vjs-big-play-button");
       if (bigp) {
         bigp.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 mx-auto ml-3">
@@ -49,10 +49,10 @@ const VideoPlayer = ({ options }) => {
   }, [options]);
 
   return (
-    <div data-vjs-player className="my-4 mx-auto max-w-screen-md relative flex-1">
-      <video width={500} height={200}
+    <div data-vjs-player className="my-4 mx-auto max-w-screen-md relative flex-1 !w-1/2 !h-80">
+      <video 
         ref={videoRef}
-        className="video-js vjs-default-skin rounded-3xl overflow-hidden !w-full !h-full object-none"
+        className="video-js !p-0 vjs-default-skin rounded-xl overflow-hidden !w-full !h-full object-none "
       />
     </div>
   );

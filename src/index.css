@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+  }
   @font-face {
     font-family: "Peyda";
     src: url(/font/Peyda-Medium.ttf);
@@ -149,5 +153,10 @@
       rgba(0, 0, 0, 0) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#000000", GradientType=1);
+  }
+  .from-cnDarkBlue-27:is(.dark *) {
+    --tw-gradient-from: rgb(55 65 81) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(40, 42, 59, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
 }
