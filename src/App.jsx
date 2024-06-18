@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-// import Store from "./pages/Store";
+import Store from "./pages/Store";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import About from "./pages/About";
@@ -14,12 +14,12 @@ import GamesFilter from "./components/Games/GamesFilter";
 
 function App() {
   return (
-    <div className="relative container text-white overflow-x-hidden min-h-screen ">
+    <div className="relative container text-white  min-h-screen ">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="store/:id" element={<Prodoct />} />
-          {/* <Route path="store" element={<Store />} /> */}
+          <Route path="store" element={<Store />} />
           <Route path="news" element={<News />} />
           <Route path="news/:id" element={<div>single new</div>} />
           <Route path="register" element={<Register />} />
