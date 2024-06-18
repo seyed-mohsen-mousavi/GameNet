@@ -225,7 +225,36 @@
       "date": "2020-03-10",
       "description": "بازی Call of Duty: Warzone یکی از محبوب‌ترین بازی‌های بتل رویال است که توسط شرکت Activision ساخته شده است. این بازی با گرافیک بالا و گیم‌پلی هیجان‌انگیز خود توانسته است طرفداران زیادی را جذب کند.",
       "link": "https://www.callofduty.com/warzone",
-      "image": "/images/callofduty/4.jpg"
+      "image": "/images/callofduty/4.jpg",
+      "trialer": "/video/trailer/warzoneTrailer.mp4",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": {
+          "poster": "/images/callofduty/warzone.jpg",
+          "gallery": ["", "", ""]
+        },
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main1": { "title": "", "desc": "" },
+          "main2": { "title": "", "desc": "" },
+          "system": {
+            "min": "",
+            "max": ""
+          }
+        },
+        "producer": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        }
+      },
+      "category": ["اکشن", "action"]
     },
     {
       "id": 62345678,
@@ -237,7 +266,36 @@
       "date": "2017-07-25",
       "description": "بازی Fortnite یکی از محبوب‌ترین بازی‌های بتل رویال است که توسط شرکت Epic Games ساخته شده است. این بازی با گرافیک کارتونی و امکانات متنوع خود، تجربه‌ای منحصر به فرد را به بازیکنان ارائه می‌دهد.",
       "link": "https://www.epicgames.com/fortnite",
-      "image": "/images/news/Fortnite-Cover.jpg"
+      "image": "/images/news/Fortnite-Cover.jpg",
+      "trialer": "",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": {
+          "poster": "/images/callofduty/warzone.jpg",
+          "gallery": ["", "", ""]
+        },
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main1": { "title": "", "desc": "" },
+          "main2": { "title": "", "desc": "" },
+          "system": {
+            "min": "",
+            "max": ""
+          }
+        },
+        "producer": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        }
+      },
+      "category": "اکشن"
     },
     {
       "id": 63456789,
@@ -249,7 +307,36 @@
       "date": "2015-05-19",
       "description": "بازی The Witcher 3: Wild Hunt یک بازی نقش‌آفرینی است که توسط شرکت CD Projekt Red ساخته شده است. این بازی با داستان عمیق و گرافیک خیره‌کننده، یکی از بهترین بازی‌های تاریخ محسوب می‌شود.",
       "link": "https://thewitcher.com/en/witcher3",
-      "image": "/images/news/the-witcher-4-logo.webp"
+      "image": "/images/news/the-witcher-4-logo.webp",
+      "trialer": "",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": {
+          "poster": "/images/callofduty/warzone.jpg",
+          "gallery": ["", "", ""]
+        },
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main1": { "title": "", "desc": "" },
+          "main2": { "title": "", "desc": "" },
+          "system": {
+            "min": "",
+            "max": ""
+          }
+        },
+        "producer": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        }
+      },
+      "category": ["اکشن", "action"]
     },
     {
       "id": 64567890,
@@ -261,7 +348,36 @@
       "date": "2020-12-10",
       "description": "بازی Cyberpunk 2077 یک بازی نقش‌آفرینی و جهان باز است که توسط شرکت CD Projekt Red ساخته شده است. این بازی با داستان علمی تخیلی و گرافیک بالا، تجربه‌ای جدید و هیجان‌انگیز را برای بازیکنان به ارمغان می‌آورد.",
       "link": "https://www.cyberpunk.net",
-      "image": "/images/news/Cyber-Punk.jpg"
+      "image": "/images/news/Cyber-Punk.jpg",
+      "trialer": "",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": {
+          "poster": "/images/callofduty/warzone.jpg",
+          "gallery": ["", "", ""]
+        },
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main1": { "title": "", "desc": "" },
+          "main2": { "title": "", "desc": "" },
+          "system": {
+            "min": "",
+            "max": ""
+          }
+        },
+        "producer": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        }
+      },
+      "category": ["اکشن", "action"]
     },
     {
       "id": 65678901,
@@ -273,7 +389,36 @@
       "date": "2013-09-17",
       "description": "بازی Grand Theft Auto V یکی از محبوب‌ترین و پرفروش‌ترین بازی‌های جهان است که توسط شرکت Rockstar Games ساخته شده است. این بازی با داستان جذاب و گرافیک بالا، تجربه‌ای بی‌نظیر را به بازیکنان ارائه می‌دهد.",
       "link": "https://www.rockstargames.com/V",
-      "image": "/images/gtav_back.jpg"
+      "image": "/images/gtav_back.jpg",
+      "trialer": "",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": {
+          "poster": "/images/callofduty/warzone.jpg",
+          "gallery": ["", "", ""]
+        },
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main1": { "title": "", "desc": "" },
+          "main2": { "title": "", "desc": "" },
+          "system": {
+            "min": "",
+            "max": ""
+          }
+        },
+        "producer": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        }
+      },
+      "category": ["اکشن", "action"]
     }
   ]
 }

@@ -10,9 +10,13 @@ import { Button } from "@mui/material";
 import { Image } from "@nextui-org/image";
 import Modal from "react-modal";
 import Comments from "./Comments";
+import useServer from "../../hook/useServer";
 
 function SinglePage() {
-  console.log(location.pathname.split("/games/page/")[1]);
+  const [game, isLoading] = useServer(
+    `games/${location.pathname.split("/games/page/")[1]}`
+  );
+  console.log(game);
   const trialer = useRef(null);
   const videoJsOptions = {
     autoplay: false,
@@ -23,7 +27,7 @@ function SinglePage() {
     poster: "/images/callofduty/warzone.jpg",
     sources: [
       {
-        src: "/video/trailer/warzoneTrailer.mp4",
+        src: game.trialer,
         type: "video/mp4",
         label: "360p",
         res: 360,
@@ -35,6 +39,7 @@ function SinglePage() {
   const prdc = useRef();
   const gallery = useRef();
   const comments = useRef();
+  if (isLoading) return <div>Loading</div>;
   return (
     <div className="w-full flex gap-7 flex-col  px-5 mt-6">
       <div className="flex gap-5 flex-col md:flex-row p-5 bg-gray-700  rounded-lg">
@@ -47,7 +52,14 @@ function SinglePage() {
           </p>
           <VideoPlayer options={videoJsOptions} el={trialer} />
         </div>
-        <AboutGame />
+        <AboutGame
+          title={game.title}
+          desc={game.description}
+          categ={game.category}
+          date={game.date}
+          like={game.like}
+          save={game.save}
+        />
       </div>
       <div className="flex flex-col md:flex-row gap-10 z-10 w-full mt-2">
         <div className="flex flex-col gap-7">
@@ -67,42 +79,28 @@ function SinglePage() {
 
 export default SinglePage;
 
-function AboutGame() {
+function AboutGame({ title, desc, categ, date, like, save }) {
   return (
     <div className="md:w-1/2 z-10">
       <div className="flex justify-between items-center">
-        <span className="text-gray-500">2024,11,03</span>
+        <span className="text-gray-500">{date}</span>
         <div className="flex  gap-5">
           <button className=" text-red-500 text-sm flex gap-1 items-center bg-red-500/30 hover:bg-red-500/50 transition-colors ease-linear px-2 py-1 rounded">
-            <p className="mt-1">20</p>
+            <p className="mt-1">{like}</p>
             <HeartIcon className="w-5 h-5" />
           </button>
           <button className=" text-gray-500 text-sm flex gap-1 items-center bg-gray-500/30 hover:bg-gray-500/50 transition-colors ease-linear px-2 py-1 rounded">
-            <p className="mt-1">36</p>
+            <p className="mt-1">{save}</p>
             <BookmarkIcon className="w-5 h-5" />
           </button>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center md:items-start">
-        <h2 className="text-3xl font-PeydaBlack pt-5 pb-2">
-          کالاف دیوتی وارزون
-        </h2>
+        <h2 className="text-3xl font-PeydaBlack pt-5 pb-2">{title}</h2>
         <Link to="" className="px-2 py-0.5 rounded-lg bg-black/20 text-sm">
-          اکشن
+          {categ}
         </Link>
-        <p className="text-sm 2xl:text-base text-gray-300 line-clamp-[10] pt-3">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-          ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
-          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
-          در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
-          طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-          الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-          صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
-          شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
-          اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
-          قرار گیرد.
-        </p>
+        <p className="text-gray-300 line-clamp-[10] pt-3">{desc}</p>
       </div>
     </div>
   );
