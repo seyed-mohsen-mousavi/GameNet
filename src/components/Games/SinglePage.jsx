@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import VideoPlayer from "./VideoPlayer";
 import { LiaTelegram } from "react-icons/lia";
 import { BsTwitterX } from "react-icons/bs";
 import { FaWhatsapp, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IoMdLink } from "react-icons/io";
 import { BookmarkIcon, HeartIcon } from "@heroicons/react/24/outline";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@mui/material";
 import { Image } from "@nextui-org/image";
 import Modal from "react-modal";
@@ -13,18 +14,15 @@ import Comments from "./Comments";
 import useServer from "../../hook/useServer";
 
 function SinglePage() {
-  const [game, isLoading] = useServer(
-    `games/${location.pathname.split("/games/page/")[1]}`
-  );
-  console.log(game);
+  const { id } = useParams();
+  const [game, isLoading] = useServer(`games/${id}`);
   const trialer = useRef(null);
   const videoJsOptions = {
     autoplay: false,
     controls: true,
     responsive: true,
-    fluid: true,
     language: "fa",
-    poster: "/images/callofduty/warzone.jpg",
+    poster: game.details?.images.poster,
     sources: [
       {
         src: game.trialer,
@@ -39,6 +37,7 @@ function SinglePage() {
   const prdc = useRef();
   const gallery = useRef();
   const comments = useRef();
+  console.log(game.details?.images.gallery);
   if (isLoading) return <div>Loading</div>;
   return (
     <div className="w-full flex gap-7 flex-col  px-5 mt-6">
@@ -65,12 +64,23 @@ function SinglePage() {
         <div className="flex flex-col gap-7">
           <Description el={desc} />
           <Producer el={prdc} />
-          <Gallery el={gallery} />
-          <Comments />
+          <Gallery
+            el={gallery}
+            images={game.details?.images.gallery}
+            title="sss"
+          />
+          <Comments el={comments} />
+          <br />
+          <br />
         </div>
         <div className="flex flex-col gap-5">
           <AboutPage />
-          <Timeline desc={desc} prdc={prdc} gallery={gallery} />
+          <Timeline
+            desc={desc}
+            prdc={prdc}
+            gallery={gallery}
+            comments={comments}
+          />
         </div>
       </div>
     </div>
@@ -158,23 +168,40 @@ function Timeline({ desc, prdc, gallery, comments }) {
   const [isPrdc, setIsPrdc] = useState(false);
   const [isgallery, setIsgallery] = useState(false);
   const [iscomments, setIscomments] = useState(false);
-  window.onscroll = () => {
-    if (window.pageYOffset > desc.current.offsetTop) {
-      setIsDesc(true);
-    } else {
-      setIsDesc(false);
-    }
-    if (window.pageYOffset > prdc.current.offsetTop) {
-      setIsPrdc(true);
-    } else {
-      setIsPrdc(false);
-    }
-    if (window.pageYOffset > gallery.current.offsetTop) {
-      setIsgallery(true);
-    } else {
-      setIsgallery(false);
-    }
-  };
+  const [isEnd, setIsEnd] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > desc.current.offsetTop) {
+        setIsDesc(true);
+      } else {
+        setIsDesc(false);
+      }
+      if (window.pageYOffset > prdc.current.offsetTop) {
+        setIsPrdc(true);
+      } else {
+        setIsPrdc(false);
+      }
+      if (window.pageYOffset > gallery.current.offsetTop) {
+        setIsgallery(true);
+      } else {
+        setIsgallery(false);
+      }
+      if (window.pageYOffset > comments.current.offsetTop + 20) {
+        setIscomments(true);
+      } else {
+        setIscomments(false);
+      }
+    };
+    // document.onscrollend = () => {
+    //   setIsEnd(true);
+    // };
+    document.body.onscrollend = () => console.log("s");
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleScroll = (el) =>
     el.current.scrollIntoView({
       behavior: "smooth",
@@ -182,7 +209,7 @@ function Timeline({ desc, prdc, gallery, comments }) {
     });
 
   return (
-    <ul className="timeline timeline-vertical bg-gray-700 rounded-lg p-3 font-Peyda sticky top-0">
+    <ul className="timeline timeline-vertical bg-gray-700 rounded-lg p-3 font-Peyda sticky top-6">
       <li>
         <div className="timeline-start timeline-box bg-transparent border-none shadow-none">
           <Button
@@ -253,7 +280,11 @@ function Timeline({ desc, prdc, gallery, comments }) {
         />
       </li>
       <li>
-        <hr className="" />
+        <hr
+          className={`transition-colors ease-linear ${
+            iscomments ? "bg-primary" : ""
+          }`}
+        />
         <div className="timeline-start timeline-box bg-transparent border-none shadow-none">
           <Button
             onClick={() => handleScroll(gallery)}
@@ -268,7 +299,9 @@ function Timeline({ desc, prdc, gallery, comments }) {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="w-5 h-5"
+            className={`w-5 h-5  transition-colors ease-linear ${
+              iscomments ? "text-primary" : ""
+            }`}
           >
             <path
               fillRule="evenodd"
@@ -277,10 +310,18 @@ function Timeline({ desc, prdc, gallery, comments }) {
             />
           </svg>
         </div>
-        <hr />
+        <hr
+          className={`transition-colors ease-linear ${
+            iscomments ? "bg-primary" : ""
+          }`}
+        />
       </li>
       <li>
-        <hr />
+        <hr
+          className={`transition-colors ease-linear ${
+            isEnd ? "bg-primary" : ""
+          }`}
+        />
         <div className="timeline-middle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -509,7 +550,7 @@ function Producer({ el }) {
   );
 }
 
-function Gallery({ el }) {
+function Gallery({ el, images, title }) {
   return (
     <div
       ref={el}
@@ -517,9 +558,9 @@ function Gallery({ el }) {
     >
       <TitleHeader title="گالری بازی" />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 px-5 w-full mt-5">
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <div key={index}>
-            <FullScreenImage src={image.img} alt={image.title} />
+            <FullScreenImage src={image} alt={`عکس ${index} ${title}`} />
           </div>
         ))}
       </div>
@@ -563,25 +604,6 @@ const FullScreenImage = ({ src, alt }) => {
 };
 
 Modal.setAppElement("#root");
-
-const images = [
-  {
-    img: "https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg",
-    title: "Bed",
-  },
-  {
-    img: "/images/callofduty/2.jpg",
-    title: "Kitchen",
-  },
-  {
-    img: "/images/callofduty/3.jpg",
-    title: "Sink",
-  },
-  {
-    img: "/images/callofduty/4.jpg",
-    title: "Sink",
-  },
-];
 
 export function TitleHeader({ title }) {
   return (

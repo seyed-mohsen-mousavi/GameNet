@@ -226,13 +226,18 @@
       "description": "بازی Call of Duty: Warzone یکی از محبوب‌ترین بازی‌های بتل رویال است که توسط شرکت Activision ساخته شده است. این بازی با گرافیک بالا و گیم‌پلی هیجان‌انگیز خود توانسته است طرفداران زیادی را جذب کند.",
       "link": "https://www.callofduty.com/warzone",
       "image": "/images/callofduty/4.jpg",
-      "trialer": "/video/trailer/warzoneTrailer.mp4",
+      "trialer": "/video/trailer/warzone.mp4",
       "like": 200,
       "save": 200,
       "details": {
         "images": {
           "poster": "/images/callofduty/warzone.jpg",
-          "gallery": ["", "", ""]
+          "gallery": [
+            "/images/callofduty/1.jpg",
+            "/images/callofduty/2.jpg",
+            "/images/callofduty/3.jpg",
+            "/images/callofduty/4.jpg"
+          ]
         },
         "completeExplanations": {
           "header": {
@@ -267,13 +272,18 @@
       "description": "بازی Fortnite یکی از محبوب‌ترین بازی‌های بتل رویال است که توسط شرکت Epic Games ساخته شده است. این بازی با گرافیک کارتونی و امکانات متنوع خود، تجربه‌ای منحصر به فرد را به بازیکنان ارائه می‌دهد.",
       "link": "https://www.epicgames.com/fortnite",
       "image": "/images/news/Fortnite-Cover.jpg",
-      "trialer": "",
+      "trialer": "/video/trailer/Fortnite.mp4",
       "like": 200,
       "save": 200,
       "details": {
         "images": {
-          "poster": "/images/callofduty/warzone.jpg",
-          "gallery": ["", "", ""]
+          "poster": "/images/Fortnite/FortniteTum.jpg",
+          "gallery": [
+            "/images/Fortnite/1.webp",
+            "/images/Fortnite/2.webp",
+            "/images/Fortnite/3.jpg",
+            "/images/Fortnite/4.jpg"
+          ]
         },
         "completeExplanations": {
           "header": {
@@ -314,7 +324,7 @@
       "details": {
         "images": {
           "poster": "/images/callofduty/warzone.jpg",
-          "gallery": ["", "", ""]
+          "gallery": ["/images/cyberpunk/1.jpg", "", "", ""]
         },
         "completeExplanations": {
           "header": {
@@ -354,8 +364,13 @@
       "save": 200,
       "details": {
         "images": {
-          "poster": "/images/callofduty/warzone.jpg",
-          "gallery": ["", "", ""]
+          "poster": "/images/cyberpunk/cyberPunkTum.jpg",
+          "gallery": [
+            "/images/cyberpunk/1.jpg",
+            "/images/cyberpunk/2.jpeg",
+            "/images/cyberpunk/3.webp",
+            "/images/cyberpunk/4.jpg"
+          ]
         },
         "completeExplanations": {
           "header": {
@@ -395,8 +410,13 @@
       "save": 200,
       "details": {
         "images": {
-          "poster": "/images/callofduty/warzone.jpg",
-          "gallery": ["", "", ""]
+          "poster": "/images/gtav/grandtheftautovTum.jpg",
+          "gallery": [
+            "/images/gtav/1.webp",
+            "/images/gtav/1.jpg",
+            "/images/gtav/1.jpg",
+            "/images/gtav/1.jpeg"
+          ]
         },
         "completeExplanations": {
           "header": {
