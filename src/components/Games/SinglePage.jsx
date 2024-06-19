@@ -168,7 +168,6 @@ function Timeline({ desc, prdc, gallery, comments }) {
   const [isPrdc, setIsPrdc] = useState(false);
   const [isgallery, setIsgallery] = useState(false);
   const [iscomments, setIscomments] = useState(false);
-  const [isEnd, setIsEnd] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset > desc.current.offsetTop) {
@@ -192,10 +191,6 @@ function Timeline({ desc, prdc, gallery, comments }) {
         setIscomments(false);
       }
     };
-    // document.onscrollend = () => {
-    //   setIsEnd(true);
-    // };
-    document.body.onscrollend = () => console.log("s");
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -291,7 +286,7 @@ function Timeline({ desc, prdc, gallery, comments }) {
             variant="text"
             className="!text-white !font-Peyda"
           >
-            البوم عکس
+ گالری تصاویر
           </Button>
         </div>
         <div className="timeline-middle">
@@ -319,7 +314,7 @@ function Timeline({ desc, prdc, gallery, comments }) {
       <li>
         <hr
           className={`transition-colors ease-linear ${
-            isEnd ? "bg-primary" : ""
+            iscomments ? "bg-primary" : ""
           }`}
         />
         <div className="timeline-middle">
@@ -556,7 +551,7 @@ function Gallery({ el, images, title }) {
       ref={el}
       className="text-white p-5 rounded-xl flex flex-col gap-6 max-h-full bg-gray-700"
     >
-      <TitleHeader title="گالری بازی" />
+      <TitleHeader title="گالری تصاویر" />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 px-5 w-full mt-5">
         {images?.map((image, index) => (
           <div key={index}>

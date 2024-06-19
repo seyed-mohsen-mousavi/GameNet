@@ -318,13 +318,18 @@
       "description": "بازی The Witcher 3: Wild Hunt یک بازی نقش‌آفرینی است که توسط شرکت CD Projekt Red ساخته شده است. این بازی با داستان عمیق و گرافیک خیره‌کننده، یکی از بهترین بازی‌های تاریخ محسوب می‌شود.",
       "link": "https://thewitcher.com/en/witcher3",
       "image": "/images/news/the-witcher-4-logo.webp",
-      "trialer": "",
+      "trialer": "/video/trailer/theWitcher3WildHunt.mp4",
       "like": 200,
       "save": 200,
       "details": {
         "images": {
-          "poster": "/images/callofduty/warzone.jpg",
-          "gallery": ["/images/cyberpunk/1.jpg", "", "", ""]
+          "poster": "/images/TheWitcher3WildHunt/TheWitcher3WildHuntTum.jpg",
+          "gallery": [
+            "/images/TheWitcher3WildHunt/1.jpg",
+            "/images/TheWitcher3WildHunt/2.webp",
+            "/images/TheWitcher3WildHunt/3.webp",
+            "/images/TheWitcher3WildHunt/4.jpg"
+          ]
         },
         "completeExplanations": {
           "header": {
@@ -359,7 +364,7 @@
       "description": "بازی Cyberpunk 2077 یک بازی نقش‌آفرینی و جهان باز است که توسط شرکت CD Projekt Red ساخته شده است. این بازی با داستان علمی تخیلی و گرافیک بالا، تجربه‌ای جدید و هیجان‌انگیز را برای بازیکنان به ارمغان می‌آورد.",
       "link": "https://www.cyberpunk.net",
       "image": "/images/news/Cyber-Punk.jpg",
-      "trialer": "",
+      "trialer": "/video/trailer/cyberpunk.mp4",
       "like": 200,
       "save": 200,
       "details": {
@@ -405,7 +410,7 @@
       "description": "بازی Grand Theft Auto V یکی از محبوب‌ترین و پرفروش‌ترین بازی‌های جهان است که توسط شرکت Rockstar Games ساخته شده است. این بازی با داستان جذاب و گرافیک بالا، تجربه‌ای بی‌نظیر را به بازیکنان ارائه می‌دهد.",
       "link": "https://www.rockstargames.com/V",
       "image": "/images/gtav_back.jpg",
-      "trialer": "",
+      "trialer": "/video/trailer/GrandThefAutoV.mp4",
       "like": 200,
       "save": 200,
       "details": {
@@ -413,9 +418,9 @@
           "poster": "/images/gtav/grandtheftautovTum.jpg",
           "gallery": [
             "/images/gtav/1.webp",
-            "/images/gtav/1.jpg",
-            "/images/gtav/1.jpg",
-            "/images/gtav/1.jpeg"
+            "/images/gtav/2.jpg",
+            "/images/gtav/3.jpg",
+            "/images/gtav/4.jpeg"
           ]
         },
         "completeExplanations": {
