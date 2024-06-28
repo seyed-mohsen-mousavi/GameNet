@@ -286,7 +286,7 @@ function Timeline({ desc, prdc, gallery, comments }) {
             variant="text"
             className="!text-white !font-Peyda"
           >
- گالری تصاویر
+            گالری تصاویر
           </Button>
         </div>
         <div className="timeline-middle">
@@ -617,3 +617,4 @@ export function TitleHeader({ title }) {
     </div>
   );
 }
+  

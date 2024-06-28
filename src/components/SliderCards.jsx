@@ -9,6 +9,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import LazyLoad from "react-lazyload";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SliderCards({ arr, categ }) {
   const pagination = {
@@ -36,6 +37,8 @@ export default function SliderCards({ arr, categ }) {
       slidesPerView: 4,
     },
   };
+  const dispatch = useDispatch();
+  const fav = useSelector((fav) => fav);
   return (
     <Swiper
       breakpoints={breakpoints}
@@ -49,72 +52,88 @@ export default function SliderCards({ arr, categ }) {
       modules={[Navigation, Pagination]}
       className="mt-5"
     >
-      {arr.map((n) => (
-        <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
-          <div className="relative">
-            <Link to={`page/${n.id}`}>
-              <LazyLoad>
-                <img
-                  loading="lazy"
-                  src={n.image}
-                  className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
-                  alt={`${categ} ${n.title} `}
-                />
-              </LazyLoad>
-            </Link>
-            <div className="flex absolute left-2 -bottom-2  gap-5">
-              <button
-                title={n.like}
-                className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-red-500 transition-all ease-linear"
-              >
-                <HeartIcon className="w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear" />
-              </button>
-              <button
-                title={n.save}
-                className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-gray-400 transition-all ease-linear"
-              >
-                <BookmarkIcon className="w-5 h-5 group-hover:fill-gray-400/30 transition-all ease-linear" />
-              </button>
-            </div>
-          </div>
-          <div className="flex flex-col gap-1 pt-3">
-            <div className="flex justify-between gap-2 items-center text-sm pr-1">
-              <Link className="inline-flex gap-1 items-center">
-                <img
-                  loading="lazy"
-                  src="/images/icon/header/Grand-Theft-Auto-San-Andreas.jpg"
-                  className="w-7 h-7 rounded-full object-cover"
-                  alt={`${n.author} سازنده ${categ} `}
-                />
-                <p className="hover:underline">{n.author}</p>
+      {arr.map((n) => {
+        const s = fav.favorite.filter((e) => {
+          return e === n;
+        });
+        return (
+          <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
+            <div className="relative">
+              <Link to={`page/${n.id}`}>
+                <LazyLoad>
+                  <img
+                    loading="lazy"
+                    src={n.image}
+                    className="w-full h-60 object-cover rounded-xl hover:brightness-[.8] transition-all ease-linear bg-gray-400"
+                    alt={`${categ} ${n.title} `}
+                  />
+                </LazyLoad>
               </Link>
-              <p className="text-gray-400 inline-flex gap-2">
-                <ReactTimeAgo
-                  date={new Date(n.date)}
-                  locale="fa-IR"
-                  timeStyle="round"
-                />
-                <ClockIcon className="w-4 text-gray-500" />
-              </p>
+              <div className="flex absolute left-2 -bottom-2  gap-5">
+                <button
+                  onClick={() => {
+                    s.length > 0
+                      ? dispatch({ type: "REMOVE_LIKE", payload: n })
+                      : dispatch({ type: "ADD_LIKE", payload: n });
+                  }}
+                  title={n.like}
+                  className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-red-500 transition-all ease-linear"
+                >
+                  <HeartIcon
+                    className={`w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear ${
+                      s.length > 0
+                        ? "fill-red-500 group-hover:fill-red-400 stroke-none"
+                        : ""
+                    }`}
+                  />
+                </button>
+                <button
+                  title={n.save}
+                  className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-gray-400 transition-all ease-linear"
+                >
+                  <BookmarkIcon className="w-5 h-5 group-hover:fill-gray-400/30 transition-all ease-linear" />
+                </button>
+              </div>
             </div>
-            <h2 className="text-lg font-PeydaMed w-11/12 ">
-              <Link to={n.id}>{n.title}</Link>
-            </h2>
-            <p className="text-gray-300 text-xs line-clamp-3">
-              {n.description}
-            </p>
-            <div className="pt-2">
-              <p className="text-gray-400 inline-flex items-center text-xs gap-1">
-                <Link to="action" className="text-red-500 pl-2">
-                  اکشن
+            <div className="flex flex-col gap-1 pt-3">
+              <div className="flex justify-between gap-2 items-center text-sm pr-1">
+                <Link className="inline-flex gap-1 items-center">
+                  <img
+                    loading="lazy"
+                    src="/images/icon/header/Grand-Theft-Auto-San-Andreas.jpg"
+                    className="w-7 h-7 rounded-full object-cover"
+                    alt={`${n.author} سازنده ${categ} `}
+                  />
+                  <p className="hover:underline">{n.author}</p>
                 </Link>
-                <BookOpenIcon className="w-4" />
-                {n.views.toLocaleString()} نفر خوندن
+                <p className="text-gray-400 inline-flex gap-2">
+                  <ReactTimeAgo
+                    date={new Date(n.date)}
+                    locale="fa-IR"
+                    timeStyle="round"
+                  />
+                  <ClockIcon className="w-4 text-gray-500" />
+                </p>
+              </div>
+              <h2 className="text-lg font-PeydaMed w-11/12 ">
+                <Link to={n.id}>{n.title}</Link>
+              </h2>
+              <p className="text-gray-300 text-xs line-clamp-3">
+                {n.description}
               </p>
+              <div className="pt-2">
+                <p className="text-gray-400 inline-flex items-center text-xs gap-1">
+                  <Link to="action" className="text-red-500 pl-2">
+                    اکشن
+                  </Link>
+                  <BookOpenIcon className="w-4" />
+                  {n.views.toLocaleString()} نفر خوندن
+                </p>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        );
+      })}
       <div className="flex gap-3 w-full justify-center items-center py-2 pt-5">
         <button className="prev opacity-60 hover:opacity-80 transition-opacity ease-in-out">
           <svg
