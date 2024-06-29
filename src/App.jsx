@@ -15,31 +15,44 @@ import { Provider } from "react-redux";
 import favorite from "./redux/favorite";
 import { Toaster } from "react-hot-toast";
 import GameNets from "./pages/GameNets";
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 function App() {
   return (
     <div className="relative container text-white  min-h-screen ">
       <Toaster />
-      <Provider store={favorite}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="store/:id" element={<Prodoct />} />
-            <Route path="store" element={<Store />} />
-            <Route path="news" element={<News />} />
-            <Route path="news/:id" element={<div>single new</div>} />
-            <Route path="register" element={<Register />} />
-            <Route path="about" element={<About />} />
-            <Route path="games" element={<Games />} />
-            <Route path="games/page/:id" element={<SinglePage />} />
-            <Route path="games/:id" element={<GamesFilter />} />
-            <Route path="streamers" element={<Streamers />} />
-            <Route path="login" element={<Login />} />
-            <Route path="gameNet" element={<GameNets />} />
-          </Route>
-        </Routes>
-      </Provider>
+      <ThemeProvider theme={THEME}>
+        <Provider store={favorite}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="store/:id" element={<Prodoct />} />
+              <Route path="store" element={<Store />} />
+              <Route path="news" element={<News />} />
+              <Route path="news/:id" element={<div>single new</div>} />
+              <Route path="register" element={<Register />} />
+              <Route path="about" element={<About />} />
+              <Route path="games" element={<Games />} />
+              <Route path="games/page/:id" element={<SinglePage />} />
+              <Route path="games/:id" element={<GamesFilter />} />
+              <Route path="streamers" element={<Streamers />} />
+              <Route path="login" element={<Login />} />
+              <Route path="gameNet" element={<GameNets />} />
+            </Route>
+          </Routes>
+        </Provider>
+      </ThemeProvider>
     </div>
   );
 }
 
 export default App;
+const THEME = createTheme({
+  typography: {
+    fontFamily: "Peyda-light",
+    fontSize: 14,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+  },
+});

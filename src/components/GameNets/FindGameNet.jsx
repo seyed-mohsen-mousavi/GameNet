@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { getAllProvinces, getCitiesByProvinceName } from "../..";
-import { ArrowUturnRightIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowLongLeftIcon,
+  ArrowUturnRightIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 import {
   Modal,
   ModalContent,
@@ -10,8 +14,18 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
+import {
+  FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+} from "@mui/material";
+import LoadingButton from "@mui/lab/LoadingButton";
+
 function FindGameNet() {
   const [destination, setDestination] = useState([]);
+  const [filter, setFilter] = useState("");
+  console.log(filter, destination);
   return (
     <div className="relative 2xl:h-[40rem] xl:h-[32rem]  sm:h-[30rem] h-72  rounded-2xl">
       <img
@@ -20,29 +34,40 @@ function FindGameNet() {
         alt=""
       />
       <div className=" absolute w-full bottom-10 left-0 righ-0 px-5">
-        <h2 className="text-2xl font-PeydaMed pr-5 pb-3">
+        <h2 className="text-2xl font-PeydaBlack pr-5 pb-3">
           پیدا کردن بهترین گیم نت{" "}
         </h2>
-        <div className=" bg-gray-700 w-full h-full rounded-lg flex items-center">
+        <div className=" bg-gray-700 w-full h-full rounded-lg flex items-center p-5 px-6 justify-between">
           <SelectDestination
             setDestination={setDestination}
             destination={destination}
           />
-          <Filter />
+          <Filter setFilter={setFilter} />
+          <LoadingButton
+            className="group !bg-gray-400/20 !px-4 !py-2 m-5 !rounded-lg !shadow-none"
+            loading={false}
+            endIcon={
+              <ArrowLongLeftIcon className="w-4 mt-0.5  group-hover:-translate-x-4 -translate-x-3 transition-transform ease-in-out" />
+            }
+            variant="contained"
+          >
+            <span className=" font-PeydaLight">شروع جستجو</span>
+          </LoadingButton>
         </div>
       </div>
     </div>
   );
 }
 
-export default FindGameNet;
 function SelectDestination({ setDestination, destination }) {
   const provinces = getAllProvinces();
   const [provincesSelect, setProvincesSelect] = useState();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
-    <div className="md:relative mx-10 py-5">
-      <p className="text-sm lg:text-base dark:text-white">انتخاب شهر : </p>
+    <div className="md:relative mx-10 py-5 flex-auto">
+      <p className="text-sm lg:text-base dark:text-white font-PeydaMed">
+        انتخاب شهر :{" "}
+      </p>
       <button
         type="button"
         className="bg-gray-400/10  items-center hover:bg-gray-400/20 transition-colors p-2 rounded-lg flex gap-1 justify-center mt-1 w-full dark:text-white"
@@ -54,10 +79,10 @@ function SelectDestination({ setDestination, destination }) {
             {destination[1]} ,{destination[0]}
           </p>
         ) : (
-          <p className="pl-3">انتخاب</p>
+          <p className="pl-3">انتخاب شهر</p>
         )}
       </button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal backdrop="blur" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>
@@ -131,13 +156,50 @@ function SelectDestination({ setDestination, destination }) {
   );
 }
 
-function Filter() {
+function Filter({ setFilter }) {
   return (
-    <div className="md:relative flex mx-10 py-5">
-      <p className="text-sm lg:text-base dark:text-white">فیلتر : </p>
+    <div className="md:relative flex items-center mx-10 py-5">
+      <p className="text-sm lg:text-base dark:text-white font-PeydaMed">
+        فیلتر :{" "}
+      </p>
       <div>
-        
+        <FormControl>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            defaultValue="new"
+            onChange={(e) => setFilter(e.target.value)}
+            name="radio-buttons-group"
+            className="!flex-row gap-1"
+          >
+            <FormControlLabel
+              className="bg-gray-400/20 pl-4 rounded-lg"
+              value="new"
+              control={<Radio />}
+              label="جدیدترین ها"
+            />
+            <FormControlLabel
+              className="bg-gray-400/20 pl-4 rounded-lg"
+              value="bestOfWeek"
+              control={<Radio />}
+              label="بهترین های هفته"
+            />
+            <FormControlLabel
+              className="bg-gray-400/20 pl-4 rounded-lg"
+              value="mostScore"
+              control={<Radio />}
+              label="بیشترین امتیاز"
+            />
+            <FormControlLabel
+              className="bg-gray-400/20 pl-4 rounded-lg"
+              value="bestByIGN"
+              control={<Radio />}
+              label="برترین از نظر IGN"
+            />
+          </RadioGroup>
+        </FormControl>{" "}
       </div>
     </div>
   );
 }
+
+export default FindGameNet;
