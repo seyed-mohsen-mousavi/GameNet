@@ -40,8 +40,8 @@ function SinglePage() {
   console.log(game.details?.images.gallery);
   if (isLoading) return <div>Loading</div>;
   return (
-    <div className="w-full flex gap-7 flex-col  px-5 mt-6">
-      <div className="flex gap-5 flex-col md:flex-row p-5 bg-gray-700  rounded-lg">
+    <div className="w-full flex gap-7 flex-col  px-5 mt-6 ">
+      <div className="flex gap-5 flex-col md:flex-row p-5   rounded-lg">
         <div className="xl:w-3/4 w-full h-96 bg-black/15 backdrop-blur p-4 rounded-lg">
           <p
             ref={trialer}
@@ -118,8 +118,8 @@ function AboutGame({ title, desc, categ, date, like, save }) {
 function AboutPage() {
   return (
     <>
-      <div className="flex flex-col gap-7">
-        <div className=" text-white p-5 rounded-xl flex flex-col gap-6 max-h-full bg-gray-700 ">
+      <div className="flex flex-col gap-7 border-y bg-black/10 border-y-green-400 rounded-lg border-gray-400">
+        <div className=" text-white p-5 rounded-xl flex flex-col gap-6 max-h-full  ">
           <div className="flex gap-2 items-center">
             <img
               className="rounded-full border-4 border-gray-600  object-cover w-16 h-16"
@@ -204,7 +204,7 @@ function Timeline({ desc, prdc, gallery, comments }) {
     });
 
   return (
-    <ul className="timeline timeline-vertical bg-gray-700 rounded-lg p-3 font-Peyda sticky top-6">
+    <ul className="timeline timeline-vertical   rounded-lg p-3 font-Peyda sticky top-6">
       <li>
         <div className="timeline-start timeline-box bg-transparent border-none shadow-none">
           <Button
@@ -354,12 +354,12 @@ function Description({ el }) {
   return (
     <div
       ref={el}
-      className="text-white bg-gray-700  flex flex-col items-center w-full relative h-full rounded-xl rounded-b-3xl overflow-hidden"
+      className="text-white flex flex-col items-center w-full relative h-full rounded-xl rounded-b-3xl overflow-hidden p-5"
     >
       <div>
         <div
           className="flex flex-col  w-full p-4 gap-8  mb-1 overflow-hidden"
-          style={{ maxHeight: open ? "100%" : "24rem" }}
+          style={{ maxHeight: open ? "100%" : "22.5rem" }}
         >
           <TitleHeader title="توضیحات" />
           <section className="w-full">
@@ -432,7 +432,7 @@ function Description({ el }) {
       ></div>
       <button
         onClick={hanleClick}
-        className="py-2 text-lg font-PeydaMed hover:text-gray-400 transition-colors text-[#6365f7]"
+        className="py-2 text-lg font-PeydaMed hover:text-gray-400 transition-colors text-[#6365f7] z-10"
       >
         {open ? "بستن" : "ادامه"}
       </button>
@@ -448,7 +448,7 @@ function Producer({ el }) {
   return (
     <div
       ref={el}
-      className="relative text-white p-5 rounded-xl  flex flex-col gap-6 bg-gray-700"
+      className="relative text-white p-5 rounded-xl  flex flex-col gap-6 "
     >
       <TitleHeader title="سازنده بازی" />
       <div className=" text-white flex flex-col items-center">
@@ -457,7 +457,7 @@ function Producer({ el }) {
         </div>
         <div
           className="flex flex-col gap-6 items-center w-full p-4 overflow-hidden"
-          style={{ maxHeight: open ? "100%" : "15rem" }}
+          style={{ maxHeight: open ? "100%" : "14.5rem" }}
         >
           <section className="w-full">
             <h2 className="text-2xl font-bold mb-4">Activision</h2>
@@ -549,7 +549,7 @@ function Gallery({ el, images, title }) {
   return (
     <div
       ref={el}
-      className="text-white p-5 rounded-xl flex flex-col gap-6 max-h-full bg-gray-700"
+      className="text-white p-5 rounded-xl flex flex-col gap-6 max-h-full "
     >
       <TitleHeader title="گالری تصاویر" />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 px-5 w-full mt-5">
@@ -617,4 +617,3 @@ export function TitleHeader({ title }) {
     </div>
   );
 }
-  

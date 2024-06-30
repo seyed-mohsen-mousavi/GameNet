@@ -1,9 +1,9 @@
-import FindGameNet from "../components/GameNets/FindGameNet";
+import Index from "../components/GameNets/Index";
 
 function GameNets() {
   return (
     <div className="px-1 mt-0 md:mt-5 z-10">
-      <FindGameNet />
+      <Index />
     </div>
   );
 }

@@ -446,5 +446,187 @@
       "category": ["اکشن", "action"]
     }
   ],
-  "GameNets": []
+  "GameNets": [],
+  "BestGameNets": [
+    {
+      "id": 62345678,
+      "title": "گیم نت",
+      "views": 3546,
+      "date": "2017-07-25",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+      "image": "/images/news/Fortnite-Cover.jpg",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": [
+          "/images/Fortnite/1.webp",
+          "/images/Fortnite/2.webp",
+          "/images/Fortnite/3.jpg",
+          "/images/Fortnite/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" },
+          "about": {
+            "text": "",
+            "tell": "",
+            "email": "",
+            "socialMedia": {
+              "instagram": "",
+              "twitter": "",
+              "telegram": ""
+            }
+          },
+          "َAmenities": [{}, {}, {}],
+          "geoLocation": { "x": 20, "y": 30 }
+        },
+        "location": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        },
+        "comments": [{}, {}, {}]
+      }
+    },
+    {
+      "id": 62345678,
+      "title": "گیم نت",
+      "views": 354,
+      "date": "2017-07-25",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+      "image": "/images/news/Fortnite-Cover.jpg",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": [
+          "/images/Fortnite/1.webp",
+          "/images/Fortnite/2.webp",
+          "/images/Fortnite/3.jpg",
+          "/images/Fortnite/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" },
+          "about": {
+            "text": "",
+            "tell": "",
+            "email": "",
+            "socialMedia": {
+              "instagram": "",
+              "twitter": "",
+              "telegram": ""
+            }
+          },
+          "َAmenities": [{}, {}, {}],
+          "geoLocation": { "x": 20, "y": 30 }
+        },
+        "location": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        },
+        "comments": [{}, {}, {}]
+      }
+    },
+    {
+      "id": 62345678,
+      "title": "گیم نت",
+      "views": 2346,
+      "date": "2017-07-25",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+      "image": "/images/news/Fortnite-Cover.jpg",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": [
+          "/images/Fortnite/1.webp",
+          "/images/Fortnite/2.webp",
+          "/images/Fortnite/3.jpg",
+          "/images/Fortnite/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" },
+          "about": {
+            "text": "",
+            "tell": "",
+            "email": "",
+            "socialMedia": {
+              "instagram": "",
+              "twitter": "",
+              "telegram": ""
+            }
+          },
+          "َAmenities": [{}, {}, {}],
+          "geoLocation": { "x": 20, "y": 30 }
+        },
+        "location": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        },
+        "comments": [{}, {}, {}]
+      }
+    },
+    {
+      "id": 62345678,
+      "title": "گیم نت",
+      "views": 1546,
+      "date": "2017-07-25",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+      "image": "/images/news/Fortnite-Cover.jpg",
+      "like": 200,
+      "save": 200,
+      "details": {
+        "images": [
+          "/images/Fortnite/1.webp",
+          "/images/Fortnite/2.webp",
+          "/images/Fortnite/3.jpg",
+          "/images/Fortnite/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" },
+          "about": {
+            "text": "",
+            "tell": "",
+            "email": "",
+            "socialMedia": {
+              "instagram": "",
+              "twitter": "",
+              "telegram": ""
+            }
+          },
+          "َAmenities": [{}, {}, {}],
+          "geoLocation": { "x": 20, "y": 30 }
+        },
+        "location": {
+          "header": {
+            "title": "",
+            "desc": ""
+          },
+          "main": { "title": "", "desc": "" }
+        },
+        "comments": [{}, {}, {}]
+      }
+    }
+  ]
 }

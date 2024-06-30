@@ -5,7 +5,7 @@ function Comments({ el }) {
   return (
     <div
       ref={el}
-      className="text-white p-5 rounded-xl flex flex-col gap-6 max-h-full bg-gray-700"
+      className="text-white p-5 rounded-xl flex flex-col gap-6 max-h-full "
     >
       <TitleHeader title="نظرات و پرسش ها" />
       <h2 className="text-2xl font-PeydaMed my-4 ml-10 text-left">

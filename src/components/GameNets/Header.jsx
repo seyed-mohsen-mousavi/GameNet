@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { getAllProvinces, getCitiesByProvinceName } from "../..";
 import {
   ArrowLongLeftIcon,
@@ -15,36 +14,35 @@ import {
 } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 import {
+  ButtonBase,
   FormControl,
   FormControlLabel,
   Radio,
   RadioGroup,
 } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
+import { useState } from "react";
 
-function FindGameNet() {
-  const [destination, setDestination] = useState([]);
-  const [filter, setFilter] = useState("");
-  console.log(filter, destination);
+function Header({ setFilter, destination, setDestination }) {
   return (
-    <div className="relative 2xl:h-[40rem] xl:h-[32rem]  sm:h-[30rem] h-72  rounded-2xl">
+    <div className="relative 2xl:h-[40rem] xl:h-[32rem]  sm:h-[30rem] h-72  rounded-2xl overflow-hidden">
       <img
-        className="w-full h-full object-cover"
-        src="/images/Esports-venue-2048x1365.jpg"
+        className="w-full h-full object-cover scale-x-[-1]"
+        src="/images/news/best-games-of-the-2024.jpg"
         alt=""
       />
       <div className=" absolute w-full bottom-10 left-0 righ-0 px-5">
         <h2 className="text-2xl font-PeydaBlack pr-5 pb-3">
           پیدا کردن بهترین گیم نت{" "}
         </h2>
-        <div className=" bg-gray-700 w-full h-full rounded-lg flex items-center p-5 px-6 justify-between">
+        <div className=" bg-[#18181b] w-full h-full rounded-lg flex flex-col md:flex-row items-center py-8 px-6 justify-between">
           <SelectDestination
             setDestination={setDestination}
             destination={destination}
           />
           <Filter setFilter={setFilter} />
           <LoadingButton
-            className="group !bg-gray-400/20 !px-4 !py-2 m-5 !rounded-lg !shadow-none"
+            className="group !bg-gray-400/20 !px-4 !py-2 !mt-4 !rounded-lg !shadow-none"
             loading={false}
             endIcon={
               <ArrowLongLeftIcon className="w-4 mt-0.5  group-hover:-translate-x-4 -translate-x-3 transition-transform ease-in-out" />
@@ -59,18 +57,19 @@ function FindGameNet() {
   );
 }
 
+export default Header;
 function SelectDestination({ setDestination, destination }) {
   const provinces = getAllProvinces();
   const [provincesSelect, setProvincesSelect] = useState();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
-    <div className="md:relative mx-10 py-5 flex-auto">
+    <div className="md:relative mx-10 flex-auto">
       <p className="text-sm lg:text-base dark:text-white font-PeydaMed">
         انتخاب شهر :{" "}
       </p>
-      <button
+      <ButtonBase
         type="button"
-        className="bg-gray-400/10  items-center hover:bg-gray-400/20 transition-colors p-2 rounded-lg flex gap-1 justify-center mt-1 w-full dark:text-white"
+        className="!bg-gray-400/10  !items-center  transition-colors !p-2 !rounded-lg !flex gap-1 justify-center mt-1 w-full dark:text-white"
         onClick={onOpen}
       >
         <MapPinIcon className="w-6" />
@@ -81,7 +80,7 @@ function SelectDestination({ setDestination, destination }) {
         ) : (
           <p className="pl-3">انتخاب شهر</p>
         )}
-      </button>
+      </ButtonBase>
       <Modal backdrop="blur" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
@@ -158,15 +157,14 @@ function SelectDestination({ setDestination, destination }) {
 
 function Filter({ setFilter }) {
   return (
-    <div className="md:relative flex items-center mx-10 py-5">
-      <p className="text-sm lg:text-base dark:text-white font-PeydaMed">
-        فیلتر :{" "}
+    <div className="md:relative flex-auto  items-center mx-10">
+      <p className="text-sm lg:text-base dark:text-white font-PeydaMed pb-1">
+        فیلتر بر اساس :{" "}
       </p>
       <div>
         <FormControl>
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="new"
             onChange={(e) => setFilter(e.target.value)}
             name="radio-buttons-group"
             className="!flex-row gap-1"
@@ -201,5 +199,3 @@ function Filter({ setFilter }) {
     </div>
   );
 }
-
-export default FindGameNet;
