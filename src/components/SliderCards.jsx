@@ -4,14 +4,17 @@ import {
   BookOpenIcon,
   BookmarkIcon,
   ClockIcon,
+  EyeIcon,
   HeartIcon,
 } from "@heroicons/react/24/outline";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import LazyLoad from "react-lazyload";
 import { useDispatch, useSelector } from "react-redux";
+import { Rating } from "@mui/material";
+import { Tooltip } from "react-tooltip";
 
-export default function SliderCards({ arr, categ }) {
+export default function SliderCards({ arr, categ, type }) {
   const pagination = {
     el: ".swiper-pagination",
     type: "bullets",
@@ -122,12 +125,36 @@ export default function SliderCards({ arr, categ }) {
                 {n.description}
               </p>
               <div className="pt-2">
-                <p className="text-gray-400 inline-flex items-center text-xs gap-1">
-                  <Link to="action" className="text-red-500 pl-2">
-                    اکشن
-                  </Link>
-                  <BookOpenIcon className="w-4" />
-                  {n.views.toLocaleString()} نفر خوندن
+                <p
+                  className="text-gray-400 inline-flex items-center text-xs gap-1 justify-between w-full"
+                  dir="ltr"
+                >
+                  {type == "gamenet" ? (
+                    <>
+                      <Tooltip id="my-tooltip" />
+                      <div
+                        data-tooltip-id="my-tooltip"
+                        data-tooltip-content={n.rating}
+                        className="bg-gray-400/50 px-1 pt-1 rounded-md"
+                      >
+                        <Rating
+                          name="half-rating-read"
+                          defaultValue={n.rating}
+                          precision={0.1}
+                          size="small"
+                          readOnly
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <Link to="action" className="text-red-500 pl-2">
+                      اکشن
+                    </Link>
+                  )}
+                  <div className="inline-flex items-center gap-2">
+                    <EyeIcon className="w-4 -mr-1" />
+                    {n.views.toLocaleString()} بازدید
+                  </div>
                 </p>
               </div>
             </div>

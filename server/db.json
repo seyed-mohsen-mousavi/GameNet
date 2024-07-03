@@ -446,186 +446,761 @@
       "category": ["اکشن", "action"]
     }
   ],
-  "GameNets": [],
-  "BestGameNets": [
+  "GameNets": [
     {
-      "id": 62345678,
-      "title": "گیم نت",
-      "views": 3546,
-      "date": "2017-07-25",
-      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
-      "image": "/images/news/Fortnite-Cover.jpg",
-      "like": 200,
-      "save": 200,
+      "id": 62345680,
+      "title": "گیم نت آریا",
+      "views": "1700",
+      "date": "2024-06-20",
+      "description": "گیم نت آریا با سیستم‌های پیشرفته و محیطی دوستانه در شمال تهران.",
+      "image": "/images/gamenets/6.jpg",
+      "like": 320,
+      "rating": "4.1",
+      "save": 180,
       "details": {
         "images": [
-          "/images/Fortnite/1.webp",
-          "/images/Fortnite/2.webp",
-          "/images/Fortnite/3.jpg",
-          "/images/Fortnite/4.jpg"
+          "/images/AriaGame/1.webp",
+          "/images/AriaGame/2.webp",
+          "/images/AriaGame/3.jpg",
+          "/images/AriaGame/4.jpg"
         ],
         "completeExplanations": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "معرفی گیم نت آریا",
+            "desc": "گیم نت آریا با سیستم‌های پیشرفته و محیطی دوستانه، تجربه‌ای به‌یادماندنی را برای گیمرها فراهم می‌کند."
           },
-          "main": { "title": "", "desc": "" },
+          "main": {
+            "title": "تجهیزات و بازی‌ها",
+            "desc": "بیش از 30 سیستم با سخت‌افزارهای قدرتمند و اینترنت پرسرعت."
+          },
           "about": {
-            "text": "",
-            "tell": "",
-            "email": "",
+            "text": "آریا در منطقه شمال تهران واقع شده و به راحتی قابل دسترسی است.",
+            "tell": "021-99887766",
+            "email": "info@ariagame.net",
             "socialMedia": {
-              "instagram": "",
-              "twitter": "",
-              "telegram": ""
+              "instagram": "@aria_game",
+              "twitter": "@aria_game",
+              "telegram": "@aria_game"
             }
           },
-          "َAmenities": [{}, {}, {}],
-          "geoLocation": { "x": 20, "y": 30 }
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "سیستم‌های قوی",
+              "description": "سیستم‌های گیمینگ قدرتمند.",
+              "typeEnglish": "Powerful Systems"
+            },
+            {
+              "type": "محیط دوستانه",
+              "description": "فضایی مناسب برای بازی و تفریح.",
+              "typeEnglish": "Friendly Environment"
+            }
+          ],
+          "geoLocation": { "x": 35.8045, "y": 51.3988 }
         },
         "location": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت آریا در منطقه شمال تهران واقع شده است."
           },
-          "main": { "title": "", "desc": "" }
+          "main": {
+            "title": "آدرس",
+            "desc": "تهران، خیابان ولیعصر، نبش خیابان شریعتی، پلاک 789"
+          }
         },
-        "comments": [{}, {}, {}]
+        "comments": [
+          {
+            "user": "محمد",
+            "comment": "محیط دوستانه و تجهیزات عالی.",
+            "imageProfile": "/images/profiles/mohammad.jpg"
+          },
+          {
+            "user": "الهام",
+            "comment": "بازی‌های جدید و متنوع.",
+            "imageProfile": "/images/profiles/elham.jpg"
+          },
+          {
+            "user": "امیر",
+            "comment": "دسترسی آسان و فضای راحت.",
+            "imageProfile": "/images/profiles/amir.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 62345681,
+      "title": "گیم نت مهتاب",
+      "views": "1300",
+      "date": "2024-06-15",
+      "description": "گیم نت مهتاب با فضای آرام و سیستم‌های به‌روز در شرق تهران.",
+      "image": "/images/gamenets/5.webp",
+      "like": 270,
+      "rating": "3.5",
+      "save": 140,
+      "details": {
+        "images": [
+          "/images/MahtabGame/1.webp",
+          "/images/MahtabGame/2.webp",
+          "/images/MahtabGame/3.jpg",
+          "/images/MahtabGame/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "معرفی گیم نت مهتاب",
+            "desc": "گیم نت مهتاب با فضای آرام و سیستم‌های به‌روز، محیطی مناسب برای بازی‌های آنلاین و آفلاین ارائه می‌دهد."
+          },
+          "main": {
+            "title": "تجهیزات و امکانات",
+            "desc": "سیستم‌های جدید و اینترنت پرسرعت برای تجربه بهتر بازی‌ها."
+          },
+          "about": {
+            "text": "مهتاب در منطقه شرق تهران قرار دارد و به راحتی قابل دسترسی است.",
+            "tell": "021-55443322",
+            "email": "info@mahtabgame.net",
+            "socialMedia": {
+              "instagram": "@mahtab_game",
+              "twitter": "@mahtab_game",
+              "telegram": "@mahtab_game"
+            }
+          },
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "فضای آرام",
+              "description": "محیطی آرام و راحت برای بازی.",
+              "typeEnglish": "Calm Space"
+            },
+            {
+              "type": "سیستم‌های به‌روز",
+              "description": "سیستم‌های گیمینگ جدید.",
+              "typeEnglish": "Updated Systems"
+            }
+          ],
+          "geoLocation": { "x": 35.7101, "y": 51.492 }
+        },
+        "location": {
+          "header": {
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت مهتاب در منطقه شرق تهران واقع شده است."
+          },
+          "main": {
+            "title": "آدرس",
+            "desc": "تهران، خیابان دماوند، نبش خیابان پیروزی، پلاک 321"
+          }
+        },
+        "comments": [
+          {
+            "user": "فاطمه",
+            "comment": "محیط آرام و سیستم‌های خوب.",
+            "imageProfile": "/images/profiles/fatemeh.jpg"
+          },
+          {
+            "user": "مهدی",
+            "comment": "اینترنت عالی و بازی‌های جدید.",
+            "imageProfile": "/images/profiles/mahdi.jpg"
+          },
+          {
+            "user": "سارا",
+            "comment": "فضای راحت و دوستانه.",
+            "imageProfile": "/images/profiles/sara.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 62345682,
+      "title": "گیم نت البرز",
+      "views": "1900",
+      "date": "2024-06-10",
+      "description": "گیم نت البرز با امکانات فوق‌العاده و تجهیزات پیشرفته در کرج.",
+      "image": "/images/gamenets/4.jpg",
+      "like": 350,
+      "rating": "3.7",
+      "save": 190,
+      "details": {
+        "images": [
+          "/images/AlborzGame/1.webp",
+          "/images/AlborzGame/2.webp",
+          "/images/AlborzGame/3.jpg",
+          "/images/AlborzGame/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "معرفی گیم نت البرز",
+            "desc": "گیم نت البرز در کرج با امکانات فوق‌العاده و تجهیزات پیشرفته، تجربه‌ای متفاوت را برای گیمرها فراهم می‌کند."
+          },
+          "main": {
+            "title": "تجهیزات و بازی‌ها",
+            "desc": "سیستم‌های قدرتمند و اینترنت پرسرعت برای تجربه بهتر بازی‌ها."
+          },
+          "about": {
+            "text": "البرز در مرکز شهر کرج قرار دارد و به راحتی قابل دسترسی است.",
+            "tell": "026-12345678",
+            "email": "info@alborzgame.net",
+            "socialMedia": {
+              "instagram": "@alborz_game",
+              "twitter": "@alborz_game",
+              "telegram": "@alborz_game"
+            }
+          },
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "سیستم‌های قوی",
+              "description": "سیستم‌های گیمینگ قدرتمند.",
+              "typeEnglish": "Powerful Systems"
+            },
+            {
+              "type": "محیط دوستانه",
+              "description": "فضایی مناسب برای بازی و تفریح.",
+              "typeEnglish": "Friendly Environment"
+            }
+          ],
+          "geoLocation": { "x": 35.84, "y": 50.9391 }
+        },
+        "location": {
+          "header": {
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت البرز در مرکز شهر کرج واقع شده است."
+          },
+          "main": {
+            "title": "آدرس",
+            "desc": "کرج، خیابان اصلی، نبش خیابان فرعی، پلاک 654"
+          }
+        },
+        "comments": [
+          {
+            "user": "حسین",
+            "comment": "فضای بسیار مدرن و تجهیزات عالی.",
+            "imageProfile": "/images/profiles/hossein2.jpg"
+          },
+          {
+            "user": "زهرا",
+            "comment": "بازی‌های متنوع و جذاب.",
+            "imageProfile": "/images/profiles/zahra2.jpg"
+          },
+          {
+            "user": "سعید",
+            "comment": "پارکینگ اختصاصی واقعا به کار میاد.",
+            "imageProfile": "/images/profiles/saeid2.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 62345683,
+      "title": "گیم نت ستاره",
+      "views": "1600",
+      "date": "2024-06-05",
+      "description": "گیم نت ستاره با تجهیزات به‌روز و اینترنت پرسرعت در جنوب تهران.",
+      "image": "/images/gamenets/1.jpg",
+      "like": 310,
+      "rating": "4.5",
+      "save": 160,
+      "details": {
+        "images": [
+          "/images/SetarehGame/1.webp",
+          "/images/SetarehGame/2.webp",
+          "/images/SetarehGame/3.jpg",
+          "/images/SetarehGame/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "معرفی گیم نت ستاره",
+            "desc": "گیم نت ستاره با تجهیزات به‌روز و اینترنت پرسرعت، تجربه‌ای متفاوت را برای گیمرها فراهم می‌کند."
+          },
+          "main": {
+            "title": "تجهیزات و امکانات",
+            "desc": "سیستم‌های جدید و اینترنت پرسرعت برای تجربه بهتر بازی‌ها."
+          },
+          "about": {
+            "text": "ستاره در منطقه جنوب تهران قرار دارد و به راحتی قابل دسترسی است.",
+            "tell": "021-55443322",
+            "email": "info@setarehgame.net",
+            "socialMedia": {
+              "instagram": "@setareh_game",
+              "twitter": "@setareh_game",
+              "telegram": "@setareh_game"
+            }
+          },
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "فضای آرام",
+              "description": "محیطی آرام و راحت برای بازی.",
+              "typeEnglish": "Calm Space"
+            },
+            {
+              "type": "سیستم‌های به‌روز",
+              "description": "سیستم‌های گیمینگ جدید.",
+              "typeEnglish": "Updated Systems"
+            }
+          ],
+          "geoLocation": { "x": 35.6731, "y": 51.3245 }
+        },
+        "location": {
+          "header": {
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت ستاره در منطقه جنوب تهران واقع شده است."
+          },
+          "main": {
+            "title": "آدرس",
+            "desc": "تهران، خیابان ولیعصر، نبش خیابان شریعتی، پلاک 123"
+          }
+        },
+        "comments": [
+          {
+            "user": "محمد",
+            "comment": "محیط دوستانه و تجهیزات عالی.",
+            "imageProfile": "/images/profiles/mohammad2.jpg"
+          },
+          {
+            "user": "الهام",
+            "comment": "بازی‌های جدید و متنوع.",
+            "imageProfile": "/images/profiles/elham2.jpg"
+          },
+          {
+            "user": "امیر",
+            "comment": "دسترسی آسان و فضای راحت.",
+            "imageProfile": "/images/profiles/amir2.jpg"
+          }
+        ]
       }
     },
     {
       "id": 62345678,
-      "title": "گیم نت",
-      "views": 354,
-      "date": "2017-07-25",
-      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
-      "image": "/images/news/Fortnite-Cover.jpg",
-      "like": 200,
-      "save": 200,
+      "title": "گیم نت ایران گیم",
+      "views": "1500",
+      "date": "2024-07-03",
+      "description": "یکی از بهترین گیم نت‌های تهران با تجهیزات به‌روز و محیطی دوستانه.",
+      "image": "/images/gamenets/6.webp",
+      "like": 300,
+      "rating": "5",
+      "save": 150,
       "details": {
         "images": [
-          "/images/Fortnite/1.webp",
-          "/images/Fortnite/2.webp",
-          "/images/Fortnite/3.jpg",
-          "/images/Fortnite/4.jpg"
+          "/images/IranGame/1.webp",
+          "/images/IranGame/2.webp",
+          "/images/IranGame/3.jpg",
+          "/images/IranGame/4.jpg"
         ],
         "completeExplanations": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "معرفی گیم نت ایران گیم",
+            "desc": "گیم نت ایران گیم یکی از مجهزترین و محبوب‌ترین گیم نت‌های تهران است که با محیطی دوستانه و امکانات به‌روز، تجربه‌ای متفاوت را برای علاقه‌مندان به بازی‌های کامپیوتری فراهم می‌کند."
           },
-          "main": { "title": "", "desc": "" },
+          "main": {
+            "title": "تجهیزات و بازی‌ها",
+            "desc": "این گیم نت دارای بیش از 20 سیستم با سخت‌افزارهای قدرتمند، اینترنت پرسرعت و مجموعه‌ای از جدیدترین بازی‌های آنلاین و آفلاین است."
+          },
           "about": {
-            "text": "",
-            "tell": "",
-            "email": "",
+            "text": "ایران گیم در منطقه مرکزی تهران واقع شده و دسترسی آسانی دارد. این گیم نت همواره تلاش دارد تا با ارائه خدمات بهتر، رضایت مشتریان خود را جلب کند.",
+            "tell": "021-12345678",
+            "email": "info@irangame.net",
             "socialMedia": {
-              "instagram": "",
-              "twitter": "",
-              "telegram": ""
+              "instagram": "@irangame_net",
+              "twitter": "@irangame_net",
+              "telegram": "@irangame_net"
             }
           },
-          "َAmenities": [{}, {}, {}],
-          "geoLocation": { "x": 20, "y": 30 }
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا برای بازی‌های آنلاین.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "سیستم‌های به‌روز",
+              "description": "سیستم‌های گیمینگ با سخت‌افزارهای جدید.",
+              "typeEnglish": "Updated Systems"
+            },
+            {
+              "type": "محیط دوستانه",
+              "description": "محیطی مناسب برای بازی و تفریح.",
+              "typeEnglish": "Friendly Environment"
+            }
+          ],
+          "geoLocation": { "x": 35.6892, "y": 51.389 }
         },
         "location": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت ایران گیم در منطقه مرکزی تهران واقع شده است."
           },
-          "main": { "title": "", "desc": "" }
+          "main": {
+            "title": "آدرس",
+            "desc": "تهران، خیابان انقلاب، نبش خیابان حافظ، پلاک 123"
+          }
         },
-        "comments": [{}, {}, {}]
+        "comments": [
+          {
+            "user": "علی",
+            "comment": "محیط عالی و تجهیزات به‌روز. خیلی راضی بودم.",
+            "imageProfile": "/images/profiles/ali.jpg"
+          },
+          {
+            "user": "مینا",
+            "comment": "فضای دوستانه و کارکنان حرفه‌ای.",
+            "imageProfile": "/images/profiles/mina.jpg"
+          },
+          {
+            "user": "رضا",
+            "comment": "از بازی‌های متنوع و جدیدشان خیلی خوشم اومد.",
+            "imageProfile": "/images/profiles/reza.jpg"
+          }
+        ]
       }
     },
     {
-      "id": 62345678,
-      "title": "گیم نت",
-      "views": 2346,
-      "date": "2017-07-25",
-      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
-      "image": "/images/news/Fortnite-Cover.jpg",
-      "like": 200,
+      "id": 62345679,
+      "title": "گیم نت پارسیان",
+      "views": "2000",
+      "date": "2024-06-25",
+      "description": "گیم نت پارسیان با فضایی مدرن و تجهیزات پیشرفته در غرب تهران.",
+      "image": "/images/gamenets/parsian/1.webp",
+      "like": 450,
+      "rating": "5",
       "save": 200,
       "details": {
         "images": [
-          "/images/Fortnite/1.webp",
-          "/images/Fortnite/2.webp",
-          "/images/Fortnite/3.jpg",
-          "/images/Fortnite/4.jpg"
+          "/images/ParsianGame/1.webp",
+          "/images/ParsianGame/2.webp",
+          "/images/ParsianGame/3.jpg",
+          "/images/ParsianGame/4.jpg"
         ],
         "completeExplanations": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "معرفی گیم نت پارسیان",
+            "desc": "گیم نت پارسیان در غرب تهران واقع شده و با فضایی مدرن و تجهیزات پیشرفته، تجربه‌ای بی‌نظیر را به گیمرها ارائه می‌دهد."
           },
-          "main": { "title": "", "desc": "" },
+          "main": {
+            "title": "تجهیزات و امکانات",
+            "desc": "این گیم نت دارای سیستم‌های قدرتمند و اینترنت پرسرعت است که امکان بازی‌های آنلاین و آفلاین را فراهم می‌کند."
+          },
           "about": {
-            "text": "",
-            "tell": "",
-            "email": "",
+            "text": "پارسیان در نزدیکی مرکز خرید بزرگ تهران قرار دارد و به راحتی قابل دسترسی است.",
+            "tell": "021-87654321",
+            "email": "info@parsian-game.net",
             "socialMedia": {
-              "instagram": "",
-              "twitter": "",
-              "telegram": ""
+              "instagram": "@parsian_game",
+              "twitter": "@parsian_game",
+              "telegram": "@parsian_game"
             }
           },
-          "َAmenities": [{}, {}, {}],
-          "geoLocation": { "x": 20, "y": 30 }
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اتصال به اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "فضای مدرن",
+              "description": "دکوراسیون مدرن و جذاب.",
+              "typeEnglish": "Modern Space"
+            },
+            {
+              "type": "پارکینگ اختصاصی",
+              "description": "پارکینگ اختصاصی برای مشتریان.",
+              "typeEnglish": "Private Parking"
+            }
+          ],
+          "geoLocation": { "x": 35.7322, "y": 51.4485 }
         },
         "location": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت پارسیان در غرب تهران و نزدیک به مرکز خرید بزرگ واقع شده است."
           },
-          "main": { "title": "", "desc": "" }
+          "main": {
+            "title": "آدرس",
+            "desc": "تهران، خیابان آزادی، نبش خیابان کارگر، پلاک 456"
+          }
         },
-        "comments": [{}, {}, {}]
+        "comments": [
+          {
+            "user": "حسین",
+            "comment": "فضای بسیار مدرن و تجهیزات عالی.",
+            "imageProfile": "/images/profiles/hossein.jpg"
+          },
+          {
+            "user": "زهرا",
+            "comment": "بازی‌های متنوع و جذاب.",
+            "imageProfile": "/images/profiles/zahra.jpg"
+          },
+          {
+            "user": "سعید",
+            "comment": "پارکینگ اختصاصی واقعا به کار میاد.",
+            "imageProfile": "/images/profiles/saeid.jpg"
+          }
+        ]
       }
     },
     {
-      "id": 62345678,
-      "title": "گیم نت",
-      "views": 1546,
-      "date": "2017-07-25",
-      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
-      "image": "/images/news/Fortnite-Cover.jpg",
-      "like": 200,
-      "save": 200,
+      "id": 62345684,
+      "title": "گیم نت مروارید",
+      "views": "1400",
+      "date": "2024-05-30",
+      "description": "گیم نت مروارید با تجهیزات پیشرفته و اینترنت پرسرعت در شیراز.",
+      "image": "/images/gamenets/2.jpg",
+      "like": 290,
+      "rating": "4.5",
+      "save": 150,
       "details": {
         "images": [
-          "/images/Fortnite/1.webp",
-          "/images/Fortnite/2.webp",
-          "/images/Fortnite/3.jpg",
-          "/images/Fortnite/4.jpg"
+          "/images/MarvaridGame/1.webp",
+          "/images/MarvaridGame/2.webp",
+          "/images/MarvaridGame/3.jpg",
+          "/images/MarvaridGame/4.jpg"
         ],
         "completeExplanations": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "معرفی گیم نت مروارید",
+            "desc": "گیم نت مروارید در شیراز با تجهیزات پیشرفته و اینترنت پرسرعت، تجربه‌ای متفاوت را برای گیمرها فراهم می‌کند."
           },
-          "main": { "title": "", "desc": "" },
+          "main": {
+            "title": "تجهیزات و بازی‌ها",
+            "desc": "سیستم‌های قدرتمند و اینترنت پرسرعت برای تجربه بهتر بازی‌ها."
+          },
           "about": {
-            "text": "",
-            "tell": "",
-            "email": "",
+            "text": "مروارید در مرکز شهر شیراز قرار دارد و به راحتی قابل دسترسی است.",
+            "tell": "071-12345678",
+            "email": "info@marvaridgame.net",
             "socialMedia": {
-              "instagram": "",
-              "twitter": "",
-              "telegram": ""
+              "instagram": "@marvarid_game",
+              "twitter": "@marvarid_game",
+              "telegram": "@marvarid_game"
             }
           },
-          "َAmenities": [{}, {}, {}],
-          "geoLocation": { "x": 20, "y": 30 }
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "سیستم‌های قوی",
+              "description": "سیستم‌های گیمینگ قدرتمند.",
+              "typeEnglish": "Powerful Systems"
+            },
+            {
+              "type": "محیط دوستانه",
+              "description": "فضایی مناسب برای بازی و تفریح.",
+              "typeEnglish": "Friendly Environment"
+            }
+          ],
+          "geoLocation": { "x": 29.5926, "y": 52.5836 }
         },
         "location": {
           "header": {
-            "title": "",
-            "desc": ""
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت مروارید در مرکز شهر شیراز واقع شده است."
           },
-          "main": { "title": "", "desc": "" }
+          "main": {
+            "title": "آدرس",
+            "desc": "شیراز، خیابان اصلی، نبش خیابان فرعی، پلاک 321"
+          }
         },
-        "comments": [{}, {}, {}]
+        "comments": [
+          {
+            "user": "محمد",
+            "comment": "فضای بسیار مدرن و تجهیزات عالی.",
+            "imageProfile": "/images/profiles/mohammad3.jpg"
+          },
+          {
+            "user": "الهام",
+            "comment": "بازی‌های جدید و متنوع.",
+            "imageProfile": "/images/profiles/elham3.jpg"
+          },
+          {
+            "user": "امیر",
+            "comment": "دسترسی آسان و فضای راحت.",
+            "imageProfile": "/images/profiles/amir3.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 62345685,
+      "title": "گیم نت ققنوس",
+      "views": "1800",
+      "date": "2024-05-25",
+      "description": "گیم نت ققنوس با امکانات فوق‌العاده و اینترنت پرسرعت در مشهد.",
+      "image": "/images/news/GhoghnousGame-Cover.jpg",
+      "like": 370,
+      "rating": "4.7",
+      "save": 200,
+      "details": {
+        "images": [
+          "/images/GhoghnousGame/1.webp",
+          "/images/GhoghnousGame/2.webp",
+          "/images/GhoghnousGame/3.jpg",
+          "/images/GhoghnousGame/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "معرفی گیم نت ققنوس",
+            "desc": "گیم نت ققنوس در مشهد با امکانات فوق‌العاده و اینترنت پرسرعت، تجربه‌ای متفاوت را برای گیمرها فراهم می‌کند."
+          },
+          "main": {
+            "title": "تجهیزات و بازی‌ها",
+            "desc": "سیستم‌های قدرتمند و اینترنت پرسرعت برای تجربه بهتر بازی‌ها."
+          },
+          "about": {
+            "text": "ققنوس در مرکز شهر مشهد قرار دارد و به راحتی قابل دسترسی است.",
+            "tell": "051-12345678",
+            "email": "info@ghoghnousgame.net",
+            "socialMedia": {
+              "instagram": "@ghoghnous_game",
+              "twitter": "@ghoghnous_game",
+              "telegram": "@ghoghnous_game"
+            }
+          },
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "سیستم‌های قوی",
+              "description": "سیستم‌های گیمینگ قدرتمند.",
+              "typeEnglish": "Powerful Systems"
+            },
+            {
+              "type": "محیط دوستانه",
+              "description": "فضایی مناسب برای بازی و تفریح.",
+              "typeEnglish": "Friendly Environment"
+            }
+          ],
+          "geoLocation": { "x": 36.2978, "y": 59.6116 }
+        },
+        "location": {
+          "header": {
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت ققنوس در مرکز شهر مشهد واقع شده است."
+          },
+          "main": {
+            "title": "آدرس",
+            "desc": "مشهد، خیابان اصلی، نبش خیابان فرعی، پلاک 789"
+          }
+        },
+        "comments": [
+          {
+            "user": "محمد",
+            "comment": "محیط دوستانه و تجهیزات عالی.",
+            "imageProfile": "/images/profiles/mohammad4.jpg"
+          },
+          {
+            "user": "الهام",
+            "comment": "بازی‌های جدید و متنوع.",
+            "imageProfile": "/images/profiles/elham4.jpg"
+          },
+          {
+            "user": "امیر",
+            "comment": "دسترسی آسان و فضای راحت.",
+            "imageProfile": "/images/profiles/amir4.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 62345686,
+      "title": "گیم نت سپهر",
+      "views": "1100",
+      "date": "2024-05-20",
+      "description": "گیم نت سپهر با تجهیزات به‌روز و اینترنت پرسرعت در اهواز.",
+      "image": "/images/news/SepehrGame-Cover.jpg",
+      "like": 250,
+      "rating": "4.5",
+      "save": 130,
+      "details": {
+        "images": [
+          "/images/SepehrGame/1.webp",
+          "/images/SepehrGame/2.webp",
+          "/images/SepehrGame/3.jpg",
+          "/images/SepehrGame/4.jpg"
+        ],
+        "completeExplanations": {
+          "header": {
+            "title": "معرفی گیم نت سپهر",
+            "desc": "گیم نت سپهر در اهواز با تجهیزات به‌روز و اینترنت پرسرعت، تجربه‌ای متفاوت را برای گیمرها فراهم می‌کند."
+          },
+          "main": {
+            "title": "تجهیزات و بازی‌ها",
+            "desc": "سیستم‌های قدرتمند و اینترنت پرسرعت برای تجربه بهتر بازی‌ها."
+          },
+          "about": {
+            "text": "سپهر در مرکز شهر اهواز قرار دارد و به راحتی قابل دسترسی است.",
+            "tell": "061-12345678",
+            "email": "info@sepehrgame.net",
+            "socialMedia": {
+              "instagram": "@sepehr_game",
+              "twitter": "@sepehr_game",
+              "telegram": "@sepehr_game"
+            }
+          },
+          "َAmenities": [
+            {
+              "type": "اینترنت پرسرعت",
+              "description": "اینترنت با سرعت بالا.",
+              "typeEnglish": "High-Speed Internet"
+            },
+            {
+              "type": "سیستم‌های قوی",
+              "description": "سیستم‌های گیمینگ قدرتمند.",
+              "typeEnglish": "Powerful Systems"
+            },
+            {
+              "type": "محیط دوستانه",
+              "description": "فضایی مناسب برای بازی و تفریح.",
+              "typeEnglish": "Friendly Environment"
+            }
+          ],
+          "geoLocation": { "x": 31.3183, "y": 48.6706 }
+        },
+        "location": {
+          "header": {
+            "title": "موقعیت گیم نت",
+            "desc": "گیم نت سپهر در مرکز شهر اهواز واقع شده است."
+          },
+          "main": {
+            "title": "آدرس",
+            "desc": "اهواز، خیابان اصلی، نبش خیابان فرعی، پلاک 654"
+          }
+        },
+        "comments": [
+          {
+            "user": "محمد",
+            "comment": "محیط دوستانه و تجهیزات عالی.",
+            "imageProfile": "/images/profiles/mohammad5.jpg"
+          },
+          {
+            "user": "الهام",
+            "comment": "بازی‌های جدید و متنوع.",
+            "imageProfile": "/images/profiles/elham5.jpg"
+          },
+          {
+            "user": "امیر",
+            "comment": "دسترسی آسان و فضای راحت.",
+            "imageProfile": "/images/profiles/amir5.jpg"
+          }
+        ]
       }
     }
   ]

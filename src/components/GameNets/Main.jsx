@@ -8,26 +8,63 @@ import { Link } from "react-router-dom";
 import { ButtonBase } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 import "./style.css";
+import SliderCards, { Loader } from "../SliderCards";
+import { SeeAll } from "../../pages/News";
 function Main() {
+  const [gameNets, isLoading] = useServer("GameNets");
+  console.log(gameNets);
   return (
-    <div>
-      <h2 className="text-2xl font-PeydaBlack mb-5">برترین های IGN</h2>
-      <Best />
+    <div className="z-10">
+      <h2 className="text-2xl font-PeydaBlack">برترین های IGN</h2>
+      <Best gameNets={gameNets} isLoading={isLoading} />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <SeeAll title="برترین شهر ها" link="latest" color="#d42222" />
+          <div className="flex items-center gap-5 text-sm p-2">
+            <button className="px-4 py-1.5 bg-white/10 hover:bg-white/5 transition-colors rounded-lg">
+              همه
+            </button>
+            <button className="px-4 py-1.5  hover:bg-white/10 transition-colors rounded-lg">
+              تهران
+            </button>
+            <button className="px-4 py-1.5  hover:bg-white/10 transition-colors rounded-lg">
+              مشهد
+            </button>
+            <button className="px-4 py-1.5  hover:bg-white/10 transition-colors rounded-lg">
+              اصفهان
+            </button>
+            <button className="px-4 py-1.5  hover:bg-white/10 transition-colors rounded-lg">
+              کرچ
+            </button>
+            <button className="px-4 py-1.5  hover:bg-white/10 transition-colors rounded-lg">
+              شیراز
+            </button>
+          </div>
+          <SliderCards type="gamenet" arr={gameNets.slice(0, 4)} categ="عکس" />
+        </>
+      )}
     </div>
   );
 }
 
 export default Main;
 
-function Best() {
-  const [gameNets, isLoading] = useServer("BestGameNets");
-  console.log(gameNets);
-  if (isLoading) return <Loader />;
+function Best({ gameNets, isLoading }) {
+  const bestGameNets = gameNets.sort((a, b) => b.rating - a.rating).slice(0, 4);
   return (
-    <div className="grid grid-cols-4 gap-6">
-      {gameNets.map((gn, i) => (
-        <BestCard key={i} item={gn} />
-      ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 lg:gap-6 gap-20 px-10 lg:px-0 justify-items-center sm:justify-items-stretch my-10">
+      {isLoading ? (
+        <>
+          <LoaderCard />
+          <LoaderCard />
+          <LoaderCard />
+          <LoaderCard />
+        </>
+      ) : (
+        bestGameNets.map((gn, i) => <BestCard key={i} item={gn} />)
+      )}
     </div>
   );
 }
@@ -35,7 +72,7 @@ function BestCard({ item }) {
   const s = 10000;
   console.log(s.toLocaleString());
   return (
-    <div className="h-32 group">
+    <div className="group">
       <div className="flex justify-between items-center pb-2">
         <div>
           <h2 className="text-xl font-PeydaMed p-0 m-0">
@@ -52,30 +89,20 @@ function BestCard({ item }) {
           </Link>
         </ButtonBase>
       </div>
-      <Link to={`${item.id}`}>
+      <Link to={`${item.id}`} className="h-full w-full">
         <img
           src={item.image}
           alt={`${item.titl} عکس  `}
-          className="w-full h-full object-cover rounded-lg group-hover:brightness-75 transition ease-linear bg-gray-400"
+          className="w-full h-32 object-cover rounded-lg group-hover:brightness-75 transition ease-linear bg-gray-400"
           loading="lazy"
         />
       </Link>
     </div>
   );
 }
-function Loader() {
-  return (
-    <div className="grid grid-cols-4 gap-6">
-      <LoaderCard />
-      <LoaderCard />
-      <LoaderCard />
-      <LoaderCard />
-    </div>
-  );
-}
 function LoaderCard() {
   return (
-    <div className="h-32  group">
+    <div className="group">
       <div className="flex justify-between items-center pb-2">
         <div>
           <h2 className="h-5 w-20 rounded bg-gray-400 animate-pulse"></h2>
@@ -93,7 +120,7 @@ function LoaderCard() {
           Submit
         </LoadingButton>
       </div>
-      <div className="w-full h-full object-cover rounded-md group-hover:brightness-75 transition ease-linear bg-gray-400" />
+      <div className="w-full h-32 object-cover rounded-md group-hover:brightness-75 transition ease-linear bg-gray-400" />
     </div>
   );
 }
