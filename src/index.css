@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  body::-webkit-scrollbar {
+    background: #000;
+  }
   * {
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -39,6 +42,7 @@
     background-color: #6535b23b;
     border-radius: 9999px;
   }
+  
   .pattern {
     --s: 50px;
     --c: #191b22;

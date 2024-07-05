@@ -12,7 +12,6 @@ import SliderCards, { Loader } from "../SliderCards";
 import { SeeAll } from "../../pages/News";
 function Main() {
   const [gameNets, isLoading] = useServer("GameNets");
-  console.log(gameNets);
   return (
     <div className="z-10">
       <h2 className="text-2xl font-PeydaBlack">برترین های IGN</h2>
@@ -21,7 +20,7 @@ function Main() {
         <Loader />
       ) : (
         <>
-          <SeeAll title="برترین شهر ها" link="latest" color="#d42222" />
+          <SeeAll title=" برترین گیم نت ها " link="latest" color="#d42222" />
           <div className="flex items-center gap-5 text-sm p-2">
             <button className="px-4 py-1.5 bg-white/10 hover:bg-white/5 transition-colors rounded-lg">
               همه

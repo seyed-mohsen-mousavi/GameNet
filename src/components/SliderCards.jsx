@@ -62,7 +62,7 @@ export default function SliderCards({ arr, categ, type }) {
         return (
           <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
             <div className="relative">
-              <Link to={`page/${n.id}`}>
+              <Link to={`${type == "gamenet" ? "" : "page/"}${n.id}`}>
                 <LazyLoad>
                   <img
                     loading="lazy"

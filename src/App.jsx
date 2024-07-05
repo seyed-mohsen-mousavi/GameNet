@@ -17,6 +17,7 @@ import { Toaster } from "react-hot-toast";
 import GameNets from "./pages/GameNets";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
+import SingleGameNets from "./components/GameNets/SingleGameNets";
 function App() {
   return (
     <div className="relative container text-white  min-h-screen ">
@@ -38,6 +39,7 @@ function App() {
               <Route path="streamers" element={<Streamers />} />
               <Route path="login" element={<Login />} />
               <Route path="gameNet" element={<GameNets />} />
+              <Route path="gameNet/:id" element={<SingleGameNets />} />
             </Route>
           </Routes>
         </Provider>

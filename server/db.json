@@ -455,7 +455,7 @@
       "description": "گیم نت آریا با سیستم‌های پیشرفته و محیطی دوستانه در شمال تهران.",
       "image": "/images/gamenets/6.jpg",
       "like": 320,
-      "rating": "4.1",
+      "rating": 2,
       "save": 180,
       "details": {
         "images": [
@@ -879,10 +879,11 @@
       "save": 200,
       "details": {
         "images": [
-          "/images/ParsianGame/1.webp",
-          "/images/ParsianGame/2.webp",
-          "/images/ParsianGame/3.jpg",
-          "/images/ParsianGame/4.jpg"
+          "/images/gamenets/parsian/1.webp",
+          "/images/gamenets/parsian/2.webp",
+          "/images/gamenets/parsian/3.webp",
+          "/images/gamenets/parsian/4.webp",
+          "/images/gamenets/parsian/5.webp"
         ],
         "completeExplanations": {
           "header": {
@@ -1043,7 +1044,7 @@
       "description": "گیم نت ققنوس با امکانات فوق‌العاده و اینترنت پرسرعت در مشهد.",
       "image": "/images/news/GhoghnousGame-Cover.jpg",
       "like": 370,
-      "rating": "4.7",
+      "rating": "4.1",
       "save": 200,
       "details": {
         "images": [

@@ -27,9 +27,9 @@ function Header({ setFilter, destination, setDestination }) {
   return (
     <div className="relative 2xl:h-[40rem] xl:h-[32rem]  sm:h-[30rem] h-72  rounded-2xl overflow-hidden">
       <img
-        className="w-full h-full object-cover scale-x-[-1]"
-        src="/images/news/best-games-of-the-2024.jpg"
-        alt=""
+        className="w-full h-full object-cover"
+        src="/images/gamenets/cover.jpg"
+        alt="گیم نت های ایران / ایران گیم نت"
       />
       <div className=" absolute w-full bottom-10 left-0 righ-0 px-5">
         <h2 className="text-2xl font-PeydaBlack pr-5 pb-3">
