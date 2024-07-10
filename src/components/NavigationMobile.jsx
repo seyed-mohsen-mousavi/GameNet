@@ -13,6 +13,7 @@ const sidebar = {
       type: "spring",
       stiffness: 20,
       restDelta: 2,
+      zIndex: 9999,
     },
   }),
   closed: {
@@ -22,6 +23,7 @@ const sidebar = {
       type: "spring",
       stiffness: 400,
       damping: 40,
+      zIndex: 0,
     },
   },
 };

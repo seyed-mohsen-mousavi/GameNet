@@ -42,7 +42,30 @@
     background-color: #6535b23b;
     border-radius: 9999px;
   }
-  
+  .all-games {
+    font-size: 16px;
+    padding: 1em 3.3em;
+    margin: 50px 0;
+    transform: perspective(200px) rotateX(15deg);
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(0deg, #733cb3 0%, #3b35b2 100%);
+    will-change: transform;
+    transition: all 0.3s;
+    border-bottom: 2px solid #7600ff;
+  }
+  .all-games:hover {
+    transform: perspective(190px) rotateX(25deg) translateY(2px);
+    box-shadow: #8c3cb32b 0px 40px 29px 0px;
+  }
+  .css-1c99szj-MuiRating-icon{
+    color: gray !important;
+  }
+  .all-games:active {
+    transform: perspective(170px) rotateX(36deg) translateY(5px);
+  }
   .pattern {
     --s: 50px;
     --c: #191b22;

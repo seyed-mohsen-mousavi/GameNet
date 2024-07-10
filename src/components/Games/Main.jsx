@@ -3,7 +3,8 @@ import {
   HandThumbUpIcon,
   InformationCircleIcon,
 } from "@heroicons/react/24/solid";
-
+import { Link } from "react-router-dom";
+import "./games.css"
 function Main({ el }) {
   return (
     <div ref={el} className="w-full mx-auto px-7">
@@ -49,6 +50,11 @@ function Main({ el }) {
           </div>
           <span className="w-1.5 h-14 rounded-lg bg-blue-400 right-0 absolute"></span>
         </div>
+      </div>
+      <div className="flex">
+        <Link to="all" className="mx-auto">
+          <button className="all-games ">همه ی بازی ها</button>
+        </Link>
       </div>
     </div>
   );

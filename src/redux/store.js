@@ -1,6 +1,6 @@
 import { createStore } from "redux";
 import favoritesReducer from "./Favorites/favoritesReducer";
 
-const favorite = createStore(favoritesReducer);
+const store = createStore(favoritesReducer);
 
-export default favorite;
+export default store;

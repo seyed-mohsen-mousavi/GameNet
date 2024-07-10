@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useServer from "../../hook/useServer";
-import { EyeIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon } from "@heroicons/react/24/outline";
 import { Rating } from "@mui/material";
 
 function SingleGameNets() {

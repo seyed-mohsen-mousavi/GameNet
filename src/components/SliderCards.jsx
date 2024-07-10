@@ -41,7 +41,8 @@ export default function SliderCards({ arr, categ, type }) {
     },
   };
   const dispatch = useDispatch();
-  const fav = useSelector((fav) => fav);
+  const fav = useSelector((fave) => fave);
+
   return (
     <Swiper
       breakpoints={breakpoints}
@@ -57,7 +58,7 @@ export default function SliderCards({ arr, categ, type }) {
     >
       {arr.map((n) => {
         const s = fav.favorite.filter((e) => {
-          return e === n;
+          return e.id === n.id;
         });
         return (
           <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
@@ -134,12 +135,11 @@ export default function SliderCards({ arr, categ, type }) {
                       <Tooltip id="my-tooltip" />
                       <div
                         data-tooltip-id="my-tooltip"
-                        data-tooltip-content={n.rating}
-                        className="bg-gray-400/50 px-1 pt-1 rounded-md"
+                        data-tooltip-content={+n.rating}
                       >
                         <Rating
                           name="half-rating-read"
-                          defaultValue={n.rating}
+                          defaultValue={+n.rating}
                           precision={0.1}
                           size="small"
                           readOnly

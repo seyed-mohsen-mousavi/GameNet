@@ -456,6 +456,7 @@
       "image": "/images/gamenets/6.jpg",
       "like": 320,
       "rating": 2,
+      "city": "تهران",
       "save": 180,
       "details": {
         "images": [
@@ -540,6 +541,7 @@
       "image": "/images/gamenets/5.webp",
       "like": 270,
       "rating": "3.5",
+      "city": "تهران",
       "save": 140,
       "details": {
         "images": [
@@ -624,6 +626,7 @@
       "image": "/images/gamenets/4.jpg",
       "like": 350,
       "rating": "3.7",
+      "city": "کرج",
       "save": 190,
       "details": {
         "images": [
@@ -708,6 +711,7 @@
       "image": "/images/gamenets/1.jpg",
       "like": 310,
       "rating": "4.5",
+      "city": "تهران",
       "save": 160,
       "details": {
         "images": [
@@ -792,6 +796,7 @@
       "image": "/images/gamenets/6.webp",
       "like": 300,
       "rating": "5",
+      "city": "تهران",
       "save": 150,
       "details": {
         "images": [
@@ -876,6 +881,7 @@
       "image": "/images/gamenets/parsian/1.webp",
       "like": 450,
       "rating": "5",
+      "city": "تهران",
       "save": 200,
       "details": {
         "images": [
@@ -961,6 +967,7 @@
       "image": "/images/gamenets/2.jpg",
       "like": 290,
       "rating": "4.5",
+      "city": "شیراز",
       "save": 150,
       "details": {
         "images": [
@@ -1045,6 +1052,7 @@
       "image": "/images/news/GhoghnousGame-Cover.jpg",
       "like": 370,
       "rating": "4.1",
+      "city": "مشهد",
       "save": 200,
       "details": {
         "images": [
@@ -1129,6 +1137,7 @@
       "image": "/images/news/SepehrGame-Cover.jpg",
       "like": 250,
       "rating": "4.5",
+      "city": "اهواز",
       "save": 130,
       "details": {
         "images": [
