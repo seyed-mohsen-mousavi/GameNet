@@ -132,7 +132,14 @@ export default function SliderCards({ arr, categ, type }) {
                 >
                   {type == "gamenet" ? (
                     <>
-                      <Tooltip id="my-tooltip" />
+                      <Tooltip
+                        id="my-tooltip"
+                        style={{
+                          backgroundColor: "rgb(43 55 72)",
+                          borderRadius: "10px",
+                          color: "#FFF",
+                        }}
+                      />
                       <div
                         data-tooltip-id="my-tooltip"
                         data-tooltip-content={+n.rating}
