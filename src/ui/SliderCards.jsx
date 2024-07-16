@@ -10,7 +10,6 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import LazyLoad from "react-lazyload";
-import { useDispatch, useSelector } from "react-redux";
 import { Rating } from "@mui/material";
 import { Tooltip } from "react-tooltip";
 
@@ -40,8 +39,6 @@ export default function SliderCards({ arr, categ, type }) {
       slidesPerView: 4,
     },
   };
-  const dispatch = useDispatch();
-  const fav = useSelector((fave) => fave);
   return (
     <Swiper
       breakpoints={breakpoints}
@@ -56,9 +53,6 @@ export default function SliderCards({ arr, categ, type }) {
       className="mt-5"
     >
       {arr.map((n) => {
-        const s = fav.favorite.filter((e) => {
-          return e.id === n.id;
-        });
         return (
           <SwiperSlide key={n.id} className="w-full px-5 md:px-0 md:w-[22rem]">
             <div className="relative">
@@ -74,20 +68,12 @@ export default function SliderCards({ arr, categ, type }) {
               </Link>
               <div className="flex absolute left-2 -bottom-2  gap-5">
                 <button
-                  onClick={() => {
-                    s.length > 0
-                      ? dispatch({ type: "REMOVE_LIKE", payload: n })
-                      : dispatch({ type: "ADD_LIKE", payload: n });
-                  }}
+                  // onClick={}
                   title={n.like}
                   className="group bg-[#2b3748] shadow-2xl p-1.5 rounded-full text-red-500 transition-all ease-linear"
                 >
                   <HeartIcon
-                    className={`w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear ${
-                      s.length > 0
-                        ? "fill-red-500 group-hover:fill-red-400 stroke-none"
-                        : ""
-                    }`}
+                    className={`w-5 h-5 group-hover:fill-red-400/30 transition-all ease-linear `}
                   />
                 </button>
                 <button
