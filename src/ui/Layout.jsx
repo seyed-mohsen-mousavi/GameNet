@@ -4,9 +4,11 @@ import Footer from "./Footer";
 
 function Layout() {
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Navbar />
-      <Outlet />
+      <div className="flex-1">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
