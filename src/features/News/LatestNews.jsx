@@ -1,5 +1,5 @@
 import useServer from "../../hook/useServer";
-import SliderCards, { Loader } from "../SliderCards";
+import SliderCards, { Loader } from "../../ui/SliderCards";
 
 export default function LatestNews({ children }) {
   const [news, isLoading] = useServer("news");

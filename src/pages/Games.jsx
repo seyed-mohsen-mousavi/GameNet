@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import Header from "../components/Games/Header";
-import Main from "../components/Games/Main";
-import LatestGames from "../components/Games/LatestGames";
+import Header from "../features/Games/Header";
+import Main from "../features/Games/Main";
+import LatestGames from "../features/Games/LatestGames";
 import { SeeAll } from "../pages/News";
-import Category from "../components/Games/Category";
-import FreeGames from "../components/Games/FreeGames";
-import ForMore from "../components/Games/ForMore";
+import Category from "../features/Games/Category";
+import FreeGames from "../features/Games/FreeGames";
+import ForMore from "../features/Games/ForMore";
 function Games() {
   const around = useRef(null);
   const scroll = () => {

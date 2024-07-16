@@ -8,7 +8,7 @@ import {
   CurrencyDollarIcon,
   PuzzlePieceIcon,
 } from "@heroicons/react/16/solid";
-import { useStoreContext } from "../../context/StoreProvider";
+import { useStoreContext } from "../StoreProvider";
 // next ui component
 import { Button } from "@nextui-org/button";
 import {

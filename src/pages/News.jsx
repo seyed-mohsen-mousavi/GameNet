@@ -1,12 +1,12 @@
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
-import HeaderNews from "../components/News/HeaderNews";
-import LatestNews from "../components/News/LatestNews";
+import HeaderNews from "../features/News/HeaderNews";
+import LatestNews from "../features/News/LatestNews";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
 import fa from "javascript-time-ago/locale/fa";
 import { Link } from "react-router-dom";
-import MostViewed from "../components/News/MostViewed";
-import WeeklyHighlightNews from "../components/News/WeeklyHighlightNews";
+import MostViewed from "../features/News/MostViewed";
+import WeeklyHighlightNews from "../features/News/WeeklyHighlightNews";
 
 TimeAgo.addDefaultLocale(en);
 TimeAgo.addLocale(fa);

@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import useGames from "../../hook/useGames";
 import { BookmarkIcon, HeartIcon } from "@heroicons/react/24/outline";
-import { useStoreContext } from "../context/StoreProvider";
+import { useStoreContext } from "./StoreProvider";
 import LazyLoad from "react-lazyload";
 
 function Prodocts() {

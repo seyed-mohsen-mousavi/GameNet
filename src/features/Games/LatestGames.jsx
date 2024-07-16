@@ -1,6 +1,6 @@
 import useServer from "../../hook/useServer";
-import SliderCards, { Loader } from "../SliderCards";
-function FreeGames({ children }) {
+import SliderCards, { Loader } from "../../ui/SliderCards";
+function LatestGames({ children }) {
   const [Games, isLoading] = useServer("Games");
   if (isLoading) return <Loader />;
   return (
@@ -13,4 +13,4 @@ function FreeGames({ children }) {
   );
 }
 
-export default FreeGames;
+export default LatestGames;

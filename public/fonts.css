@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Peyda";
+  src: url(/font/Peyda-Medium.ttf);
+}
+@font-face {
+  font-family: "Peyda-light";
+  src: url(/font/Peyda-Light.ttf);
+}
+@font-face {
+  font-family: "Peyda-black";
+  src: url(/font/Peyda-Black.ttf);
+}
+@font-face {
+  font-family: "Peyda-med";
+  src: url(/font/Peyda-Medium.ttf);
+}
+@font-face {
+  font-family: "Jaro";
+  src: url(/font/Jaro-Regular-VariableFont_opsz.ttf);
+}

@@ -1,4 +1,4 @@
-import Index from "../components/GameNets/Index";
+import Index from "../features/GameNets/Index";
 
 function GameNets() {
   return (

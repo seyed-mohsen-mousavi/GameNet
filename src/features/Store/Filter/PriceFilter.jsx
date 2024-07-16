@@ -1,6 +1,6 @@
 import Slider from "@mui/material/Slider";
 import "./price.css";
-import { useStoreContext } from "../../context/StoreProvider";
+import { useStoreContext } from "../StoreProvider";
 const minDistance = 1000000;
 export default function PriceFilter() {
   const { price, setPrice , maxPrice } = useStoreContext();

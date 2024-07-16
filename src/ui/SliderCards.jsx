@@ -42,7 +42,6 @@ export default function SliderCards({ arr, categ, type }) {
   };
   const dispatch = useDispatch();
   const fav = useSelector((fave) => fave);
-
   return (
     <Swiper
       breakpoints={breakpoints}

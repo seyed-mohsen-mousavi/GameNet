@@ -1,4 +1,4 @@
-import SliderCards from "../SliderCards";
+import SliderCards from "../../ui/SliderCards";
 import { SeeAll } from "../../pages/News";
 import { useState } from "react";
 function GameNets({ gameNets }) {

@@ -1,3 +1,4 @@
+@import url("/fonts.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,26 +11,7 @@
     scroll-behavior: smooth;
     scrollbar-width: thin;
   }
-  @font-face {
-    font-family: "Peyda";
-    src: url(/font/Peyda-Medium.ttf);
-  }
-  @font-face {
-    font-family: "Peyda-light";
-    src: url(/font/Peyda-Light.ttf);
-  }
-  @font-face {
-    font-family: "Peyda-black";
-    src: url(/font/Peyda-Black.ttf);
-  }
-  @font-face {
-    font-family: "Peyda-med";
-    src: url(/font/Peyda-Medium.ttf);
-  }
-  @font-face {
-    font-family: "Jaro";
-    src: url(/font/Jaro-Regular-VariableFont_opsz.ttf);
-  }
+
   .gradient {
     position: absolute;
     bottom: -10px;
@@ -60,7 +42,7 @@
     transform: perspective(190px) rotateX(25deg) translateY(2px);
     box-shadow: #8c3cb32b 0px 40px 29px 0px;
   }
-  .css-1c99szj-MuiRating-icon{
+  .css-1c99szj-MuiRating-icon {
     color: gray !important;
   }
   .all-games:active {

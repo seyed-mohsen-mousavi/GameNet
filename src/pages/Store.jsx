@@ -1,8 +1,8 @@
-import FillterCard from "../components/Store/Filter/FillterCard";
-import FillterCardMobile from "../components/Store/Filter/FillterCardMobile";
-import HeaderImage from "../components/Store/HeaderImage";
-import Prodocts from "../components/Store/Prodocts";
-import StoreProvider from "../components/context/StoreProvider";
+import FillterCard from "../features/Store/Filter/FillterCard";
+import FillterCardMobile from "../features/Store/Filter/FillterCardMobile";
+import HeaderImage from "../features/Store/HeaderImage";
+import Prodocts from "../features/Store/Prodocts";
+import StoreProvider from "../features/Store/StoreProvider";
 
 function Store() {
   return (

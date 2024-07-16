@@ -1,5 +1,5 @@
 import useServer from "../../hook/useServer";
-import { Loader } from "../SliderCards";
+import  { Loader } from "../../ui/SliderCards";
 import "./style.css";
 import BestIGNGameNets from "./BestIGNGameNets";
 import GameNets from "./GameNets";

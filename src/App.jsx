@@ -6,18 +6,19 @@ import Auth from "./pages/Auth";
 import About from "./pages/About";
 import Games from "./pages/Games";
 import Streamers from "./pages/Streamers";
-import Layout from "./components/Layout";
-import Prodoct from "./components/Store/Prodoct";
+import Layout from "./ui/Layout";
+import Prodoct from "./features/Store/Prodoct";
 import News from "./pages/News";
-import SinglePage from "./components/Games/SinglePage";
-import GamesFilter from "./components/Games/GamesFilter";
+import SinglePage from "./features/Games/SinglePage";
+import GamesFilter from "./features/Games/GamesFilter";
 import { Provider } from "react-redux";
 import { Toaster } from "react-hot-toast";
 import GameNets from "./pages/GameNets";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
-import SingleGameNets from "./components/GameNets/SingleGameNets";
+import SingleGameNets from "./features/GameNets/SingleGameNets";
 import store from "./redux/store";
+import NotFound from "./ui/NotFound";
 function App() {
   return (
     <div className="relative container text-white  min-h-screen ">
@@ -41,6 +42,7 @@ function App() {
               <Route path="gameNet" element={<GameNets />} />
               <Route path="gameNet/:id" element={<SingleGameNets />} />
             </Route>
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Provider>
       </ThemeProvider>
