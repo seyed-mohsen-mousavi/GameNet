@@ -1,7 +1,7 @@
 import { platform, categories } from "../../../../data/sortData";
 import Platform from "./Platform";
 import Categorie from "./Categorie";
-import { useStoreContext } from "../StoreProvider";
+import { useStoreContext } from "../context/StoreProvider";
 import PriceFilter from "./PriceFilter";
 import { Input } from "@nextui-org/input";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";

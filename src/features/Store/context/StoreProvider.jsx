@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
-import useSearchSort from "../../hook/useCheckToBe";
-import useCheckToBe from "../../hook/useCheckToBe";
+import useSearchSort from "../../../hook/useCheckToBe";
+import useCheckToBe from "../../../hook/useCheckToBe";
 
 const StoreContext = createContext();
 export default function StoreProvider({ children }) {

@@ -95,21 +95,21 @@ function CardSlider({ title, desc, createdAt, author, id }) {
         >
           {title}
         </Link>
-        <p className="flex animate-fade">
+        <div className="flex animate-fade">
           <p className="text-gray-700 text-sm line-clamp-5 sm:line-clamp-3 lg:line-clamp-5 pt-3">
             {desc}
           </p>
-        </p>
+        </div>
       </div>
       <div>
-        <p className="text-xs inline-flex items-center gap-1 mt-4">
+        <div className="text-xs inline-flex items-center gap-1 mt-4">
           <PencilIcon className="w-3" />
           {new Date(createdAt).toLocaleDateString("fa-IR", {
             day: "numeric",
             month: "long",
             year: "numeric",
           })}
-        </p>
+        </div>
       </div>
     </div>
   );
@@ -129,14 +129,14 @@ export function PopularCard({ title, createdAt, author, id, views, image }) {
       <div className="flex flex-col justify-around gap-2 w-3/4">
         <div className="flex gap-3 items-center text-xs xl:text-sm">
           <p className="text-white line-clamp-1"> {author} </p>
-          <p className="text-gray-400  inline-flex gap-1">
+          <div className="text-gray-400  inline-flex gap-1">
             <ClockIcon className="w-3.5" />
             <ReactTimeAgo
               date={new Date(createdAt)}
               locale="fa-IR"
               timeStyle="round"
             />
-          </p>
+          </div>
         </div>
         <div>
           <Link
@@ -170,7 +170,7 @@ function PopularCardLoader() {
           <p className="text-white w-12 h-4 bg-gray-400 rounded animate-pulse">
             {" "}
           </p>
-          <p className="text-gray-400 text-sm w-16 h-4 rounded bg-gray-400 animate-pulse"></p>
+          <span className="text-gray-400 text-sm w-16 h-4 rounded bg-gray-400 animate-pulse"></span>
         </div>
         <div className="flex flex-col gap-3">
           <div className="text-gray-400 bg-gray-400 animate-pulse h-3 overflow-hidden rounded">

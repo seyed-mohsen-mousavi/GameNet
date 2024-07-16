@@ -19,6 +19,6 @@ export default function useInc(limt) {
         return c;
       });
     }, 0);
-  }, []);
+  }, [limiter]);
   return [value];
 }

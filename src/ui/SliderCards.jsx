@@ -95,14 +95,14 @@ export default function SliderCards({ arr, categ, type }) {
                   />
                   <p className="hover:underline">{n.author}</p>
                 </Link>
-                <p className="text-gray-400 inline-flex gap-2">
+                <div className="text-gray-400 inline-flex gap-2">
                   <ReactTimeAgo
                     date={new Date(n.date)}
                     locale="fa-IR"
                     timeStyle="round"
                   />
                   <ClockIcon className="w-4 text-gray-500" />
-                </p>
+                </div>
               </div>
               <h2 className="text-lg font-PeydaMed w-11/12 ">
                 <Link to={n.id}>{n.title}</Link>
@@ -111,7 +111,7 @@ export default function SliderCards({ arr, categ, type }) {
                 {n.description}
               </p>
               <div className="pt-2">
-                <p
+                <div
                   className="text-gray-400 inline-flex items-center text-xs gap-1 justify-between w-full"
                   dir="ltr"
                 >
@@ -147,7 +147,7 @@ export default function SliderCards({ arr, categ, type }) {
                     <EyeIcon className="w-4 -mr-1" />
                     {n.views.toLocaleString()} بازدید
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -213,26 +213,26 @@ function LoaderCard({ c }) {
         <div className="inline-flex gap-2 items-center text-sm pr-1">
           <div className="inline-flex gap-1 items-center">
             <div className="w-7 h-7 rounded-full object-cover bg-gray-400"></div>
-            <p className="hover:underline w-12 h-3 bg-gray-400 animate-pulse rounded-sm"></p>
+            <div className="hover:underline w-12 h-3 bg-gray-400 animate-pulse rounded-sm"></div>
           </div>
-          <p className="text-gray-400 w-16 h-3 bg-gray-400 rounded-sm animate-pulse"></p>
+          <div className="text-gray-400 w-16 h-3 bg-gray-400 rounded-sm animate-pulse"></div>
         </div>
         <h2 className="text-lg font-PeydaMed w-11/12 h-3 bg-gray-400 animate-pulse rounded-sm mb-1"></h2>
         <h2 className="text-lg font-PeydaMed w-11/12 h-3 bg-gray-400 animate-pulse rounded-sm"></h2>
         <div className="w-full pt-2 flex flex-col gap-1">
-          <p className="w-full h-2 bg-gray-400 animate-pulse rounded-sm"></p>
-          <p className="w-full h-2 bg-gray-400 animate-pulse rounded-sm"></p>
-          <p className="w-3/4 h-2 bg-gray-400 animate-pulse rounded-sm"></p>
+          <div className="w-full h-2 bg-gray-400 animate-pulse rounded-sm"></div>
+          <div className="w-full h-2 bg-gray-400 animate-pulse rounded-sm"></div>
+          <div className="w-3/4 h-2 bg-gray-400 animate-pulse rounded-sm"></div>
         </div>
         <div className="pt-2">
-          <p className="text-gray-400 inline-flex items-center text-xs gap-1">
-            <p
+          <div className="text-gray-400 inline-flex items-center text-xs gap-1">
+            <div
               to="action"
               className="text-red-500 ml-2 bg-gray-400 w-7 h-3 animate-pulse rounded-sm"
-            ></p>
+            ></div>
             <BookOpenIcon className="w-4 text-gray-400 animate-pulse" />
-            <p className="bg-gray-400 w-16 h-3 animate-pulse rounded-sm"></p>
-          </p>
+            <div className="bg-gray-400 w-16 h-3 animate-pulse rounded-sm"></div>
+          </div>
         </div>
       </div>
     </div>

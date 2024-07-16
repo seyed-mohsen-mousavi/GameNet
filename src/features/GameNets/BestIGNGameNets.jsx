@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import { ButtonBase } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
-import {
-  ArrowLongLeftIcon,
-  BookOpenIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowLongLeftIcon, BookOpenIcon } from "@heroicons/react/24/outline";
 function BestIGNGameNets({ gameNets, isLoading }) {
   const bestGameNets = gameNets.sort((a, b) => b.rating - a.rating).slice(0, 4);
   return (
@@ -23,8 +20,6 @@ function BestIGNGameNets({ gameNets, isLoading }) {
   );
 }
 function BestIGNGameNetCard({ item }) {
-  const s = 10000;
-  console.log(s.toLocaleString());
   return (
     <div className="group">
       <div className="flex justify-between items-center pb-2">

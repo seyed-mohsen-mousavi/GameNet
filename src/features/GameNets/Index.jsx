@@ -5,7 +5,6 @@ import Main from "./Main";
 function Index() {
   const [destination, setDestination] = useState([]);
   const [filter, setFilter] = useState("");
-  console.log(filter, destination);
   return (
     <div className="flex flex-col gap-7">
       <Header
