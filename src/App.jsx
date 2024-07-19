@@ -11,38 +11,44 @@ import Prodoct from "./features/Store/Prodoct";
 import News from "./pages/News";
 import SinglePage from "./features/Games/SinglePage";
 import GamesFilter from "./features/Games/GamesFilter";
-import { Toaster } from "react-hot-toast";  
+import { Toaster } from "react-hot-toast";
 import GameNets from "./pages/GameNets";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import SingleGameNets from "./features/GameNets/SingleGameNets";
 import NotFound from "./ui/NotFound";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <div className="relative container text-white  min-h-screen ">
-      <Toaster />
-      <ThemeProvider theme={THEME}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="store/:id" element={<Prodoct />} />
-            <Route path="store" element={<Store />} />
-            <Route path="news" element={<News />} />
-            <Route path="news/:id" element={<div>single new</div>} />
-            <Route path="register" element={<Register />} />
-            <Route path="about" element={<About />} />
-            <Route path="games" element={<Games />} />
-            <Route path="games/page/:id" element={<SinglePage />} />
-            <Route path="games/:id" element={<GamesFilter />} />
-            <Route path="streamers" element={<Streamers />} />
-            <Route path="Auth" element={<Auth />} />
-            <Route path="gameNet" element={<GameNets />} />
-            <Route path="gameNet/:id" element={<SingleGameNets />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </ThemeProvider>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="relative container text-white  min-h-screen ">
+        <Toaster />
+        <ThemeProvider theme={THEME}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="store/:id" element={<Prodoct />} />
+              <Route path="store" element={<Store />} />
+              <Route path="news" element={<News />} />
+              <Route path="news/:id" element={<div>single new</div>} />
+              <Route path="register" element={<Register />} />
+              <Route path="about" element={<About />} />
+              <Route path="games" element={<Games />} />
+              <Route path="games/page/:id" element={<SinglePage />} />
+              <Route path="games/:id" element={<GamesFilter />} />
+              <Route path="streamers" element={<Streamers />} />
+              <Route path="Auth" element={<Auth />} />
+              <Route path="gameNet" element={<GameNets />} />
+              <Route path="gameNet/:id" element={<SingleGameNets />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ThemeProvider>
+      </div>
+    </QueryClientProvider>
   );
 }
 

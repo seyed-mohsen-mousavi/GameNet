@@ -1,32 +1,33 @@
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-function SendOTPForm() {
-  const [inputValue, setInputValue] = useState("");
+function SendOTPForm({ setStep, phoneNumber, onChange }) {
   const [error, setError] = useState(false);
   const [error2, setError2] = useState(false);
-  const [succsess, setSuccess] = useState(!error || !error2 ? false : true);
-  const hanleCharacterInput = (e) => {
-    if (!isNaN(e.target.value)) {
-      setInputValue(e.target.value);
-    }
-  };
   const checkPhoneNumber = (e) => {
     e?.preventDefault();
-    if (inputValue.length > 0) {
-      if (inputValue.startsWith("0")) {
-        if (inputValue && inputValue.length >= 11 && inputValue.length < 12) {
+    if (phoneNumber.length > 0) {
+      if (phoneNumber.startsWith("0")) {
+        if (
+          phoneNumber &&
+          phoneNumber.length >= 11 &&
+          phoneNumber.length < 12
+        ) {
           setError(false);
           setError2(false);
-          setSuccess(true);
+          setStep(2);
         } else {
           setError(false);
           setError2(true);
         }
-      } else if (inputValue.startsWith("9")) {
-        if (inputValue && inputValue.length >= 10 && inputValue.length < 11) {
+      } else if (phoneNumber.startsWith("9")) {
+        if (
+          phoneNumber &&
+          phoneNumber.length >= 10 &&
+          phoneNumber.length < 11
+        ) {
           setError(false);
           setError2(false);
-          setSuccess(true);
+          setStep(2);
         } else {
           setError(false);
           setError2(true);
@@ -42,6 +43,8 @@ function SendOTPForm() {
   };
   return (
     <div>
+      <div className="absolute inset-0 w-full h-full bg-gray-500/60 z-30"></div>
+
       <form className="flex flex-col gap-6" onSubmit={checkPhoneNumber}>
         <h2 className="select-none text-center text-base font-bold  lg:text-xl">
           {" "}
@@ -51,15 +54,14 @@ function SendOTPForm() {
           <div className="w-full relative">
             <input
               dir="auto"
-              className={`w-full text-left bg-white/15 caret-gray-300 outline-none border-2 border-solid border-transparent transition-all   placeholder:text-gray-400 placeholder:select-none  text-base lg:text-lg rounded-full py-3 lg:py-3 placeholder:text-right pr-14 lg:pr-18 pl-4 lg:pl-6 bg-gray-100 font-Peyda ${
-                error || error2 ? "border-red-500" : "focus:border-gray-500"
-              } ${succsess ? "border-green-500" : "focus:border-gray-500"}`}
+              className="w-full text-left bg-white/15 caret-gray-300 outline-none border-2 border-solid border-transparent transition-all   placeholder:text-gray-400 placeholder:select-none  text-base lg:text-lg rounded-xl py-3 lg:py-3 placeholder:text-right pr-14 lg:pr-18 pl-4 lg:pl-6 bg-gray-100 font-Peyda "
               placeholder="شماره موبایل"
               inputMode="numeric"
               type="text"
-              value={inputValue}
-              maxLength={inputValue.startsWith("0") ? 11 : 10}
-              onChange={hanleCharacterInput}
+              value={phoneNumber}
+              maxLength={phoneNumber.startsWith("0") ? 11 : 10}
+              onChange={onChange}
+              autoComplete="off"
             />
             <label
               htmlFor="input"
@@ -71,10 +73,7 @@ function SendOTPForm() {
           {error ? <Error1 /> : ""}
           {error2 ? <Error2 /> : ""}
         </div>
-        <button
-          type="submit"
-          className="text-sm lg:text-base text-center w-full flex bg-gradient-to-r from-[#7d77e9] to-[#8453bd] px-5 py-3 transition-transform ease-linear rounded-full shadow-[#733cb39c_0px_0px_5px] hover:scale-95 active:scale-100 "
-        >
+        <button type="submit" className="btn--primary">
           <p className="mx-auto pl-2 font-Peyda">ارسال کد تایید</p>
         </button>
       </form>
