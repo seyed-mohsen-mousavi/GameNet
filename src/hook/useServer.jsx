@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function useServer(url) {
-  const URL = `http://localhost:5000/${url}`;
+  const URL = `http://localhost:8000/${url}`;
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState([]);
   useEffect(() => {

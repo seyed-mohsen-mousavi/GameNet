@@ -120,6 +120,17 @@
       "description": "در این مقاله به بررسی تکنولوژی‌های جدید در صنعت بازی‌سازی پرداخته‌ایم. این تکنولوژی‌ها شامل هوش مصنوعی پیشرفته، گرافیک واقع‌گرایانه و ابزارهای توسعه بازی‌های چندنفره آنلاین می‌باشند.",
       "link": "https://gametechnews.com/new-tech-in-gaming",
       "image": "https://example.com/images/gaming-tech.jpg"
+    },
+    {
+      "id": "12",
+      "title": "به نام خدا",
+      "author": "خبرگزاری تکنولوژی گیم",
+      "author_image": "https://example.com/images/author-gametechnews.jpg",
+      "views": 16000,
+      "date": "2024-07-20 15:10:20",
+      "description": "در این مقاله به بررسی تکنولوژی‌های جدید در صنعت بازی‌سازی پرداخته‌ایم. این تکنولوژی‌ها شامل هوش مصنوعی پیشرفته، گرافیک واقع‌گرایانه و ابزارهای توسعه بازی‌های چندنفره آنلاین می‌باشند.",
+      "link": "https://gametechnews.com/new-tech-in-gaming",
+      "image": "https://example.com/images/gaming-tech.jpg"
     }
   ],
   "popularNews": [

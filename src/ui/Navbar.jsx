@@ -49,7 +49,7 @@ export const navBar = [
     icon: (
       <SiYoutubegaming className="inline-block h-5 w-5  group-aria-[current=page]:[filter:drop-shadow(-25px_0px_10px_#c084fc)]" />
     ),
-  }
+  },
 ];
 function Navbar() {
   return (
@@ -87,5 +87,3 @@ function NavLinks({ navBar }) {
     </ul>
   );
 }
-
-
