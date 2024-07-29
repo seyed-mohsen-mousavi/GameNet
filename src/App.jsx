@@ -19,11 +19,13 @@ import SingleGameNets from "./features/GameNets/SingleGameNets";
 import NotFound from "./ui/NotFound";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Navbar from "./ui/Navbar";
 function App() {
   const queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
+      <Navbar />
       <div className="relative container text-white  min-h-screen ">
         <Toaster />
         <ThemeProvider theme={THEME}>

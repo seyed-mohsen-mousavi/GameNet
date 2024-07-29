@@ -1,9 +1,10 @@
 import { useState } from "react";
 import SendOTPForm from "./SendOTPForm";
 import CheckOTPForm from "./CheckOTPForm";
+import CompleteProfile from "./CompleteProfile";
 
 function AuthContainer() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(3);
   const [phoneNumber, setPhoneNumber] = useState("");
   const renderStep = () => {
     switch (step) {
@@ -19,7 +20,9 @@ function AuthContainer() {
         );
       case 2:
         console.log(phoneNumber);
-        return <CheckOTPForm />;
+        return <CheckOTPForm setStep={setStep} phoneNumber={phoneNumber} />;
+      case 3:
+        return <CompleteProfile />;
       default:
         return null;
     }

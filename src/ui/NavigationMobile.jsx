@@ -5,6 +5,12 @@ import { useDimensions } from "./use-dimensions";
 import { navBar } from "./Navbar";
 import "./navigation.css";
 import { Backdrop, Button } from "@mui/material";
+import {
+  ArrowLeftCircleIcon,
+  ChevronLeftIcon,
+  UserCircleIcon,
+  UserIcon,
+} from "@heroicons/react/24/outline";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -33,18 +39,10 @@ export default function NavigationMobile() {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   if (isOpen) {
-    document.body.classList.add("overflow-y-scroll");
-    document.body.classList.add("inset-0");
-    document.body.style.left = "0";
-    document.body.style.top = "0";
-    document.body.style.position = "fixed";
+    document.body.style.overflowY = "hidden";
   } else {
     setTimeout(() => {
-      document.body.classList.remove("overflow-y-scroll");
-      document.body.classList.remove("inset-0");
-      document.body.style.left = null;
-      document.body.style.top = null;
-      document.body.style.position = null;
+      document.body.style.overflowY = "auto";
     }, 1000);
   }
   let x = window.matchMedia("(max-width: 700px)");
@@ -98,22 +96,7 @@ const Path = (props) => (
 function MenuToggle({ toggle }) {
   return (
     <motion.div className=" relative">
-      <motion.section
-        variants={variantsItem2}
-        className="flex items-center justify-between py-5 z-50 absolute right-[115px] -top-3"
-      >
-        <Link className="flex cursor-pointer " to="/login" onClick={toggle}>
-          <Button
-            size="small"
-            variant="contained"
-            className="w-24 h-full text-xs  bg-gradient-to-r from-[#3b35b2] to-[#733cb3] px-6 py-1 transition-transform ease-linear rounded-full shadow-[#733cb39c_0px_0px_5px] "
-          >
-            <span className="font-Peyda">ورود</span>
-          </Button>
-        </Link>
-      </motion.section>
-
-      <button onClick={toggle} className="z-50 pr-2.5">
+      <button onClick={toggle} className="z-30 pr-2.5">
         <svg
           width="23"
           height="23"
@@ -191,20 +174,38 @@ function Navigation({ toggle, isOpen }) {
     <motion.ul
       variants={variants}
       dir="rtl"
-      className={`absolute top-20 right-3 z-40 h-full flex flex-col  font-PeydaLight ${
+      className={`absolute  top-16 right-0 z-40 h-full flex flex-col  font-PeydaLight ${
         isOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >
+      <motion.li
+        variants={variantsItem}
+        className="flex items-center py-2 px-2"
+      >
+        <Link
+          onClick={toggle}
+          to="/auth"
+          className="group flex items-center gap-3 py-5 bg-[#383950]  px-[115px] pr-2 translate-x-2 text-sm"
+        >
+          <UserCircleIcon className="size-7" />
+          ورود یا ثبت نام
+        </Link>
+      </motion.li>
       {navBar.map((i) => (
-        <motion.li key={i.id} variants={variantsItem} className="flex py-2">
+        <motion.li
+          key={i.id}
+          variants={variantsItem}
+          className="flex items-center py-2 px-3"
+        >
           <NavLink
             onClick={toggle}
-            className="group flex items-center gap-3 transition-all ease-linear py-2  w-full aria-[current=page]:font-PeydaMed  aria-[current=page]:bg-white/10 aria-[current=page]:text-purple-400 backdrop-blur rounded-xl px-20 pr-2 text-sm"
+            className="group flex items-center gap-3 transition-all ease-linear py-3 translate-x-1   w-full aria-[current=page]:font-PeydaMed  aria-[current=page]:bg-[#383950]/90 aria-[current=page]:text-purple-400 backdrop-blur rounded-xl px-32 pr-2 text-sm"
             to={i.link}
           >
             {i.icon}
             {i.title}
           </NavLink>
+          <ChevronLeftIcon className="size-5 translate-x-8 pointer-events-none" />
         </motion.li>
       ))}
     </motion.ul>
