@@ -18,5 +18,5 @@ export const convertToEnglishNumbers = (str) => {
     "۸": "8",
     "۹": "9",
   };
-  return str.replace(/[\u06F0-\u06F9]/g, (w) => persianToEnglishMap[w]);
+  return str?.replace(/[\u06F0-\u06F9]/g, (w) => persianToEnglishMap[w]);
 };

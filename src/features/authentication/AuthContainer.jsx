@@ -4,7 +4,7 @@ import CheckOTPForm from "./CheckOTPForm";
 import CompleteProfile from "./CompleteProfile";
 
 function AuthContainer() {
-  const [step, setStep] = useState(3);
+  const [step, setStep] = useState(2);
   const [phoneNumber, setPhoneNumber] = useState("");
   const renderStep = () => {
     switch (step) {
@@ -13,9 +13,7 @@ function AuthContainer() {
           <SendOTPForm
             setStep={setStep}
             phoneNumber={phoneNumber}
-            onChange={(e) =>
-              !isNaN(e.target.value) ? setPhoneNumber(e.target.value) : ""
-            }
+            onChange={setPhoneNumber}
           />
         );
       case 2:

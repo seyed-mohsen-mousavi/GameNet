@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import {
-  EyeIcon,
-  EyeSlashIcon,
-  KeyIcon,
-  UserIcon,
-} from "@heroicons/react/24/outline";
+import { EyeIcon, EyeSlashIcon, KeyIcon, UserIcon } from "@heroicons/react/24/outline";
 import Input from "../../ui/input";
 
 function CompleteProfile() {
@@ -14,7 +9,13 @@ function CompleteProfile() {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      firstname: "",
+      lastname: "",
+      password: ""
+    }
+  });
 
   const onSubmit = (data) => {
     console.log("Form Data: ", data);
@@ -35,9 +36,9 @@ function CompleteProfile() {
             render={({ field }) => (
               <Input
                 prop={field}
-                placeholder="نام "
+                placeholder="نام"
                 customStyle={{ textAlign: "right" }}
-                mode="numeric"
+                mode="text"
                 label={
                   <UserIcon className="transition-all h-5 lg:w-6 w-5 lg:h-6 text-gray-400" />
                 }
@@ -57,9 +58,9 @@ function CompleteProfile() {
             render={({ field }) => (
               <Input
                 prop={field}
-                placeholder="نام خانوادگی "
+                placeholder="نام خانوادگی"
                 customStyle={{ textAlign: "right" }}
-                mode="numeric"
+                mode="text"
                 label={
                   <UserIcon className="transition-all h-5 lg:w-6 w-5 lg:h-6 text-gray-400" />
                 }
@@ -82,7 +83,7 @@ function CompleteProfile() {
                   prop={field}
                   placeholder="رمز دلخواه"
                   customStyle={{ textAlign: "right" }}
-                  mode="numeric"
+                  mode="text"
                   label={
                     <KeyIcon className="transition-all h-5 lg:w-6 w-5 lg:h-6 text-gray-400" />
                   }
